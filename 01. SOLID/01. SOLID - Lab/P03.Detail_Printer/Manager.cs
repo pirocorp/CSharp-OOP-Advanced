@@ -15,6 +15,7 @@
         public override string ToString()
         {
             return base.ToString() + Environment.NewLine + 
+                   "Documents: " + Environment.NewLine +
                    string.Join(Environment.NewLine, this.Documents);
         }
     }
