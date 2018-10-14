@@ -13,6 +13,13 @@
             this.appendDestinations = new List<IAppender>(appenders);
         }
 
+        public IEnumerable<IAppender> Appenders => this.appendDestinations;
+
+        public void AddAppender(IAppender appender)
+        {
+            this.appendDestinations.Add(appender);
+        }
+
         public void Info(string dateTime, string message)
         {
             this.Append(message, ReportLevel.Info, dateTime);

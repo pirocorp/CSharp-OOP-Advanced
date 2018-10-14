@@ -9,6 +9,7 @@
         public FileAppender(ILayout inputLayout) 
             : base(inputLayout)
         {
+            this.File = new LogFile();
         }
 
         public override void AppendConcrete(string message, ReportLevel reportLevel, string dateTime)
@@ -17,5 +18,10 @@
         }
 
         public LogFile File { get; set; }
+
+        public override string ToString()
+        {
+            return $"{base.ToString()}, File size: {this.File.Size}";
+        }
     }
 }

@@ -2,6 +2,7 @@
 {
     using System;
     using Appenders;
+    using Controllers;
     using Enums;
     using Files;
     using Layouts;
@@ -11,16 +12,23 @@
     {
         public static void Main()
         {
-            var simpleLayout = new SimpleLayout();
-            var xmlLayout = new XmlLayout();
-            var file = new LogFile();
-            var fileAppender = new FileAppender(xmlLayout);
-            fileAppender.File = file;
+            var layout = new SimpleLayout();
+            var controller = new ConsoleController();
+            var n = int.Parse(Console.ReadLine());
 
-            var logger = new Logger(fileAppender);
+            for (var i = 0; i < n; i++)
+            {
+                controller.ParseAppender(Console.ReadLine());
+            }
 
-            logger.Error("3/31/2015 5:33:07 PM", "Error parsing request");
-            Console.WriteLine(fileAppender.File.Size);
+            string inputLine;
+
+            while ((inputLine = Console.ReadLine()) != "END")
+            {
+                controller.ParseMessage(inputLine);
+            }
+
+            Console.WriteLine(controller.PrintStatistics());
         }
     }
 }
