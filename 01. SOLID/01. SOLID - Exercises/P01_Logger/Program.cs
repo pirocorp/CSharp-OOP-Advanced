@@ -1,6 +1,6 @@
 ﻿namespace P01_Logger
 {
-    using System.IO;
+    using System;
     using Appenders;
     using Enums;
     using Files;
@@ -12,18 +12,15 @@
         public static void Main()
         {
             var simpleLayout = new SimpleLayout();
-            var consoleAppender = new ConsoleAppender(simpleLayout);
-            consoleAppender.ReportLevel = ReportLevel.Error;
+            var xmlLayout = new XmlLayout();
+            var file = new LogFile();
+            var fileAppender = new FileAppender(xmlLayout);
+            fileAppender.File = file;
 
-            var logger = new Logger(consoleAppender);
+            var logger = new Logger(fileAppender);
 
-            logger.Info("3/31/2015 5:33:07 PM", "Everything seems fine");
-            logger.Warning("3/31/2015 5:33:07 PM", "Warning: ping is too high - disconnect imminent");
             logger.Error("3/31/2015 5:33:07 PM", "Error parsing request");
-            logger.Critical("3/31/2015 5:33:07 PM", "No connection string found in App.config");
-            logger.Fatal("3/31/2015 5:33:07 PM", "mscorlib.dll does not respond");
-
-
+            Console.WriteLine(fileAppender.File.Size);
         }
     }
 }

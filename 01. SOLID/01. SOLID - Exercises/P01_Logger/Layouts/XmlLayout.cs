@@ -10,7 +10,7 @@
         {
             return "<log>" + Environment.NewLine +
                    $"   <date>{dateTime}</date>" + Environment.NewLine +
-                   $"   <level>{reportLevel}</level>" + Environment.NewLine +
+                   $"   <level>{reportLevel.ToString().ToUpper()}</level>" + Environment.NewLine +
                    $"   <message>{message}</message>" + Environment.NewLine +
                    "</log>";
         }

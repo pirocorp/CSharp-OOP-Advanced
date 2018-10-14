@@ -27,6 +27,10 @@
             .Select(x => (int) x)
             .Sum();
 
+        //public char[] Chars => this.log.ToString()
+        //    .Where(char.IsLetter)
+        //    .ToArray();
+
         public void Close()
         {
             this.fileWriter.Close();

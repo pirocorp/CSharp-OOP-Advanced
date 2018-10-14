@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace P01_Logger.Interfaces
+﻿namespace P01_Logger.Interfaces
 {
     using Enums;
 
