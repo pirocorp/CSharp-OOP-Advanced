@@ -4,23 +4,29 @@
     using System.Collections.Generic;
     using Entities;
     using Factories;
+    using Interfaces;
 
     public class Controller
     {
-        private BlobFactory blobFactory;
-        private Dictionary<string, Blob> blobs;
+        private readonly BlobFactory blobFactory;
+        private readonly Dictionary<string, Blob> blobs;
 
-        public Controller()
+        private readonly IWriter writer;
+        private readonly IReader reader;
+
+        public Controller(IWriter inputWriter, IReader inputReader)
         {
             this.blobFactory = new BlobFactory();
             this.blobs = new Dictionary<string, Blob>();
+            this.writer = inputWriter;
+            this.reader = inputReader;
         }
 
         public void Run()
         {
             while (true)
             {
-                var inputLine = Console.ReadLine();
+                var inputLine = this.reader.ReadLine();
 
                 if (inputLine == null)
                 {
@@ -58,7 +64,7 @@
         {
             foreach (var blob in this.blobs)
             {
-                Console.WriteLine(blob.Value);
+                this.writer.WriteLine(blob.Value);
             }
         }
 
