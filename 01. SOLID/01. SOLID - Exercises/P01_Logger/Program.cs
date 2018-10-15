@@ -1,12 +1,8 @@
 ﻿namespace P01_Logger
 {
     using System;
-    using Appenders;
     using Controllers;
-    using Enums;
-    using Files;
     using Layouts;
-    using Loggers;
 
     public class Program
     {

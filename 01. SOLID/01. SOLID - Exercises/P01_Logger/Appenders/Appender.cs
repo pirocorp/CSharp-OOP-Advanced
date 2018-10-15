@@ -1,6 +1,5 @@
 ﻿namespace P01_Logger.Appenders
 {
-    using System;
     using Enums;
     using Interfaces;
 

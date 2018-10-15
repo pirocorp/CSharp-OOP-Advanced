@@ -1,10 +1,8 @@
 ﻿namespace P01_Logger.Factories
 {
     using System;
-    using System.Collections.Generic;
     using System.Linq;
     using System.Reflection;
-    using System.Text;
     using Interfaces;
 
     public class AppenderFactory

@@ -3,7 +3,6 @@
     using System;
     using System.Collections.Generic;
     using Entities;
-    using Events;
     using Factories;
     using Interfaces;
 

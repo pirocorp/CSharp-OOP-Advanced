@@ -1,14 +1,10 @@
 ﻿namespace P01_Logger.Controllers
 {
     using System;
-    using System.Collections.Generic;
     using System.Linq;
-    using System.Reflection;
     using System.Text;
-    using Appenders;
     using Enums;
     using Factories;
-    using Interfaces;
     using Loggers;
 
     public class ConsoleController

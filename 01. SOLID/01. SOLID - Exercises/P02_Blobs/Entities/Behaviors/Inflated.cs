@@ -1,7 +1,5 @@
 ﻿namespace _02.Blobs.Entities.Behaviors
 {
-    using System;
-
     public class Inflated : Behavior
     {
         private const int INFLATED_HEALTH_BOOSTER = 50;
