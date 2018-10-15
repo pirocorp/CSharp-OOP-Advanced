@@ -80,10 +80,10 @@
 
         public void Update()
         {
-            
+            this.ApplyRecurrentEffect();
         }
 
-        public void ApplyRecurrentEffect()
+        private void ApplyRecurrentEffect()
         {
             if (this.Behavior.IsTriggered)
             {
@@ -93,12 +93,15 @@
 
         public override string ToString()
         {
-            if (this.Health <= 0)
+            //Blob {name}: {health} HP, {damage} Damage
+            //Blob {name} KILLED
+
+            if (!this.isAlive)
             {
-                return $"IBlob {this.Name} KILLED";
+                return $"Blob {this.Name} KILLED";
             }
 
-            return $"IBlob {this.Name}: {this.Health} HP, {this.Damage} Damage";
+            return $"Blob {this.Name}: {this.Health} HP, {this.Damage} Damage";
         }
     }
 }
