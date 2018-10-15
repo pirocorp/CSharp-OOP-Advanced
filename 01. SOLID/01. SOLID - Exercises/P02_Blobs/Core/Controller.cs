@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using Entities;
+    using Events;
     using Factories;
     using Interfaces;
 
@@ -14,12 +15,17 @@
         private readonly IWriter writer;
         private readonly IReader reader;
 
+        private bool subscribeForEvent;
+
         public Controller(IWriter inputWriter, IReader inputReader)
         {
             this.blobFactory = new BlobFactory();
             this.blobs = new Dictionary<string, Blob>();
+
             this.writer = inputWriter;
             this.reader = inputReader;
+
+            this.subscribeForEvent = false;
         }
 
         public void Run()
@@ -39,6 +45,9 @@
 
                 switch (command)
                 {
+                    case "report-events":
+                        this.SubscribeForEvent();
+                        break;
                     case "create":
                         this.Create(inputTokens);
                         break;
@@ -46,7 +55,7 @@
                         this.Attack(inputTokens);
                         break;
                     case "pass":
-                        continue;
+                        break;
                     case "status":
                         this.Status(inputTokens);
                         break;
@@ -57,6 +66,23 @@
                 }
 
                 this.EndTurn();
+            }
+        }
+
+        private void SubscribeForEvent()
+        {
+            this.subscribeForEvent = true;
+        }
+
+        private void PrintDetailedInformation(object sender, EventArgs e)
+        {
+            if (sender is Blob blob)
+            {
+                this.writer.WriteLine(blob.DetailedInformation());
+            }
+            else
+            {
+                throw new InvalidCastException("Invalid cast to Blob");
             }
         }
 
@@ -91,6 +117,12 @@
         {
             var currentBlob = this.blobFactory.Create(inputTokens);
             var currentBlobName = currentBlob.Name;
+
+            if (this.subscribeForEvent)
+            {
+                currentBlob.ReportEvent += this.PrintDetailedInformation;
+            }
+
             this.blobs.Add(currentBlobName, currentBlob);
         }
     }

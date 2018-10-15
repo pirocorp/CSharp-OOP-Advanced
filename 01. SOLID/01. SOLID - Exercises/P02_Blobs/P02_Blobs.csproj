@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Events\ReportEventHandler.cs" />
     <Compile Include="Core\Controller.cs" />
     <Compile Include="Entities\Attacks\Attack.cs" />
     <Compile Include="Entities\Attacks\Blobplode.cs" />

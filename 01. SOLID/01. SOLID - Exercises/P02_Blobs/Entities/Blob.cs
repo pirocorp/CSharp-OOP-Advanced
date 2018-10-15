@@ -1,15 +1,20 @@
 ﻿namespace _02.Blobs.Entities
 {
+    using System;
+    using Events;
     using Interfaces;
 
     public class Blob
     {
+        public event ReportEventHandler ReportEvent;
+
         private int health;
         private IAttack attack;
 
         private int initialHealth;
         private int initialDamage;
         private bool isAlive;
+        private bool reportEvents;
 
         public Blob(string name, int health, int damage, IBehavior behavior, IAttack attack)
         {
@@ -46,6 +51,7 @@
                 if (this.health == 0)
                 {
                     this.isAlive = false;
+                    this.ReportEvent?.Invoke(this, EventArgs.Empty);
                 }
             }
         }
@@ -75,6 +81,7 @@
             if (!this.Behavior.IsTriggered)
             {
                 this.Behavior.Trigger(this);
+                this.ReportEvent?.Invoke(this, EventArgs.Empty);
             }
         }
 
@@ -89,6 +96,19 @@
             {
                 this.Behavior.ApplyRecurrentEffect(this);
             }
+        }
+
+        public string DetailedInformation()
+        {
+            //Blob {name} toggled {behavior-type}
+            //Blob {name} was killed 
+
+            if (!this.isAlive)
+            {
+                return $"Blob {this.Name} was killed";
+            }
+
+            return $"Blob {this.Name} toggled {this.Behavior.GetType().Name}Behavior";
         }
 
         public override string ToString()
