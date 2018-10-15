@@ -6,7 +6,6 @@
     {
         private int health;
         private IAttack attack;
-        private int triggerCount;
 
         private int initialHealth;
         private int initialDamage;
