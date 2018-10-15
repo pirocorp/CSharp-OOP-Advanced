@@ -4,12 +4,15 @@
 
     public class Inflated : Behavior
     {
+        private const int INFLATED_HEALTH_BOOSTER = 50;
+        private const int INFLATED_HEALTH_DECREMENTER = 10;
+
         public override void Trigger(Blob source)
         {
             base.Trigger(source);
 
             this.IsTriggered = true;
-            source.Health += 50;
+            source.Health += INFLATED_HEALTH_BOOSTER;
         }
 
         public override void ApplyRecurrentEffect(Blob source)
@@ -22,7 +25,7 @@
             }
             else
             {
-                source.Health -= 10;
+                source.Health -= INFLATED_HEALTH_DECREMENTER;
             }
         }
     }

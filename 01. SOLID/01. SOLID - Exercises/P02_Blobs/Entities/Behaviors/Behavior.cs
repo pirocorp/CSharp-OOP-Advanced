@@ -5,14 +5,14 @@
 
     public abstract class Behavior : IBehavior
     {
+        private bool toDelayRecurrentEffect;
+
         protected Behavior()
         {
-            this.ToDelayRecurrentEffect = true;
+            this.toDelayRecurrentEffect = true;
         }
 
         public bool IsTriggered { get; set; }
-
-        public bool ToDelayRecurrentEffect { get; set; }
 
         public virtual void Trigger(Blob source)
         {
@@ -28,6 +28,12 @@
             {
                 throw new InvalidOperationException($"{this.GetType().Name} behavior is not triggered and Recurrent Effect cannot be applied.");
             }
+        }
+
+        protected bool ToDelayRecurrentEffect
+        {
+            get => this.toDelayRecurrentEffect;
+            set => this.toDelayRecurrentEffect = value;
         }
     }
 }

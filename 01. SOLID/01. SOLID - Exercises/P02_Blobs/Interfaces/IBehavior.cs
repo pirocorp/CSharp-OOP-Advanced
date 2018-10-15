@@ -6,8 +6,6 @@
     {
         bool IsTriggered { get; }
 
-        bool ToDelayRecurrentEffect { get; }
-
         void Trigger(Blob source);
 
         void ApplyRecurrentEffect(Blob source);
