@@ -12,7 +12,7 @@
 
         public override void Execute(string[] inputParameters, ICustomList<string> listOfItems)
         {
-            listOfItems.Add(inputParameters[1]);
+            listOfItems.Add(inputParameters[1]); 
         }
     }
 }
