@@ -36,14 +36,14 @@
             var firstPosition = int.Parse(inputTokens[0]);
             var secondPosition = int.Parse(inputTokens[1]);
 
-            this.listOfStrings = this.SwapElementsOnPositions(firstPosition, secondPosition, this.listOfStrings.ToArray()).ToList();
+            this.listOfStrings = SwapElementsOnPositions(firstPosition, secondPosition, this.listOfStrings.ToArray()).ToList();
 
             Console.WriteLine(string.Join(Environment.NewLine, this.listOfStrings));
         }
 
-        private T[] SwapElementsOnPositions<T>(int position1, int position2, T[] listOfStrings)
+        private static T[] SwapElementsOnPositions<T>(int position1, int position2, T[] arrayToSort)
         {
-            var result = new T[listOfStrings.Length];
+            var result = new T[arrayToSort.Length];
 
             var firstPosition = Math.Min(position1, position2);
             var secondPosition = Math.Max(position1, position2);
@@ -51,14 +51,14 @@
             var swappedElement = default(T);
 
 
-            for (var i = 0; i < listOfStrings.Length; i++)
+            for (var i = 0; i < arrayToSort.Length; i++)
             {
-                var source = listOfStrings[i];
+                var source = arrayToSort[i];
 
                 if (i == firstPosition)
                 {
                     swappedElement = source;
-                    result[i] = listOfStrings[secondPosition];
+                    result[i] = arrayToSort[secondPosition];
                     continue;
                 }
 
@@ -73,6 +73,5 @@
 
             return result;
         }
-
     }
 }
