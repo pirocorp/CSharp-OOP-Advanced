@@ -50,6 +50,7 @@
 
             var swappedElement = default(T);
 
+
             for (var i = 0; i < listOfStrings.Length; i++)
             {
                 var source = listOfStrings[i];
