@@ -1,4 +1,4 @@
-﻿namespace P05_GenericCountMethodStrings.IO.Interfaces
+﻿namespace P06_GenericCountMethodDouble.IO.Interfaces
 {
     public interface IReader
     {

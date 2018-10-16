@@ -1,4 +1,4 @@
-﻿namespace P05_GenericCountMethodStrings.Core
+﻿namespace P06_GenericCountMethodDouble.Core
 {
     using System;
     using System.Collections.Generic;

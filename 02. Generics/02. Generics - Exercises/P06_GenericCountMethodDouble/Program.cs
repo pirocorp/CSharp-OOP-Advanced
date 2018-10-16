@@ -1,4 +1,4 @@
-﻿namespace P05_GenericCountMethodStrings
+﻿namespace P06_GenericCountMethodDouble
 {
     using Core;
     using IO;

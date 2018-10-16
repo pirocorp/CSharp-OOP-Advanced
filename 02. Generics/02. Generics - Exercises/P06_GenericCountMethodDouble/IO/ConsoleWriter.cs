@@ -1,4 +1,4 @@
-﻿namespace P05_GenericCountMethodStrings.IO
+﻿namespace P06_GenericCountMethodDouble.IO
 {
     using System;
     using Interfaces;

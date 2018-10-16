@@ -1,4 +1,4 @@
-﻿namespace P05_GenericCountMethodStrings.Models
+﻿namespace P06_GenericCountMethodDouble.Models
 {
     using System;
 
