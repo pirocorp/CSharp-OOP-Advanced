@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="P07_CustomList.Program" Collapsed="true">
+    <Position X="28" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="P07_CustomList.Models.Commands.AddCommand" Collapsed="true">
+    <Position X="8.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Commands\AddCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="P07_CustomList.Models.Commands.Command" Collapsed="true">
+    <Position X="14" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Models\Commands\Command.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="P07_CustomList.Models.Commands.ContainsCommand" Collapsed="true">
+    <Position X="15.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Commands\ContainsCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="P07_CustomList.Models.Commands.GreaterCommand" Collapsed="true">
+    <Position X="19.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Commands\GreaterCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="P07_CustomList.Models.Commands.MaxCommand" Collapsed="true">
+    <Position X="6.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Commands\MaxCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="P07_CustomList.Models.Commands.MinCommand" Collapsed="true">
+    <Position X="10.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Commands\MinCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="P07_CustomList.Models.Commands.PrintCommand" Collapsed="true">
+    <Position X="13" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Commands\PrintCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="P07_CustomList.Models.Commands.RemoveCommand" Collapsed="true">
+    <Position X="17.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Commands\RemoveCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="P07_CustomList.Models.Commands.SwapCommand" Collapsed="true">
+    <Position X="22" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Commands\SwapCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="P07_CustomList.Models.CustomList&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="28" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAABAEAAAEEAAABAAAAAABAAAAAAAQAAAQAAA=</HashCode>
+      <FileName>Models\CustomList.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="P07_CustomList.IO.ConsoleReader" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="24.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IO\ConsoleReader.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="P07_CustomList.IO.ConsoleWriter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="26.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IO\ConsoleWriter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="P07_CustomList.Core.Engine" Collapsed="true">
+    <Position X="24.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAAAAEAAAAAAAQAAAAAQAAI=</HashCode>
+      <FileName>Core\Engine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="P07_CustomList.Factories.GenericFactory" Collapsed="true">
+    <Position X="26.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factories\GenericFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="P07_CustomList.Models.Interfaces.ICommand" Collapsed="true">
+    <Position X="24.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Interfaces\ICommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="P07_CustomList.Models.Interfaces.ICustomList&lt;T&gt;" Collapsed="true">
+    <Position X="26.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAABAEAAAAEAAABAAAAAABAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Models\Interfaces\ICustomList.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="P07_CustomList.IO.Interfaces.IReader" Collapsed="true">
+    <Position X="28" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IO\Interfaces\IReader.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="P07_CustomList.IO.Interfaces.IWriter" Collapsed="true">
+    <Position X="24.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IO\Interfaces\IWriter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

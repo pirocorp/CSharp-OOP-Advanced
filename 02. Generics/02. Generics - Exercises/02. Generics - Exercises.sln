@@ -11,11 +11,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P03_GenericSwapMethodString
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P05_GenericCountMethodStrings", "P05_GenericCountMethodStrings\P05_GenericCountMethodStrings.csproj", "{2086BE1B-0DCF-467B-9054-32B095E6E00A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P06_GenericCountMethodDouble", "P06_GenericCountMethodDouble\P06_GenericCountMethodDouble.csproj", "{7E8FACEC-F32B-4E16-AECC-6C85E639DAEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P06_GenericCountMethodDouble", "P06_GenericCountMethodDouble\P06_GenericCountMethodDouble.csproj", "{7E8FACEC-F32B-4E16-AECC-6C85E639DAEE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P07_CustomList", "P07_CustomList\P07_CustomList.csproj", "{F2DAFD1E-C21B-4DE4-8A52-E900CCB6B487}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P07_CustomList", "P07_CustomList\P07_CustomList.csproj", "{F2DAFD1E-C21B-4DE4-8A52-E900CCB6B487}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P08_CustomListSorter", "P08_CustomListSorter\P08_CustomListSorter.csproj", "{275AFDF9-DAD2-4A7B-82EA-D5A0841949E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P08_CustomListSorter", "P08_CustomListSorter\P08_CustomListSorter.csproj", "{275AFDF9-DAD2-4A7B-82EA-D5A0841949E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P10_Tuple", "P10_Tuple\P10_Tuple.csproj", "{1FA42F5D-F67E-4A35-8AD9-519F9059097E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{275AFDF9-DAD2-4A7B-82EA-D5A0841949E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{275AFDF9-DAD2-4A7B-82EA-D5A0841949E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{275AFDF9-DAD2-4A7B-82EA-D5A0841949E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FA42F5D-F67E-4A35-8AD9-519F9059097E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FA42F5D-F67E-4A35-8AD9-519F9059097E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FA42F5D-F67E-4A35-8AD9-519F9059097E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FA42F5D-F67E-4A35-8AD9-519F9059097E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
