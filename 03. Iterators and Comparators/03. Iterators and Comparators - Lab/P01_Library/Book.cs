@@ -3,7 +3,7 @@
     using System;
     using System.Collections.Generic;
 
-    public class Book
+    public class Book : IComparable<Book>
     {
         private int year;
         private string title;
@@ -45,5 +45,22 @@
         }
 
         public IEnumerable<string> Authors => this.authors;
+
+        public int CompareTo(Book other)
+        {
+            var result = this.year.CompareTo(other.year);
+
+            if (result == 0)
+            {
+                return this.Title.CompareTo(other.Title);
+            }
+
+            return result;
+        }
+
+        public override string ToString()
+        {
+            return $"{this.Title} - {this.Year}";
+        }
     }
 }
