@@ -9,7 +9,7 @@
 
         public Library(params Book[] inputBooks)
         {
-            this.books = new SortedSet<Book>(inputBooks);
+            this.books = new SortedSet<Book>(inputBooks, new BookComparator());
         }
 
         public IEnumerator<Book> GetEnumerator()
