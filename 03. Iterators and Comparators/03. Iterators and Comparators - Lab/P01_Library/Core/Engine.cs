@@ -1,5 +1,6 @@
 ﻿namespace P01_Library.Core
 {
+    using System;
     using IO.Interfaces;
 
     public class Engine
@@ -21,6 +22,12 @@
 
             Library libraryOne = new Library();
             Library libraryTwo = new Library(bookOne, bookTwo, bookThree);
+
+            foreach (var book in libraryTwo)
+            {
+                Console.WriteLine(book.Title);
+            }
+
 
         }
     }
