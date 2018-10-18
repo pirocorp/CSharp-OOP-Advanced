@@ -5,11 +5,11 @@
 
     public class Library : IEnumerable<Book>
     {
-        private readonly List<Book> books;
+        private readonly SortedSet<Book> books;
 
         public Library(params Book[] inputBooks)
         {
-            this.books = new List<Book>(inputBooks);
+            this.books = new SortedSet<Book>(inputBooks);
         }
 
         public IEnumerator<Book> GetEnumerator()
@@ -27,9 +27,9 @@
             private int currentIndex;
             private readonly List<Book> books;
 
-            public LibraryIterator(List<Book> books)
+            public LibraryIterator(IEnumerable<Book> books)
             {
-                this.books = books;
+                this.books = new List<Book>(books);
                 this.Reset();
             }
 
