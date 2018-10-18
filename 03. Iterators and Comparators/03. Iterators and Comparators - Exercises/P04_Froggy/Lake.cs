@@ -1,9 +1,7 @@
 ﻿namespace P04_Froggy
 {
-    using System;
     using System.Collections;
     using System.Collections.Generic;
-    using System.Text;
 
     public class Lake : IEnumerable<int>
     {
