@@ -1,9 +1,8 @@
-﻿namespace P01_Library.Core
+﻿namespace P01_ListyIterator.Core
 {
     using System;
     using System.Collections.Generic;
     using IO.Interfaces;
-    using P01_ListyIterator;
 
     public class EngineIterator<T>
     {

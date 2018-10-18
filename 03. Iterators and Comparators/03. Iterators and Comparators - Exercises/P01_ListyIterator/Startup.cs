@@ -1,7 +1,6 @@
-﻿namespace P01_Library
+﻿namespace P01_ListyIterator
 {
     using System;
-    using System.Collections.Generic;
     using System.Linq;
     using Core;
     using IO;

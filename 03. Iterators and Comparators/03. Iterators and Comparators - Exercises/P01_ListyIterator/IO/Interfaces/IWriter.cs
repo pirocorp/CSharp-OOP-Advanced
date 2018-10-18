@@ -1,4 +1,4 @@
-﻿namespace P01_Library.IO.Interfaces
+﻿namespace P01_ListyIterator.IO.Interfaces
 {
     public interface IWriter
     {
