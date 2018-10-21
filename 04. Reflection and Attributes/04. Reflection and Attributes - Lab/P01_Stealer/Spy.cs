@@ -77,10 +77,38 @@
 
             var allPrivateMethods = investigatedClass
                 .GetMethods(BindingFlags.Instance | BindingFlags.NonPublic)
-                .ToArray();
+                
+.ToArray();
             foreach (var method in allPrivateMethods)
             {
                 result.AppendLine($"{method.Name}");
+            }
+
+            return result.ToString();
+        }
+
+        public string CollectGettersAndSetters(string className)
+        {
+            var result = new StringBuilder();
+            var investigatedClass = this.GetClassType(className);
+
+            var methods = investigatedClass.GetMethods(BindingFlags.Instance | BindingFlags.Static | 
+                                                       BindingFlags.NonPublic | BindingFlags.Public);
+
+            var getters = methods
+                .Where(m => m.Name.Contains("get"))
+                .ToArray();
+            foreach (var getter in getters)
+            {
+                result.AppendLine($"{getter.Name} will return {getter.ReturnType}");
+            }
+
+            var setters = methods
+                .Where(m => m.Name.Contains("set"))
+                .ToArray();
+            foreach (var setter in setters)
+            {
+                result.AppendLine($"{setter.Name} will set field of {setter.GetParameters().First().ParameterType}");
             }
 
             return result.ToString();

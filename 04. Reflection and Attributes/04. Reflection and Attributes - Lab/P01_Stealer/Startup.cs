@@ -7,7 +7,7 @@
         public static void Main()
         {
             var spy = new Spy();
-            var result = spy.RevealPrivateMethods(nameof(Hacker));
+            var result = spy.CollectGettersAndSetters(nameof(Hacker));
             Console.WriteLine(result);
         }
     }
