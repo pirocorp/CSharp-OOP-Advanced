@@ -39,32 +39,31 @@
 
             var investigatedClass = this.GetClassType(className);
 
-            var publicFields = investigatedClass.GetFields();
+            var publicFields = investigatedClass.GetFields(BindingFlags.Instance | BindingFlags.Static | BindingFlags.Public);
             foreach (var field in publicFields)
             {
                 result.AppendLine($"{field.Name} must be private!");
             }
 
-            var properties = investigatedClass.GetProperties(BindingFlags.NonPublic | BindingFlags.Public |
-                                                                  BindingFlags.Instance | BindingFlags.Static);
-
-            var nonPublicGetters = properties
-                .Where(p => !p.GetMethod.IsPublic)
+            var classNonPublicMethods = investigatedClass
+                .GetMethods(BindingFlags.NonPublic | BindingFlags.Instance)
+                .Where(m => m.Name.StartsWith("get"))
                 .ToArray();
-            foreach (var getter in nonPublicGetters)
+            foreach (var getter in classNonPublicMethods)
             {
-                result.AppendLine($"get_{getter.Name} have to be public!");
+                result.AppendLine($"{getter.Name} have to be public!");
             }
 
-            var publicSetters = properties
-                .Where(p => p.SetMethod.IsPublic)
+            var classPublicMethods = investigatedClass
+                .GetMethods(BindingFlags.Instance | BindingFlags.Public)
+                .Where(m => m.Name.StartsWith("set"))
                 .ToArray();
-            foreach (var setter in publicSetters)
+            foreach (var setter in classPublicMethods)
             {
-                result.AppendLine($"set_{setter.Name} have to be private!");
+                result.AppendLine($"{setter.Name} have to be private!");
             }
 
-            return result.ToString();
+            return result.ToString().Trim();
         }
 
         public string RevealPrivateMethods(string className)
