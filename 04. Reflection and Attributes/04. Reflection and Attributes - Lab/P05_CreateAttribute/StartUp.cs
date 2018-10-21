@@ -2,12 +2,14 @@
 {
     using Attributes;
 
-    public class StartUp
+    [SoftUni("Zdravko")]
+    class StartUp
     {
         [SoftUni("Zdravko")]
-        public static void Main()
+        static void Main(string[] args)
         {
-            
+            var tracker = new Tracker();
+            tracker.PrintMethodsByAuthor();
         }
     }
 }
