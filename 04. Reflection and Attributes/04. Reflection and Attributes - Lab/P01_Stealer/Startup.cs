@@ -7,7 +7,7 @@
         public static void Main()
         {
             var spy = new Spy();
-            var result = spy.AnalyzeAccessModifiers(nameof(Hacker));
+            var result = spy.RevealPrivateMethods(nameof(Hacker));
             Console.WriteLine(result);
         }
     }

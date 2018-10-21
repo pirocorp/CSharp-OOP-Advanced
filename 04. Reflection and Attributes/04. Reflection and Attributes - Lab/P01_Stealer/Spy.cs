@@ -67,6 +67,25 @@
             return result.ToString();
         }
 
+        public string RevealPrivateMethods(string className)
+        {
+            var result = new StringBuilder();
+            var investigatedClass = this.GetClassType(className);
+
+            result.AppendLine($"All Private Methods of Class: {className}");
+            result.AppendLine($"Base Class: {investigatedClass.BaseType.Name}");
+
+            var allPrivateMethods = investigatedClass
+                .GetMethods(BindingFlags.Instance | BindingFlags.NonPublic)
+                .ToArray();
+            foreach (var method in allPrivateMethods)
+            {
+                result.AppendLine($"{method.Name}");
+            }
+
+            return result.ToString();
+        }
+
         private Type GetClassType(string classToInvestigate)
         {
             var namespaceAsString = this.GetType().Namespace;
