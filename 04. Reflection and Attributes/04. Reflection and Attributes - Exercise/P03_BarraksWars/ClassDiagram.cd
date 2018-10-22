@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="P03_BarraksWars.Models.Units.Archer" Collapsed="true">
+    <Position X="5.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Models\Units\Archer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="P03_BarraksWars.Models.Units.Pikeman" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Models\Units\Pikeman.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="P03_BarraksWars.Models.Units.Swordsman" Collapsed="true">
+    <Position X="12.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Models\Units\SwordsMan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="P03_BarraksWars.Models.Units.Unit" Collapsed="true">
+    <Position X="9" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAKAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAg=</HashCode>
+      <FileName>Models\Units\Unit.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="P03_BarraksWars.Data.UnitRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAEAAAAAACAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\UnitRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="P03_BarraksWars.Core.Factories.UnitFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Factories\UnitFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="P03_BarraksWars.Core.Engine" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAACCAAAAAAAAAAAAAAAAAAAAgAAQAAAAAI=</HashCode>
+      <FileName>Core\Engine.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="P03_BarraksWars.AppEntryPoint" Collapsed="true">
+    <Position X="16.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>AppEntryPoint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="P03_BarraksWars.Models.Units.Gunner" Collapsed="true">
+    <Position X="10.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Models\Units\Gunner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="P03_BarraksWars.Models.Units.Horseman" Collapsed="true">
+    <Position X="9" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Models\Units\Horseman.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="P03_BarraksWars.Contracts.IAttacker" Collapsed="true">
+    <Position X="9.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Contracts\IAttacker.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="P03_BarraksWars.Contracts.ICommandInterpreter" Collapsed="true">
+    <Position X="15" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\ICommandInterpreter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="P03_BarraksWars.Contracts.IDestroyable" Collapsed="true">
+    <Position X="7.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\IDestroyable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="P03_BarraksWars.Contracts.IExecutable" Collapsed="true">
+    <Position X="16.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\IExecutable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="P03_BarraksWars.Contracts.IRepository" Collapsed="true">
+    <Position X="18.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAACAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\IRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="P03_BarraksWars.Contracts.IRunnable" Collapsed="true">
+    <Position X="15" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Contracts\IRunnable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="P03_BarraksWars.Contracts.IUnit" Collapsed="true">
+    <Position X="8.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\IUnit.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="P03_BarraksWars.Contracts.IUnitFactory" Collapsed="true">
+    <Position X="16.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\IUnitFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

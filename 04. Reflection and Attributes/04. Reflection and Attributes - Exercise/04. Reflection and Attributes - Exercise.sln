@@ -3,7 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P01_HarvestingFields", "P01_HarvestingFields\P01_HarvestingFields.csproj", "{9FD545B1-0231-43E5-B0EF-C92A74D79E44}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P02_BlackBoxInteger", "P02_BlackBoxInteger\P02_BlackBoxInteger.csproj", "{76FE538F-6F4F-4037-97BA-0D67A221E306}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P03_BarraksWars", "P03_BarraksWars\P03_BarraksWars.csproj", "{A3830F66-10D1-4080-8845-AA232A93DF22}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9FD545B1-0231-43E5-B0EF-C92A74D79E44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FD545B1-0231-43E5-B0EF-C92A74D79E44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FD545B1-0231-43E5-B0EF-C92A74D79E44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FD545B1-0231-43E5-B0EF-C92A74D79E44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76FE538F-6F4F-4037-97BA-0D67A221E306}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76FE538F-6F4F-4037-97BA-0D67A221E306}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76FE538F-6F4F-4037-97BA-0D67A221E306}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76FE538F-6F4F-4037-97BA-0D67A221E306}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3830F66-10D1-4080-8845-AA232A93DF22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3830F66-10D1-4080-8845-AA232A93DF22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3830F66-10D1-4080-8845-AA232A93DF22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3830F66-10D1-4080-8845-AA232A93DF22}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
