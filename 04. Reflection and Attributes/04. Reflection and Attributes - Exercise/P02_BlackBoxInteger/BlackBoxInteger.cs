@@ -2,7 +2,7 @@
 {
     public class BlackBoxInteger
     {
-        private static int DefaultValue = 0;
+        private static int _defaultValue = 0;
 
         private int innerValue;
 
@@ -13,7 +13,7 @@
 
         private BlackBoxInteger()
         {
-            this.innerValue = DefaultValue;
+            this.innerValue = _defaultValue;
         }
 
         private void Add(int addend)

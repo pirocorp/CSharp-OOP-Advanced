@@ -1,7 +1,6 @@
 ﻿namespace P03_BarraksWars.Core.Commands
 {
     using System;
-    using Contracts;
 
     public class Fight : Command
     {
