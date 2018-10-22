@@ -13,8 +13,6 @@
         public Add(string[] data/*, IRepository repository, IUnitFactory unitFactory*/) 
             : base(data/*, repository, unitFactory*/)
         {
-            this.repository = repository;
-            this.unitFactory = unitFactory;
         }
 
         public override string Execute()

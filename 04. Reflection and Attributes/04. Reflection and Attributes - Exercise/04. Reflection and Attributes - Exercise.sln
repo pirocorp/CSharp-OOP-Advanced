@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P02_BlackBoxInteger", "P02_
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P03_BarraksWars", "P03_BarraksWars\P03_BarraksWars.csproj", "{A3830F66-10D1-4080-8845-AA232A93DF22}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P06_TrafficLights", "P06_TrafficLights\P06_TrafficLights.csproj", "{01FDC4F0-4796-4CB3-8409-9250017D5F31}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{A3830F66-10D1-4080-8845-AA232A93DF22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3830F66-10D1-4080-8845-AA232A93DF22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3830F66-10D1-4080-8845-AA232A93DF22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01FDC4F0-4796-4CB3-8409-9250017D5F31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01FDC4F0-4796-4CB3-8409-9250017D5F31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01FDC4F0-4796-4CB3-8409-9250017D5F31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01FDC4F0-4796-4CB3-8409-9250017D5F31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

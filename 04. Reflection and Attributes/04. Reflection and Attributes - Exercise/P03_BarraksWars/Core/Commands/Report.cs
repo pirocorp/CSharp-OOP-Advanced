@@ -11,7 +11,6 @@
         public Report(string[] data/*, IRepository repository, IUnitFactory unitFactory*/) 
             : base(data/*, repository, unitFactory*/)
         {
-            this.repository = repository;
         }
 
         public override string Execute()
