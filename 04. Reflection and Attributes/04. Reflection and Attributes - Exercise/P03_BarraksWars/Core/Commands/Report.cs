@@ -1,17 +1,22 @@
 ﻿namespace P03_BarraksWars.Core.Commands
 {
+    using Attributes;
     using Contracts;
 
     public class Report : Command
     {
-        public Report(string[] data, IRepository repository, IUnitFactory unitFactory) 
-            : base(data, repository, unitFactory)
+        [Inject]
+        private readonly IRepository repository;
+
+        public Report(string[] data/*, IRepository repository, IUnitFactory unitFactory*/) 
+            : base(data/*, repository, unitFactory*/)
         {
+            this.repository = repository;
         }
 
         public override string Execute()
         {
-            var output = this.Repository.Statistics;
+            var output = this.repository.Statistics;
             return output;
         }
     }

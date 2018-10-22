@@ -3,6 +3,7 @@
     using System;
     using System.Linq;
     using System.Reflection;
+    using Attributes;
     using Contracts;
 
     public class CommandFactory : ICommandFactory
@@ -17,11 +18,34 @@
                 throw new NotSupportedException($"Not supported Command type: {commandType}");
             }
 
-            var instance = Activator.CreateInstance(type, data, repository, unitFactory);
+            var instance = Activator.CreateInstance(type, new object[]{ data });
 
             if (!(instance is IExecutable currentInstance))
             {
                 throw new NotSupportedException($"Incorrect Command type: {commandType}");
+            }
+
+            var injectFields = instance
+                .GetType()
+                .GetFields(BindingFlags.Instance | BindingFlags.NonPublic)
+                .Where(x => x.IsDefined(typeof(InjectAttribute), false))
+                .ToArray();
+
+            foreach (var field in injectFields)
+            {
+                var fieldType = field.FieldType;
+
+                if (fieldType == typeof(IRepository))
+                {
+                    field.SetValue(instance, repository);
+                    continue;
+                }
+
+                if (fieldType == typeof(IUnitFactory))
+                {
+                    field.SetValue(instance, unitFactory);
+                    continue;
+                }
             }
 
             return currentInstance;

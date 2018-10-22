@@ -5,8 +5,8 @@
 
     public class Fight : Command
     {
-        public Fight(string[] data, IRepository repository, IUnitFactory unitFactory) 
-            : base(data, repository, unitFactory)
+        public Fight(string[] data/*, IRepository repository, IUnitFactory unitFactory*/) 
+            : base(data/*, repository, unitFactory*/)
         {
         }
 
