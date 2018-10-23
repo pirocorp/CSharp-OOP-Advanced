@@ -1,9 +1,5 @@
-﻿namespace P07_InfernoInfinity.Core.Commands
+﻿namespace P07_InfernoInfinity.Core.Commands.AttributeCommands
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Text;
-
     public class Revision : AttributeCommand
     {
         public Revision(string[] data) 

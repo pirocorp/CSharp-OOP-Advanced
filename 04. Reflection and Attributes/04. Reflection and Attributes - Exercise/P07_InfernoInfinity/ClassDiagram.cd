@@ -66,7 +66,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="P07_InfernoInfinity.Core.Commands.Add" Collapsed="true">
-    <Position X="10.25" Y="1.75" Width="1.5" />
+    <Position X="12.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAQAAIAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
       <FileName>Core\Commands\Add.cs</FileName>
@@ -81,21 +81,21 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="P07_InfernoInfinity.Core.Commands.Create" Collapsed="true">
-    <Position X="3.5" Y="1.75" Width="1.5" />
+    <Position X="8.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAQAAAAAAABAAAAAAAAAAAAAEAAAAAA=</HashCode>
       <FileName>Core\Commands\Create.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="P07_InfernoInfinity.Core.Commands.Print" Collapsed="true">
-    <Position X="5.75" Y="1.75" Width="1.5" />
+    <Position X="10.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAQAAEAAAAAA=</HashCode>
       <FileName>Core\Commands\Print.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="P07_InfernoInfinity.Core.Commands.Remove" Collapsed="true">
-    <Position X="8" Y="1.75" Width="1.5" />
+    <Position X="12.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
       <FileName>Core\Commands\Remove.cs</FileName>
@@ -169,6 +169,48 @@
       <FileName>IO\ConsoleWriter.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="P07_InfernoInfinity.Core.Commands.AttributeCommand" Collapsed="true">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Core\Commands\AttributeCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="P07_InfernoInfinity.Core.Commands.Author" Collapsed="true">
+    <Position X="6" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Commands\Author.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="P07_InfernoInfinity.Core.Commands.Description" Collapsed="true">
+    <Position X="4.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Commands\Description.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="P07_InfernoInfinity.Core.Commands.Reviewers" Collapsed="true">
+    <Position X="2.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Commands\Reviewers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="P07_InfernoInfinity.Core.Commands.Revision" Collapsed="true">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Commands\Revision.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="P07_InfernoInfinity.Attributes.InfoAttribute" Collapsed="true">
+    <Position X="15" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAgAAAAgAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Attributes\Info.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Interface Name="P07_InfernoInfinity.Interfaces.ICommandFactory" Collapsed="true">
     <Position X="16" Y="3.75" Width="1.5" />

@@ -1,9 +1,5 @@
-﻿namespace P07_InfernoInfinity.Core.Commands
+﻿namespace P07_InfernoInfinity.Core.Commands.AttributeCommands
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Text;
-
     public class Description : AttributeCommand
     {
         public Description(string[] data) : base(data)

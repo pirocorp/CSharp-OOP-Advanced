@@ -1,4 +1,4 @@
-﻿namespace P07_InfernoInfinity.Core.Commands
+﻿namespace P07_InfernoInfinity.Core.Commands.AttributeCommands
 {
     using System.Linq;
     using Attributes;
