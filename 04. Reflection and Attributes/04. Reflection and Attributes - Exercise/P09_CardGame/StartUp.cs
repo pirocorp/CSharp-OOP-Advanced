@@ -1,8 +1,7 @@
 ﻿namespace P09_CardGame
 {
     using System;
-    using System.Linq;
-    using System.Reflection;
+    using Core;
     using Enums;
 
     public class StartUp
@@ -11,7 +10,12 @@
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
 
-            var deckOfCards = GenerateDeckOfCards();
+            var cardGameController = new CardGameController();
+            cardGameController.Run();
+        }
+
+        private static void PrintDeck(Card[] deckOfCards)
+        {
             var deckIndex = 0;
 
             for (var row = 0; row < 4; row++)
@@ -24,6 +28,7 @@
                 Console.WriteLine();
             }
         }
+
 
         private static Card[] GenerateDeckOfCards()
         {
@@ -63,6 +68,7 @@
             ranks[0] = Rank.Ace;
             return ranks;
         }
+
 
         private static Card ReadCardFromConsole()
         {

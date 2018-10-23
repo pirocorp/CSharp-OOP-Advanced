@@ -30,7 +30,7 @@
 
         public override string ToString()
         {
-            return $"Card name: {this.Name}; Card power: {this.Power}";
+            return $"{this.Name}->{this.Power}";
         }
 
         public int CompareTo(Card other)
