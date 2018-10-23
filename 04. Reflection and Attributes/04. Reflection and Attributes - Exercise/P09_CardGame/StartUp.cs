@@ -7,13 +7,14 @@
     {
         public static void Main()
         {
-            var cardRanks = Enum.GetValues(typeof(CardRank));
+            var rankOfCardString = Console.ReadLine();
+            var suitOfCardString = Console.ReadLine();
 
-            Console.WriteLine($"Card Ranks:");
-            foreach (var cardRank in cardRanks)
-            {
-                Console.WriteLine($"Ordinal value: {(int)cardRank}; Name value: {cardRank}");
-            }
+            var rankOfCard = Enum.Parse<CardRank>(rankOfCardString);
+            var suitOfCard = Enum.Parse<CardSuit>(suitOfCardString);
+
+            var card = new CardPower(rankOfCard, suitOfCard);
+            Console.WriteLine($"Card name: {card.Name}; Card power: {card.Power}");
         }
     }
 }
