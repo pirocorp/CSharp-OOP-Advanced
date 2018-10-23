@@ -5,15 +5,15 @@
 
     public class CardPower : IComparable<CardPower>
     {
-        public CardPower(CardRank rank, CardSuit suit)
+        public CardPower(Rank rank, Suit suit)
         {
             this.Rank = rank;
             this.Suit = suit;
         }
 
-        public CardRank Rank { get; }
+        public Rank Rank { get; }
 
-        public CardSuit Suit { get; }
+        public Suit Suit { get; }
 
         public int Power => (int)this.Rank + (int)this.Suit;
 

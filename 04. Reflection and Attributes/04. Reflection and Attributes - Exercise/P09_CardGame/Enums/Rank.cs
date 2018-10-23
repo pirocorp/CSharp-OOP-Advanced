@@ -1,6 +1,9 @@
 ﻿namespace P09_CardGame.Enums
 {
-    public enum CardRank
+    using Attributes;
+
+    [Type("Enumeration", "Rank", "Provides rank constants for a Card class.")]
+    public enum Rank
     {
         Two = 2,
         Three,

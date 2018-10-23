@@ -1,6 +1,9 @@
 ﻿namespace P09_CardGame.Enums
 {
-    public enum CardSuit
+    using Attributes;
+
+    [Type("Enumeration", "Suit", "Provides suit constants for a Card class.")]
+    public enum Suit
     {
         Clubs = 0,
         Diamonds = 13,
