@@ -7,10 +7,12 @@
     {
         public static void Main()
         {
-            var cardSuits = Enum.GetValues(typeof(CardSuits));
-            foreach (var cardSuit in cardSuits)
+            var cardRanks = Enum.GetValues(typeof(CardRank));
+
+            Console.WriteLine($"Card Ranks:");
+            foreach (var cardRank in cardRanks)
             {
-                Console.WriteLine($"Ordinal value: {(int)cardSuit}; Name value: {cardSuit}");
+                Console.WriteLine($"Ordinal value: {(int)cardRank}; Name value: {cardRank}");
             }
         }
     }

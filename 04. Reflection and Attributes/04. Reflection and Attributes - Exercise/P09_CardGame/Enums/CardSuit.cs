@@ -1,6 +1,6 @@
 ﻿namespace P09_CardGame.Enums
 {
-    public enum CardSuits
+    public enum CardSuit
     {
         Clubs,
         Diamonds,
