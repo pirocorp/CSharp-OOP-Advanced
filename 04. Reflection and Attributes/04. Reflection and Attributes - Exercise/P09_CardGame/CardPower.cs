@@ -17,5 +17,10 @@
         public int Power => (int)this.Rank + (int)this.Suit;
 
         public string Name => $"{this.Rank} of {this.Suit}";
+
+        public override string ToString()
+        {
+            return $"Card name: {this.Name}; Card power: {this.Power}";
+        }
     }
 }

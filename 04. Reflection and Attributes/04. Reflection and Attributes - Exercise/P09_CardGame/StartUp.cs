@@ -14,7 +14,7 @@
             var suitOfCard = Enum.Parse<CardSuit>(suitOfCardString);
 
             var card = new CardPower(rankOfCard, suitOfCard);
-            Console.WriteLine($"Card name: {card.Name}; Card power: {card.Power}");
+            Console.WriteLine(card);
         }
     }
 }
