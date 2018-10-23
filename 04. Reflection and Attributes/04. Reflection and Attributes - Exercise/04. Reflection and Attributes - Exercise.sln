@@ -9,9 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P02_BlackBoxInteger", "P02_
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P03_BarraksWars", "P03_BarraksWars\P03_BarraksWars.csproj", "{A3830F66-10D1-4080-8845-AA232A93DF22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P06_TrafficLights", "P06_TrafficLights\P06_TrafficLights.csproj", "{01FDC4F0-4796-4CB3-8409-9250017D5F31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P06_TrafficLights", "P06_TrafficLights\P06_TrafficLights.csproj", "{01FDC4F0-4796-4CB3-8409-9250017D5F31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P07_InfernoInfinity", "P07_InfernoInfinity\P07_InfernoInfinity.csproj", "{F9A95187-9215-4B48-A515-D34FDE394BA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P07_InfernoInfinity", "P07_InfernoInfinity\P07_InfernoInfinity.csproj", "{F9A95187-9215-4B48-A515-D34FDE394BA6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

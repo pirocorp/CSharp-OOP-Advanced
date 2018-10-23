@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="P07_InfernoInfinity.StartUp" Collapsed="true">
+    <Position X="16" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>StartUp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="P07_InfernoInfinity.Models.Gems.Amethyst" Collapsed="true">
+    <Position X="3.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAABAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Models\Gems\Amethyst.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="P07_InfernoInfinity.Models.Gems.Emerald" Collapsed="true">
+    <Position X="5.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAABAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Models\Gems\Emerald.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="P07_InfernoInfinity.Models.Gems.Gem" Collapsed="true">
+    <Position X="5.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAgAAAAAAAABAAAAAYAAAADAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Models\Gems\Gem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="P07_InfernoInfinity.Models.Gems.Ruby" Collapsed="true">
+    <Position X="8" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAABAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Models\Gems\Ruby.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="P07_InfernoInfinity.Models.Weapons.Axe" Collapsed="true">
+    <Position X="3.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAgAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Models\Weapons\Axe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="P07_InfernoInfinity.Models.Weapons.Knife" Collapsed="true">
+    <Position X="5.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAgAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Models\Weapons\Knife.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="P07_InfernoInfinity.Models.Weapons.Sword" Collapsed="true">
+    <Position X="8" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAgAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Models\Weapons\Sword.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="P07_InfernoInfinity.Models.Weapons.Weapon" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAgAAAgAABAIAEgBACQCYACIAGAAACgAAAQIAQAgA=</HashCode>
+      <FileName>Models\Weapons\Weapon.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="P07_InfernoInfinity.Core.Commands.Add" Collapsed="true">
+    <Position X="10.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAIAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Core\Commands\Add.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="P07_InfernoInfinity.Core.Commands.Command" Collapsed="true">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Commands\Command.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="P07_InfernoInfinity.Core.Commands.Create" Collapsed="true">
+    <Position X="3.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAABAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Core\Commands\Create.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="P07_InfernoInfinity.Core.Commands.Print" Collapsed="true">
+    <Position X="5.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAQAAEAAAAAA=</HashCode>
+      <FileName>Core\Commands\Print.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="P07_InfernoInfinity.Core.Commands.Remove" Collapsed="true">
+    <Position X="8" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Core\Commands\Remove.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="P07_InfernoInfinity.Core.Factories.CommandFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAEAABAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Core\Factories\CommandFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="P07_InfernoInfinity.Core.Factories.Factory&lt;T&gt;" Collapsed="true">
+    <Position X="12.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Factories\Factory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="P07_InfernoInfinity.Core.Factories.GemsFactory" Collapsed="true">
+    <Position X="13.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Factories\GemsFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="P07_InfernoInfinity.Core.Factories.WeaponFactory" Collapsed="true">
+    <Position X="11.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Factories\WeaponFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="P07_InfernoInfinity.Core.CommandInterpreter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Core\CommandInterpreter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="P07_InfernoInfinity.Core.Engine" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQACAAAQAAI=</HashCode>
+      <FileName>Core\Engine.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="P07_InfernoInfinity.Attributes.InjectAttribute" Collapsed="true">
+    <Position X="19.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Attributes\Inject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="P07_InfernoInfinity.IO.ConsoleReader" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IO\ConsoleReader.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="P07_InfernoInfinity.IO.ConsoleWriter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IO\ConsoleWriter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="P07_InfernoInfinity.Interfaces.ICommandFactory" Collapsed="true">
+    <Position X="16" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\ICommandFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="P07_InfernoInfinity.Interfaces.ICommandInterpreter" Collapsed="true">
+    <Position X="17.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\ICommandInterpreter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="P07_InfernoInfinity.Interfaces.IEngine" Collapsed="true">
+    <Position X="19.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Interfaces\IEngine.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="P07_InfernoInfinity.Interfaces.IExecutable" Collapsed="true">
+    <Position X="16" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IExecutable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="P07_InfernoInfinity.Interfaces.IFactory&lt;T&gt;" Collapsed="true">
+    <Position X="12.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="P07_InfernoInfinity.Interfaces.IGem" Collapsed="true">
+    <Position X="17.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAABAAAAAIAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IGem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="P07_InfernoInfinity.Interfaces.IGemFactory" Collapsed="true">
+    <Position X="13.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IGemFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="P07_InfernoInfinity.Interfaces.IReader" Collapsed="true">
+    <Position X="19.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IReader.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="P07_InfernoInfinity.Interfaces.IWeapon" Collapsed="true">
+    <Position X="16" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAABAAAAAAAAQAQAAAACAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Interfaces\IWeapon.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="P07_InfernoInfinity.Interfaces.IWeaponFactory" Collapsed="true">
+    <Position X="11.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IWeaponFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="P07_InfernoInfinity.Interfaces.IWriter" Collapsed="true">
+    <Position X="17.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IWriter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="P07_InfernoInfinity.Models.Gems.GemMutators.QualityLevel" Collapsed="true">
+    <Position X="17.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAACAAAAAAAEAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Gems\GemMutators\QualityLevel.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="P07_InfernoInfinity.Models.Weapons.WeaponMutators.LevelOfRarity" Collapsed="true">
+    <Position X="16" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAQAAAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Weapons\WeaponMutators\LevelOfRarity.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

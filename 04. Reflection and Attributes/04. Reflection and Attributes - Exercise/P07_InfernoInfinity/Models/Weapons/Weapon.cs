@@ -2,9 +2,11 @@
 {
     using System.Collections.Generic;
     using System.Linq;
+    using Attributes;
     using Interfaces;
     using WeaponMutators;
 
+    [Info("Pesho", 3, "Used for C# OOP Advanced Course - Enumerations and Attributes.", "Pesho", "Svetlio")]
     public abstract class Weapon : IWeapon
     {
         private const int STRENGTH_MIN_DAMAGE_MULTIPLIER = 2;
