@@ -10,8 +10,14 @@
         public void AttackMethod_AxeDurability_AxeLoosesDurabilityAfterAttack()
         {
             //Arrange
-            var axe = new Axe(10, 10);
-            var dummy = new Dummy(10, 10);
+            var axeAttack = 10;
+            var axeDurability = 10;
+
+            var dummyHealth = 20;
+            var dummyExperience = 5;
+
+            var axe = new Axe(axeAttack, axeDurability);
+            var dummy = new Dummy(dummyHealth, dummyExperience);
 
             //Act
             axe.Attack(dummy);
@@ -24,8 +30,14 @@
         public void AttackMethod_BrokenAxe_ThrowsException()
         {
             //Arrange
-            var axe = new Axe(10, 0);
-            var dummy = new Dummy(10, 10);
+            var axeAttack = 10;
+            var axeDurability = 0;
+
+            var dummyHealth = 20;
+            var dummyExperience = 5;
+
+            var axe = new Axe(axeAttack, axeDurability);
+            var dummy = new Dummy(dummyHealth, dummyExperience);
 
             //Arrange
             Assert.That(() => axe.Attack(dummy), Throws.Exception.TypeOf<InvalidOperationException>());

@@ -24,15 +24,15 @@
             axe.Attack(dummy);
 
             //Assert
-            Assert.That(dummy.Health, Is.EqualTo(10));
+            Assert.That(dummy.Health, Is.EqualTo(10), "Dummy health doesn't change after attack.");
         }
 
         [Test]
         public void TakeAttack_IsDead_TrowsException()
         {
             //Arrange
-            var axeAttack = 10;
-            var axeDurability = 10;
+            var axeAttack = 100;
+            var axeDurability = 100;
 
             var dummyHealth = 0;
             var dummyExperience = 5;
@@ -58,7 +58,7 @@
             var experience = dummy.GiveExperience();
 
             //Assert
-            Assert.That(experience, Is.EqualTo(dummyExperience));
+            Assert.That(experience, Is.EqualTo(dummyExperience), "Dummy doesn't give experience.");
         }
 
         [Test]
