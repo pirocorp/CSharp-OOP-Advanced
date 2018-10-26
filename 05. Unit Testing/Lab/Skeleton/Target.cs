@@ -1,13 +1,14 @@
 ﻿namespace Skeleton
 {
     using System;
+    using Interfaces;
 
-    public class Dummy
+    public class Target : ITarget
     {
         private int health;
         private readonly int experience;
 
-        public Dummy(int health, int experience)
+        public Target(int health, int experience)
         {
             this.health = health;
             this.experience = experience;
@@ -19,7 +20,7 @@
         {
             if (this.IsDead())
             {
-                throw new InvalidOperationException("Dummy is dead.");
+                throw new InvalidOperationException("Target is dead.");
             }
 
             this.health -= attackPoints;

@@ -18,13 +18,13 @@
 
             
             var axe = new Axe(axeAttack, axeDurability);
-            var dummy = new Dummy(dummyHealth, dummyExperience);
+            var dummy = new Target(dummyHealth, dummyExperience);
 
             //Act
             axe.Attack(dummy);
 
             //Assert
-            Assert.That(dummy.Health, Is.EqualTo(10), "Dummy health doesn't change after attack.");
+            Assert.That(dummy.Health, Is.EqualTo(10), "Target health doesn't change after attack.");
         }
 
         [Test]
@@ -39,10 +39,11 @@
 
             
             var axe = new Axe(axeAttack, axeDurability);
-            var dummy = new Dummy(dummyHealth, dummyExperience);
+            var dummy = new Target(dummyHealth, dummyExperience);
 
             //Assert
-            Assert.That(() => axe.Attack(dummy), Throws.InstanceOf<InvalidOperationException>());
+            Assert.That(() => axe.Attack(dummy), Throws.InstanceOf<InvalidOperationException>()
+                .With.Message.EqualTo("Target is dead."));
         }
 
         [Test]
@@ -52,13 +53,13 @@
             var dummyHealth = 0;
             var dummyExperience = 5;
 
-            var dummy = new Dummy(dummyHealth, dummyExperience);
+            var dummy = new Target(dummyHealth, dummyExperience);
 
             //Act
             var experience = dummy.GiveExperience();
 
             //Assert
-            Assert.That(experience, Is.EqualTo(dummyExperience), "Dummy doesn't give experience.");
+            Assert.That(experience, Is.EqualTo(dummyExperience), "Target doesn't give experience.");
         }
 
         [Test]
@@ -68,10 +69,11 @@
             var dummyHealth = 10;
             var dummyExperience = 5;
 
-            var dummy = new Dummy(dummyHealth, dummyExperience);
+            var dummy = new Target(dummyHealth, dummyExperience);
 
             //Assert
-            Assert.That(() => dummy.GiveExperience(), Throws.InstanceOf<InvalidOperationException>());
+            Assert.That(() => dummy.GiveExperience(), Throws.InstanceOf<InvalidOperationException>()
+                .With.Message.EqualTo("Target is not dead."));
         }
     }
 }

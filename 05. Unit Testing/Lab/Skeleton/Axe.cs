@@ -1,9 +1,9 @@
-﻿using System;
-
-// Axe durability drop with 5 
-namespace Skeleton
+﻿namespace Skeleton
 {
-    public class Axe
+    using System;
+    using Interfaces;
+
+    public class Axe : IWeapon
     {
         private readonly int attackPoints;
         private int durabilityPoints;
@@ -18,7 +18,7 @@ namespace Skeleton
 
         public int DurabilityPoints => this.durabilityPoints;
 
-        public void Attack(Dummy target)
+        public void Attack(ITarget target)
         {
             if (this.durabilityPoints <= 0)
             {

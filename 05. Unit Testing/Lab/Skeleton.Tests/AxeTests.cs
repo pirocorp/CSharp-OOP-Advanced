@@ -17,7 +17,7 @@
             var dummyExperience = 5;
 
             var axe = new Axe(axeAttack, axeDurability);
-            var dummy = new Dummy(dummyHealth, dummyExperience);
+            var dummy = new Target(dummyHealth, dummyExperience);
 
             //Act
             axe.Attack(dummy);
@@ -37,10 +37,12 @@
             var dummyExperience = 5;
 
             var axe = new Axe(axeAttack, axeDurability);
-            var dummy = new Dummy(dummyHealth, dummyExperience);
+            var dummy = new Target(dummyHealth, dummyExperience);
 
             //Arrange
-            Assert.That(() => axe.Attack(dummy), Throws.Exception.TypeOf<InvalidOperationException>());
+            Assert.That(() => axe.Attack(dummy), Throws.Exception
+                .TypeOf<InvalidOperationException>()
+                .With.Message.EqualTo("Axe is broken."));
         }
     }
 }
