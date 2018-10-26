@@ -1,29 +1,32 @@
 ﻿using System;
 
 // Axe durability drop with 5 
-public class Axe
+namespace Skeleton
 {
-    private readonly int attackPoints;
-    private int durabilityPoints;
-
-    public Axe(int attack, int durability)
+    public class Axe
     {
-        this.attackPoints = attack;
-        this.durabilityPoints = durability;
-    }
+        private readonly int attackPoints;
+        private int durabilityPoints;
 
-    public int AttackPoints => this.attackPoints;
-
-    public int DurabilityPoints => this.durabilityPoints;
-
-    public void Attack(Dummy target)
-    {
-        if (this.durabilityPoints <= 0)
+        public Axe(int attack, int durability)
         {
-            throw new InvalidOperationException("Axe is broken.");
+            this.attackPoints = attack;
+            this.durabilityPoints = durability;
         }
 
-        target.TakeAttack(this.attackPoints);
-        this.durabilityPoints -= 1;
+        public int AttackPoints => this.attackPoints;
+
+        public int DurabilityPoints => this.durabilityPoints;
+
+        public void Attack(Dummy target)
+        {
+            if (this.durabilityPoints <= 0)
+            {
+                throw new InvalidOperationException("Axe is broken.");
+            }
+
+            target.TakeAttack(this.attackPoints);
+            this.durabilityPoints -= 1;
+        }
     }
 }
