@@ -1,6 +1,5 @@
 ﻿namespace P03_IteratorTest.Tests
 {
-    using System;
     using NUnit.Framework;
 
     [TestFixture]

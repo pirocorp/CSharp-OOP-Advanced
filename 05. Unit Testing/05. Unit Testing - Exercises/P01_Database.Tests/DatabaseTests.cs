@@ -1,6 +1,7 @@
 ﻿namespace P01_Database.Tests
 {
     using System;
+    using System.Linq;
     using NUnit.Framework;
 
     [TestFixture]
@@ -13,11 +14,8 @@
             var zeroElements = 0;
             var database = new Database();
 
-            //Act
-            var elements = database.Fetch.Count;
-
             //Assert
-            Assert.That(elements, Is.EqualTo(zeroElements));
+            Assert.That(database.Fetch.Count, Is.EqualTo(zeroElements));
         }
 
         [TestCase(new int[0])]
@@ -29,11 +27,8 @@
             //Arrange
             var database = new Database(parameters);
 
-            //Act
-            var elements = database.Fetch.Count;
-
             //Assert
-            Assert.That(elements, Is.EqualTo(parameters.Length));
+            Assert.That(string.Join(", ", database.Fetch.ToArray()), Is.EqualTo(string.Join(", ", parameters)));
         }
 
         [Test]
@@ -55,10 +50,9 @@
 
             //Act
             var inputParameters = string.Join(", ", parameters);
-            var databaseParameters = string.Join(", ", database.Fetch);
 
             //Assert
-            Assert.That(inputParameters, Is.EqualTo(databaseParameters));
+            Assert.That(string.Join(", ", database.Fetch.ToArray()), Is.EqualTo(inputParameters));
         }
 
         [TestCase(new int[0])]
@@ -77,7 +71,7 @@
             }
 
             //Assert
-            Assert.That(database.Fetch.Count, Is.EqualTo(parameters.Length));
+            Assert.That(string.Join(", ", database.Fetch.ToArray()), Is.EqualTo(string.Join(", ", parameters)));
         }
 
         [Test]
