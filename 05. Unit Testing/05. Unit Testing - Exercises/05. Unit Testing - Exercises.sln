@@ -19,9 +19,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P04_BubbleSortTest", "P04_B
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P04_BubbleSortTestTests", "P04_BubbleSortTestTests\P04_BubbleSortTestTests.csproj", "{E1313066-2B7B-4A47-970E-8F50489360EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P05_Integration", "P05_Integration\P05_Integration.csproj", "{EC2CDF75-EC75-47B7-990E-943D1E57940A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P05_Integration", "P05_Integration\P05_Integration.csproj", "{EC2CDF75-EC75-47B7-990E-943D1E57940A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P05_Integration.Tests", "P05_Integration.Tests\P05_Integration.Tests.csproj", "{9DC417C3-7D31-47D1-90DE-1D90E7E44E23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P05_Integration.Tests", "P05_Integration.Tests\P05_Integration.Tests.csproj", "{9DC417C3-7D31-47D1-90DE-1D90E7E44E23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P06_Twitter", "P06_Twitter\P06_Twitter.csproj", "{4FAB716B-422F-47B8-BE2B-51C996D53F81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P06_Twitter.Tests", "P06_Twitter.Tests\P06_Twitter.Tests.csproj", "{E9805855-E1B0-4A33-8727-0C7EFE792568}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +73,14 @@ Global
 		{9DC417C3-7D31-47D1-90DE-1D90E7E44E23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DC417C3-7D31-47D1-90DE-1D90E7E44E23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DC417C3-7D31-47D1-90DE-1D90E7E44E23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FAB716B-422F-47B8-BE2B-51C996D53F81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FAB716B-422F-47B8-BE2B-51C996D53F81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FAB716B-422F-47B8-BE2B-51C996D53F81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FAB716B-422F-47B8-BE2B-51C996D53F81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9805855-E1B0-4A33-8727-0C7EFE792568}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9805855-E1B0-4A33-8727-0C7EFE792568}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9805855-E1B0-4A33-8727-0C7EFE792568}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9805855-E1B0-4A33-8727-0C7EFE792568}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
