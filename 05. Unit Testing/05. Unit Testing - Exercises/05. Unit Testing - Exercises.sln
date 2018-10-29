@@ -31,9 +31,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P07_Hack", "P07_Hack\P07_Ha
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P07_Hack.Tests", "P07_Hack.Tests\P07_Hack.Tests.csproj", "{421B94B9-9320-4FE3-B4A7-73639E558861}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P08_CustomLinkedList", "P08_CustomLinkedList\P08_CustomLinkedList.csproj", "{A8DF21BA-9360-4ED5-BB01-EC90C65F7DFA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P08_CustomLinkedList", "P08_CustomLinkedList\P08_CustomLinkedList.csproj", "{A8DF21BA-9360-4ED5-BB01-EC90C65F7DFA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P08_CustomLinkedList.Tests", "P08_CustomLinkedList.Tests\P08_CustomLinkedList.Tests.csproj", "{B647180D-B9FF-4D0C-8790-D7D8FBC47ED3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P08_CustomLinkedList.Tests", "P08_CustomLinkedList.Tests\P08_CustomLinkedList.Tests.csproj", "{B647180D-B9FF-4D0C-8790-D7D8FBC47ED3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P09_DateTimeNowAddDaysTests", "P09_DateTimeNowAddDaysTests\P09_DateTimeNowAddDaysTests.csproj", "{69A7E890-B548-477B-A4E4-B417ED7271BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P10_TirePressureMonitoringSystem", "P10_TirePressureMonitoringSystem\P10_TirePressureMonitoringSystem.csproj", "{252635AA-9B1A-4C69-9B8A-8C9EAC96FE88}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,6 +109,14 @@ Global
 		{B647180D-B9FF-4D0C-8790-D7D8FBC47ED3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B647180D-B9FF-4D0C-8790-D7D8FBC47ED3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B647180D-B9FF-4D0C-8790-D7D8FBC47ED3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69A7E890-B548-477B-A4E4-B417ED7271BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69A7E890-B548-477B-A4E4-B417ED7271BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69A7E890-B548-477B-A4E4-B417ED7271BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69A7E890-B548-477B-A4E4-B417ED7271BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{252635AA-9B1A-4C69-9B8A-8C9EAC96FE88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{252635AA-9B1A-4C69-9B8A-8C9EAC96FE88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{252635AA-9B1A-4C69-9B8A-8C9EAC96FE88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{252635AA-9B1A-4C69-9B8A-8C9EAC96FE88}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
