@@ -24,7 +24,7 @@ public class Dragon : ITarget
             this.hp -= damage;
         }
 
-        if(this.IsDead && !eventTriggered)
+        if(this.IsDead && !this.eventTriggered)
         {
             Console.WriteLine(THIS_DIED_EVENT, this);
             this.eventTriggered = true;

@@ -11,6 +11,6 @@
 
     public void Execute()
     {
-        this.attacker.SetTarget(target);
+        this.attacker.SetTarget(this.target);
     }
 }
