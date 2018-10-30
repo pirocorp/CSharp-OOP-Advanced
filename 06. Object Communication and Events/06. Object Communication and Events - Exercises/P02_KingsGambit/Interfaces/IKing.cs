@@ -1,5 +1,7 @@
-﻿namespace P02_KingsGambit.Models
+﻿namespace P02_KingsGambit.Interfaces
 {
+    using Models;
+
     public interface IKing
     {
         bool IsAlive { get; }
