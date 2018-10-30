@@ -6,7 +6,7 @@
     {
         string Name { get; }
 
-        event WorkIsDoneEventHandler WorkIsDone;
+        event EventHandler WorkIsDone;
 
         void Update();
 

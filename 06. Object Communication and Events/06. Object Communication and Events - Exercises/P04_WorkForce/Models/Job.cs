@@ -3,14 +3,14 @@
     using System;
     using Interfaces;
 
-    public delegate void WorkIsDoneEventHandler(object sender, EventArgs e);
+    public delegate void EventHandler(object sender, EventArgs e);
 
     public class Job : IJob
     {
         private readonly IEmployee employee;
         private int hoursOfWorkRequired;
 
-        public event WorkIsDoneEventHandler WorkIsDone;
+        public event EventHandler WorkIsDone;
 
         public Job(string name, IEmployee employee, int hoursOfWorkRequired)
         {
