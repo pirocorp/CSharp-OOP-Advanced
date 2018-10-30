@@ -1,12 +1,10 @@
-﻿using System;
-
-namespace Object_Communication_and_Events_Lab
+﻿namespace ObjectCommunicationAndEventsLab
 {
-    class Program
+    public class Startup
     {
-        static void Main(string[] args)
+        public static void Main()
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }

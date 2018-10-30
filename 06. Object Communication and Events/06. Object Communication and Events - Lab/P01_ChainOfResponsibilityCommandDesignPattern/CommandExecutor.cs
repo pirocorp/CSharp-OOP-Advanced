@@ -1,7 +1,12 @@
-﻿public class CommandExecutor : IExecutor
+﻿ namespace ObjectCommunicationAndEventsLab
 {
-    public void ExecuteCommand(ICommand command)
+    using Interfaces;
+
+    public class CommandExecutor : IExecutor
     {
-        command.Execute();
+        public void ExecuteCommand(ICommand command)
+        {
+            command.Execute();
+        }
     }
 }
