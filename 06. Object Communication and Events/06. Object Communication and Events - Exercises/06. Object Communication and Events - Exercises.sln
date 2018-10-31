@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02_KingsGambit", "P02_King
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P03_DependencyInversion", "P03_DependencyInversion\P03_DependencyInversion.csproj", "{1F7075A1-3709-4A84-AD76-195A18D98ED7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P04_WorkForce", "P04_WorkForce\P04_WorkForce.csproj", "{492A6DF4-1E95-4054-8C0B-DB071C0AAEA7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{1F7075A1-3709-4A84-AD76-195A18D98ED7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F7075A1-3709-4A84-AD76-195A18D98ED7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F7075A1-3709-4A84-AD76-195A18D98ED7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{492A6DF4-1E95-4054-8C0B-DB071C0AAEA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{492A6DF4-1E95-4054-8C0B-DB071C0AAEA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{492A6DF4-1E95-4054-8C0B-DB071C0AAEA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{492A6DF4-1E95-4054-8C0B-DB071C0AAEA7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

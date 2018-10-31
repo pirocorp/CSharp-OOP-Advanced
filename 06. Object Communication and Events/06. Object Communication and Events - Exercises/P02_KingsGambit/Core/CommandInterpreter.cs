@@ -5,7 +5,6 @@
     using System.Linq;
     using Interfaces;
     using IO;
-    using Models;
 
     public class CommandInterpreter
     {
