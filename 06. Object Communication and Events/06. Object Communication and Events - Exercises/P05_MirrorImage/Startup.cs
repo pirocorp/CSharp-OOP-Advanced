@@ -1,7 +1,6 @@
 ﻿namespace P05_MirrorImage
 {
     using System;
-    using System.Linq;
 
     public class Startup
     {

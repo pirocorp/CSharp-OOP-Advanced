@@ -9,7 +9,6 @@
     {
         private Wizard leftWizard;
         private Wizard rightWizard;
-        private int currentId = 0;
 
         public Wizard(string name, int magicalPower, int currentIndex = 0)
         {
@@ -42,19 +41,15 @@
 
             var rootWizard = this.FindWizardById(wizardId, this);
 
-            var wizardsToCastSpell = this.IteratorWizard(rootWizard).ToArray();
+            var wizardsToCastSpell = this.IteratorWizard(rootWizard).Where(x => x.LeftWizard == null).ToArray();
+
+            var maxId = wizardsToCastSpell.OrderByDescending(x => x.Id).First().Id;
 
             foreach (var wizard in wizardsToCastSpell)
             {
-                var offset = 0;
-
-                if (wizard.Id % 2 == 0 && wizard.Id != 0)
-                {
-                    offset = 2;
-                }
-
-                wizard.ProduceReflection(offset);
+                wizard.ProduceReflection(maxId);
                 sb.AppendLine($"{wizard.Name} {wizard.Id} casts Reflection");
+                maxId += 2;
             }
 
             return sb.ToString().Trim();
@@ -81,12 +76,12 @@
             return $"{this.Id} {this.Name} - {this.MagicalPower}";
         }
 
-        private void ProduceReflection(int offset)
+        private void ProduceReflection(int maxId)
         {
             if (this.LeftWizard == null)
             {
                 var newMagicalPower = this.MagicalPower / 2;
-                var newId = this.Id + 1 + this.Id % 2 + offset;
+                var newId = maxId + 1;
 
                 this.LeftWizard = new Wizard(this.Name, newMagicalPower, newId);
             }
@@ -94,7 +89,7 @@
             if (this.RightWizard == null)
             {
                 var newMagicalPower = this.MagicalPower / 2;
-                var newId = this.Id + 2 + this.Id % 2 + offset;
+                var newId = maxId + 2;
 
                 this.RightWizard = new Wizard(this.Name, newMagicalPower, newId);
             }
