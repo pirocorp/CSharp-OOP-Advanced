@@ -2,16 +2,17 @@
 {
     using System.Collections.Generic;
     using System.Linq;
+    using Data;
     using Interfaces;
 
     public class PassWeekCommand : Command
     {
-        public PassWeekCommand(IList<IJob> jobs, IDictionary<string, IEmployee> employees) 
+        public PassWeekCommand(JobList jobs, IDictionary<string, IEmployee> employees) 
             : base(jobs, employees)
         {
         }
 
-        public PassWeekCommand(IList<IJob> jobs, IDictionary<string, IEmployee> employees, IWriter writer, IEmployeesFactory employeesFactory) 
+        public PassWeekCommand(JobList jobs, IDictionary<string, IEmployee> employees, IWriter writer, IEmployeesFactory employeesFactory) 
             : base(jobs, employees, writer, employeesFactory)
         {
         }

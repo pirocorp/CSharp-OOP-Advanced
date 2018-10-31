@@ -4,13 +4,14 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Reflection;
+    using Data;
     using Interfaces;
     using Models.Commands;
     using Models.Employees;
 
     public class CommandFactory : ICommandFactory
     {
-        public ICommand CreateCommand(string commandType, IList<IJob> jobs, IDictionary<string, IEmployee> employees)
+        public ICommand CreateCommand(string commandType, JobList jobs, IDictionary<string, IEmployee> employees)
         {
             var type = Assembly.GetExecutingAssembly().GetTypes().FirstOrDefault(x => x.Name == $"{commandType}Command");
 

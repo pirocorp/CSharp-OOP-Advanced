@@ -1,9 +1,10 @@
 ﻿namespace P04_WorkForce.Interfaces
 {
     using System.Collections.Generic;
+    using Data;
 
     public interface ICommandFactory
     {
-        ICommand CreateCommand(string commandType, IList<IJob> jobs, IDictionary<string, IEmployee> employees);
+        ICommand CreateCommand(string commandType, JobList jobs, IDictionary<string, IEmployee> employees);
     }
 }

@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using Data;
     using Factories;
     using Interfaces;
     using IO;
@@ -9,7 +10,7 @@
     public class Engine
     {
         private readonly IDictionary<string, IEmployee> employees;
-        private readonly IList<IJob> jobs;
+        private readonly JobList jobs;
 
         private readonly ICommandFactory commandFactory;
         private readonly IReader reader;
@@ -24,7 +25,7 @@
         public Engine(ICommandFactory commandFactory, IReader reader, IWriter writer)
         {
             this.employees = new Dictionary<string, IEmployee>();
-            this.jobs = new List<IJob>();
+            this.jobs = new JobList();
 
             this.commandFactory = commandFactory;
             this.reader = reader;

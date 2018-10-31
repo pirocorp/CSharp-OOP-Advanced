@@ -1,16 +1,17 @@
 ﻿namespace P04_WorkForce.Models.Commands
 {
     using System.Collections.Generic;
+    using Data;
     using Interfaces;
 
     public class StatusCommand : Command
     {
-        public StatusCommand(IList<IJob> jobs, IDictionary<string, IEmployee> employees) 
+        public StatusCommand(JobList jobs, IDictionary<string, IEmployee> employees) 
             : base(jobs, employees)
         {
         }
 
-        public StatusCommand(IList<IJob> jobs, IDictionary<string, IEmployee> employees, IWriter writer, IEmployeesFactory employeesFactory) 
+        public StatusCommand(JobList jobs, IDictionary<string, IEmployee> employees, IWriter writer, IEmployeesFactory employeesFactory) 
             : base(jobs, employees, writer, employeesFactory)
         {
         }
