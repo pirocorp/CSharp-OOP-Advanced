@@ -7,8 +7,8 @@
         public static void Main()
         {
             var dispatcher = new Dispatcher();
-            var hadler = new Handler();
-            dispatcher.NameChange += hadler.OnDispatcherNameChange;
+            var handler = new Handler();
+            dispatcher.NameChange += handler.OnDispatcherNameChange;
             string input;
 
             while ((input = Console.ReadLine()) != "End")
