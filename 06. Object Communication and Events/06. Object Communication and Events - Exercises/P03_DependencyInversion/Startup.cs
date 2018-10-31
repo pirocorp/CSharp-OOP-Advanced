@@ -20,14 +20,14 @@
 
                 if (firstArgument == "mode")
                 {
-                    calc.changeStrategy(secondArgument[0]);
+                    calc.ChangeStrategy(secondArgument[0]);
                     continue;
                 }
 
                 var a = int.Parse(firstArgument);
                 var b = int.Parse(secondArgument);
 
-                var result = calc.performCalculation(a, b);
+                var result = calc.PerformCalculation(a, b);
 
                 Console.WriteLine(result);
             }

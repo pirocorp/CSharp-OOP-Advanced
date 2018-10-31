@@ -29,14 +29,7 @@
             get => this.name;
             set
             {
-                if (this.NameChange != null)
-                {
-                    var eventArgs = new ChangeEventArgs(this.Id.ToString(), nameof(Company),
-                        typeof(string).Name, nameof(this.Name), this.Name, value);
-
-                    this.NameChange(this, eventArgs);
-                }
-
+                this.OnNameChange(value);
                 this.name = value;
             }
         }
@@ -46,14 +39,7 @@
             get => this.turnover;
             set
             {
-                if (this.TurnoverChange != null)
-                {
-                    var eventArgs = new ChangeEventArgs(this.Id.ToString(), nameof(Company),
-                        typeof(int).Name, nameof(this.Turnover), this.Turnover.ToString(), value.ToString());
-
-                    this.TurnoverChange(this, eventArgs);
-                }
-
+                this.OnTurnoverChange(value);
                 this.turnover = value;
             }
         }
@@ -63,15 +49,41 @@
             get => this.revenue;
             set
             {
-                if (this.RevenueChange != null)
-                {
-                    var eventArgs = new ChangeEventArgs(this.Id.ToString(), nameof(Company),
-                        typeof(int).Name, nameof(this.Revenue), this.Revenue.ToString(), value.ToString());
-
-                    this.RevenueChange(this, eventArgs);
-                }
-
+                this.OnRevenueChange(value);
                 this.revenue = value;
+            }
+        }
+
+        private void OnNameChange(string value)
+        {
+            if (this.NameChange != null)
+            {
+                var eventArgs = new ChangeEventArgs(this.Id.ToString(), nameof(Company),
+                    typeof(string).Name, nameof(this.Name), this.Name, value);
+
+                this.NameChange(this, eventArgs);
+            }
+        }
+
+        private void OnTurnoverChange(int value)
+        {
+            if (this.TurnoverChange != null)
+            {
+                var eventArgs = new ChangeEventArgs(this.Id.ToString(), nameof(Company),
+                    typeof(int).Name, nameof(this.Turnover), this.Turnover.ToString(), value.ToString());
+
+                this.TurnoverChange(this, eventArgs);
+            }
+        }
+
+        private void OnRevenueChange(int value)
+        {
+            if (this.RevenueChange != null)
+            {
+                var eventArgs = new ChangeEventArgs(this.Id.ToString(), nameof(Company),
+                    typeof(int).Name, nameof(this.Revenue), this.Revenue.ToString(), value.ToString());
+
+                this.RevenueChange(this, eventArgs);
             }
         }
     }

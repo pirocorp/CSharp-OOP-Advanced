@@ -21,12 +21,12 @@
             this.strategy = new AdditionStrategy();
         }
 
-        public void changeStrategy(char op)
+        public void ChangeStrategy(char op)
         {
             this.strategy = this.strategiesFactory.CreateStrategy(op);
         }
 
-        public int performCalculation(int firstOperand, int secondOperand)
+        public int PerformCalculation(int firstOperand, int secondOperand)
         {
             return this.strategy.Calculate(firstOperand, secondOperand);
         }

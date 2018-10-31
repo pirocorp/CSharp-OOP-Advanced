@@ -26,14 +26,7 @@
             get => this.name;
             set
             {
-                if (this.NameChange != null)
-                {
-                    var eventArgs = new ChangeEventArgs(this.Id.ToString(), nameof(Employee), 
-                        typeof(string).Name, nameof(this.Name), this.Name, value);
-
-                    this.NameChange(this, eventArgs);
-                }
-
+                this.OnNameChange(value);
                 this.name = value;
             }
         }
@@ -43,15 +36,30 @@
             get => this.income;
             set
             {
-                if (this.IncomeChange != null)
-                {
-                    var eventArgs = new ChangeEventArgs(this.Id.ToString(), nameof(Employee),
-                        typeof(int).Name, nameof(this.Income), this.Income.ToString(), value.ToString());
-
-                    this.IncomeChange(this, eventArgs);
-                }
-
+                this.OnIncomeChange(value);
                 this.income = value;
+            }
+        }
+
+        private void OnNameChange(string value)
+        {
+            if (this.NameChange != null)
+            {
+                var eventArgs = new ChangeEventArgs(this.Id.ToString(), nameof(Employee),
+                    typeof(string).Name, nameof(this.Name), this.Name, value);
+
+                this.NameChange(this, eventArgs);
+            }
+        }
+
+        private void OnIncomeChange(int value)
+        {
+            if (this.IncomeChange != null)
+            {
+                var eventArgs = new ChangeEventArgs(this.Id.ToString(), nameof(Employee),
+                    typeof(int).Name, nameof(this.Income), this.Income.ToString(), value.ToString());
+
+                this.IncomeChange(this, eventArgs);
             }
         }
     }
