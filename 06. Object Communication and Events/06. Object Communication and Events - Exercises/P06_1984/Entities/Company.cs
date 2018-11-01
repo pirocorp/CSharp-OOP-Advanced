@@ -54,7 +54,7 @@
             }
         }
 
-        private void OnNameChange(string value)
+        protected void OnNameChange(string value)
         {
             if (this.NameChange != null)
             {
@@ -65,7 +65,7 @@
             }
         }
 
-        private void OnTurnoverChange(int value)
+        protected void OnTurnoverChange(int value)
         {
             if (this.TurnoverChange != null)
             {
@@ -76,7 +76,7 @@
             }
         }
 
-        private void OnRevenueChange(int value)
+        protected void OnRevenueChange(int value)
         {
             if (this.RevenueChange != null)
             {

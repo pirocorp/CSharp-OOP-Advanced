@@ -41,7 +41,7 @@
             }
         }
 
-        private void OnNameChange(string value)
+        protected void OnNameChange(string value)
         {
             if (this.NameChange != null)
             {
@@ -52,7 +52,7 @@
             }
         }
 
-        private void OnIncomeChange(int value)
+        protected void OnIncomeChange(int value)
         {
             if (this.IncomeChange != null)
             {

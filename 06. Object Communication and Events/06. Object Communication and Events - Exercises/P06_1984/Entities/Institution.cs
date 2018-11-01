@@ -32,7 +32,7 @@
 
             if (currentEvent != null)
             {
-                var method = typeof(Institution).GetMethod("RegisterChange", 
+                var method = typeof(Institution).GetMethod("OnChangeEvent", 
                     BindingFlags.NonPublic | BindingFlags.Instance);
 
                 var delegateType = currentEvent.EventHandlerType;
@@ -51,7 +51,7 @@
             return result.Trim();
         }
 
-        private void RegisterChange(object sender, ChangeEventArgs args)
+        private void OnChangeEvent(object sender, ChangeEventArgs args)
         {
             this.numberOfChanges++;
 

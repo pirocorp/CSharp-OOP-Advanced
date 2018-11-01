@@ -27,11 +27,7 @@
             set
             {
                 this.hoursOfWorkRequired = value;
-
-                if (this.hoursOfWorkRequired <= 0)
-                {
-                    this.WorkIsDone?.Invoke(this, EventArgs.Empty);
-                }
+                this.OnWorkIsDone();
             }
         }
 
@@ -43,6 +39,14 @@
         public override string ToString()
         {
             return $"Job: {this.Name} Hours Remaining: {this.HoursOfWorkRequired}";
+        }
+
+        protected void OnWorkIsDone()
+        {
+            if (this.hoursOfWorkRequired <= 0)
+            {
+                this.WorkIsDone?.Invoke(this, EventArgs.Empty);
+            }
         }
     }
 }

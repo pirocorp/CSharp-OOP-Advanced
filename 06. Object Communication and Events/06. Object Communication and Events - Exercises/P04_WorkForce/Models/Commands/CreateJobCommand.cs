@@ -25,7 +25,7 @@
             var employee = this.employees[employeeName];
 
             var newJob = new Job(nameOfJob, employee, hoursOfWorkRequired);
-            newJob.WorkIsDone += this.jobs.JobDone;
+            newJob.WorkIsDone += this.jobs.OnWorkIsDoneEvent;
 
             this.jobs.Add(newJob);
         }

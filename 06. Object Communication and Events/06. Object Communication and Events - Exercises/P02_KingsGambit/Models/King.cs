@@ -19,7 +19,7 @@
 
         public bool IsAlive => true;
 
-        public void RespondToAttack()
+        public void OnKingUnderAttack()
         {
             this.writer.WriteLine($"King {this.Name} is under attack!");
 

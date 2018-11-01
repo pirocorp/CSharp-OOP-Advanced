@@ -9,6 +9,6 @@
 
         event KingUnderAttackEventHandler KingUnderAttack;
 
-        void RespondToAttack();
+        void OnKingUnderAttack();
     }
 }

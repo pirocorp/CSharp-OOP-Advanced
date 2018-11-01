@@ -6,7 +6,7 @@
 
     public class JobList : List<IJob>
     {
-        public void JobDone(object sender, EventArgs e)
+        public void OnWorkIsDoneEvent(object sender, EventArgs e)
         {
             var currentJob = (IJob)sender;
             this.Remove(currentJob);

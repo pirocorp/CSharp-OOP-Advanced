@@ -40,7 +40,7 @@
                 switch (command)
                 {
                     case "Attack":
-                        this.king.RespondToAttack();
+                        this.king.OnKingUnderAttack();
                         break;
                     case "Kill":
                         var name = tokens[1];
