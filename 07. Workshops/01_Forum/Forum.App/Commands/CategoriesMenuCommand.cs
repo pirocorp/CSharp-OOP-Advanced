@@ -7,7 +7,7 @@
 
     public class CategoriesMenuCommand : ICommand
     {
-        private IMenuFactory menuFactory;
+        private readonly IMenuFactory menuFactory;
 
         public CategoriesMenuCommand(IMenuFactory menuFactory)
         {

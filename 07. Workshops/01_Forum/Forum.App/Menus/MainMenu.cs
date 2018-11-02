@@ -7,7 +7,7 @@
     {
 		private readonly ISession session;
 		private readonly ILabelFactory labelFactory;
-        private ICommandFactory commandFactory;
+        private readonly ICommandFactory commandFactory;
 
 
         public MainMenu(ISession session, ILabelFactory labelFactory, ICommandFactory commandFactory)

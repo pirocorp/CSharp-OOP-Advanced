@@ -5,11 +5,11 @@
     using System.Text;
     using Contracts;
 
-    public class LogInMenuCommand : ICommand
+    public class SignUpMenuCommand : ICommand
     {
         private readonly IMenuFactory menuFactory;
 
-        public LogInMenuCommand(IMenuFactory menuFactory)
+        public SignUpMenuCommand(IMenuFactory menuFactory)
         {
             this.menuFactory = menuFactory;
         }
