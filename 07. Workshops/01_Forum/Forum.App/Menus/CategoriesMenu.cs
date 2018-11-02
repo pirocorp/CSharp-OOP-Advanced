@@ -107,5 +107,12 @@
 		{
 			throw new System.NotImplementedException();
 		}
+
+	    public override void Open()
+	    {
+	        this.LoadCategories();
+
+	        base.Open();
+	    }
 	}
 }
