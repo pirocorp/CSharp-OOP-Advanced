@@ -100,7 +100,22 @@
 
 		public override IMenu ExecuteCommand()
 		{
-			throw new System.NotImplementedException();
+		    ICommand command = null;
+		    var actualIndex = this.currentPage * 10 + this.currentIndex;
+		    string postId = null;
+
+		    if (this.currentIndex > 0 && this.currentIndex < 10)
+		    {
+		        postId = this.posts[actualIndex].Id.ToString();
+		        command = this.commandFactory.CreateCommand("ViewPostMenu");
+		    }
+		    else
+		    {
+		        command = this.commandFactory
+		            .CreateCommand(string.Join("", this.CurrentOption.Text.Split()));
+            }
+
+		    return command.Execute(postId);
 		}
 
 		public void ChangePage(bool forward = true)

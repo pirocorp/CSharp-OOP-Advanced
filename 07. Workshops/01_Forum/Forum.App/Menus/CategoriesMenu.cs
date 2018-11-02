@@ -110,7 +110,8 @@
 		    }
 		    else
 		    {
-		        command = this.commandFactory.CreateCommand(string.Join("", this.CurrentOption.Text.Split()));
+		        command = this.commandFactory
+		            .CreateCommand(string.Join("", this.CurrentOption.Text.Split()));
 		    }
 
 		    return command.Execute(actualIndex.ToString());
