@@ -119,7 +119,7 @@
 		public void ChangePage(bool forward = true)
 		{
 		    this.currentPage += forward ? 1 : -1;
-		    this.currentPage = 0;
+		    this.currentIndex = 0;
             this.Open();
 		}
 

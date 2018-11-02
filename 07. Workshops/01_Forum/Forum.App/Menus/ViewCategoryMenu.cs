@@ -105,8 +105,10 @@
 
 		public void ChangePage(bool forward = true)
 		{
-			throw new System.NotImplementedException();
-		}
+		    this.currentPage += forward ? 1 : -1;
+		    this.currentIndex = 0;
+		    this.Open();
+        }
 
 		public void SetId(int id)
 		{
