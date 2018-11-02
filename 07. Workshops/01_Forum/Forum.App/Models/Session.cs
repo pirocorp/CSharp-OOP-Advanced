@@ -10,6 +10,10 @@
 	    private User user;
 	    private Stack<IMenu> history;
 
+	    public Session()
+	    {
+	        this.history = new Stack<IMenu>();
+	    }
 
 		public string Username => throw new System.NotImplementedException();
 
