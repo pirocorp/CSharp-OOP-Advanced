@@ -25,7 +25,15 @@
 
 		public IMenu Back()
 		{
-			throw new System.NotImplementedException();
+		    if (this.history.Count > 1)
+		    {
+		        this.history.Pop();
+		    }
+
+		    var previousMenu = this.history.Peek();
+            previousMenu.Open();
+
+		    return previousMenu;
 		}
 
 		public void LogIn(User user)
