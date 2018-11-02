@@ -15,13 +15,13 @@
 	        this.history = new Stack<IMenu>();
 	    }
 
-		public string Username => throw new System.NotImplementedException();
+		public string Username => this.user?.Username;
 
-		public int UserId => throw new System.NotImplementedException();
+		public int UserId => this.user?.Id ?? 0;
 
-		public bool IsLoggedIn => throw new System.NotImplementedException();
+		public bool IsLoggedIn => this.user != null;
 
-		public IMenu CurrentMenu => throw new System.NotImplementedException();
+		public IMenu CurrentMenu => this.history.Peek();
 
 		public IMenu Back()
 		{
