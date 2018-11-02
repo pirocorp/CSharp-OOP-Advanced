@@ -1,6 +1,5 @@
 ﻿namespace Forum.App.Models
 {
-    using System.Collections;
     using System.Collections.Generic;
     using System.Linq;
     using Contracts;
