@@ -24,19 +24,18 @@
 
 		    if (commandType == null)
 		    {
-		        throw new InvalidOperationException("Command not found!");
+		        throw new InvalidOperationException($"{commandName}Command not found!");
 		    }
 
 		    if (!typeof(ICommand).IsAssignableFrom(commandType))
 		    {
-		        throw new InvalidOperationException($"{commandType} is not a {nameof(ICommand)}!");
+		        throw new InvalidOperationException($"{commandName} is not a {nameof(ICommand)}!");
 		    }
 
 		    var ctor = commandType.GetConstructors().First();
-
             var ctorParams = ctor.GetParameters();
-		    var args = new object[ctorParams.Length];
 
+		    var args = new object[ctorParams.Length];
 		    for (var i = 0; i < args.Length; i++)
 		    {
 		        args[i] = this.serviceProvider.GetService(ctorParams[i].ParameterType);
