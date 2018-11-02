@@ -48,7 +48,7 @@
 
 		public bool PushView(IMenu view)
 		{
-		    if (this.history.Any() || this.history.Peek() != view)
+		    if (!this.history.Any() || this.history.Peek() != view)
 		    {
                 this.history.Push(view);
 		        return true;
