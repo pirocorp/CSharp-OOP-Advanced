@@ -28,10 +28,7 @@
 
 		private string Username { get; set; }
 
-		//Replace CurrentMenu with this after implementing Session
-		//private IMenu CurrentMenu => this.session.CurrentMenu;
-
-		private IMenu CurrentMenu { get; }
+		private IMenu CurrentMenu => this.session.CurrentMenu;
 
 		private void InitializeSession()
 		{
