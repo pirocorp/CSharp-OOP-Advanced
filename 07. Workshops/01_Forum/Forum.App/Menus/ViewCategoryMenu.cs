@@ -112,5 +112,17 @@
 		{
 			throw new System.NotImplementedException();
 		}
-	}
+
+	    public override void Open()
+	    {
+            this.LoadPosts();
+
+            base.Open();
+	    }
+
+	    private void LoadPosts()
+	    {
+	        this.posts = this.postService.GetCategoryPostsInfo(this.categoryId).ToArray();
+	    }
+    }
 }
