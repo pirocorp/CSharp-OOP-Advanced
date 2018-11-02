@@ -1,12 +1,15 @@
 ﻿namespace Forum.App.Commands
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
     using Contracts;
 
-    public class NextPageCommand : ICommand
+    public class PreviousPageCommand : ICommand
     {
         private readonly ISession session;
 
-        public NextPageCommand(ISession session)
+        public PreviousPageCommand(ISession session)
         {
             this.session = session;
         }
@@ -17,7 +20,7 @@
 
             if (currentMenu is IPaginatedMenu paginatedMenu)
             {
-                paginatedMenu.ChangePage();
+                paginatedMenu.ChangePage(false);
             }
 
             return currentMenu;
