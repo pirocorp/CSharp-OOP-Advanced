@@ -105,7 +105,9 @@
 
 		public void ChangePage(bool forward = true)
 		{
-			throw new System.NotImplementedException();
+		    this.currentPage += forward ? 1 : -1;
+		    this.currentPage = 0;
+            this.Open();
 		}
 
 	    public override void Open()
