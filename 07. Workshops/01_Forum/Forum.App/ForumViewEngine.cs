@@ -15,9 +15,9 @@
 			this.InitializeConsole();
 		}
 
-		private ConsoleColor hardCodedBgColor = ConsoleColor.Gray;
-		private ConsoleColor hardCodedHlColor = ConsoleColor.Green;
-		private ConsoleColor hardCodedFontColor = ConsoleColor.Black;
+		private readonly ConsoleColor hardCodedBgColor = ConsoleColor.Gray;
+		private readonly ConsoleColor hardCodedHlColor = ConsoleColor.Green;
+		private readonly ConsoleColor hardCodedFontColor = ConsoleColor.Black;
 
 		public void ResetBuffer()
 		{

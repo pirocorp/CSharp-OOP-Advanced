@@ -5,13 +5,16 @@
 
     public class MainMenu : Menu
     {
-		private ISession session;
-		private ILabelFactory labelFactory;
+		private readonly ISession session;
+		private readonly ILabelFactory labelFactory;
+        private ICommandFactory commandFactory;
 
-		public MainMenu(ISession session, ILabelFactory labelFactory, ICommandFactory commandFactory)
+
+        public MainMenu(ISession session, ILabelFactory labelFactory, ICommandFactory commandFactory)
         {
             this.session = session;
 			this.labelFactory = labelFactory;
+            this.commandFactory = commandFactory;
 
             this.Open();
         }

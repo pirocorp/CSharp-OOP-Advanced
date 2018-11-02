@@ -9,10 +9,10 @@
 
 	internal class MenuController : IMainController
 	{
-		private IServiceProvider serviceProvider;
+		private readonly IServiceProvider serviceProvider;
 
-		private IForumViewEngine viewEngine;
-		private ISession session;
+		private readonly IForumViewEngine viewEngine;
+		private readonly ISession session;
 		private ICommandFactory commandFactory;
 
 	    public MenuController(IServiceProvider serviceProvider, IForumViewEngine viewEngine, 

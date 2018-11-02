@@ -16,18 +16,18 @@
 		private const int REPLY_MAX_LENGTH = 220;
 		private const int REPLY_AREA_HEIGHT = 6;
 
-		private int x;
-        private int y;
+		private readonly int x;
+        private readonly int y;
         private int height;
-		private int maxLength;
+		private readonly int maxLength;
 
         private int textCursorPosition;
-        private Position displayCursor;
-		private IForumReader reader;
+        private readonly Position displayCursor;
+		private readonly IForumReader reader;
 
         private IEnumerable<string> lines = new List<string>();
         private string text = string.Empty;
-        private static char[] _forbiddenCharacters = { ';' };
+        private static readonly char[] _forbiddenCharacters = { ';' };
 
 		public TextInputArea(IForumReader reader, int x, int y, bool isPost = true)
 		{

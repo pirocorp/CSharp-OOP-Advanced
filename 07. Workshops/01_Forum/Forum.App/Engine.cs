@@ -6,7 +6,7 @@
 
     public class Engine
     {
-        private IMainController menu;
+        private readonly IMainController menu;
 
         public Engine(IMainController menuController)
         {
