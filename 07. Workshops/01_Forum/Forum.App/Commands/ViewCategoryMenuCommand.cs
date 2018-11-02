@@ -1,13 +1,10 @@
 ﻿namespace Forum.App.Commands
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Text;
     using Contracts;
 
     public class ViewCategoryMenuCommand : ICommand
     {
-        private IMenuFactory menuFactory;
+        private readonly IMenuFactory menuFactory;
 
         public ViewCategoryMenuCommand(IMenuFactory menuFactory)
         {
