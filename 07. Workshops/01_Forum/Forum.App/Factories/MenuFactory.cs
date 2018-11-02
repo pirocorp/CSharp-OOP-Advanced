@@ -1,10 +1,8 @@
 ﻿namespace Forum.App.Factories
 {
     using System;
-    using System.Collections.Generic;
     using System.Linq;
     using System.Reflection;
-    using System.Text;
     using Contracts;
 
     public class MenuFactory : IMenuFactory

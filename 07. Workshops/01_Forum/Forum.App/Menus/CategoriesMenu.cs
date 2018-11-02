@@ -11,12 +11,22 @@
 		private const int PAGE_SIZE = 10;
 		private const int CATEGORY_NAME_LENGTH = 36;
 
-		private ILabelFactory labelFactory;
+		private readonly ILabelFactory labelFactory;
+	    private readonly IPostService postService;
+	    private readonly ICommandFactory commandFactory;
 
 		private ICategoryInfoViewModel[] categories;
 		private int currentPage;
 
-		//TODO: Inject Dependencies
+	    public CategoriesMenu(ILabelFactory labelFactory, 
+	        IPostService postService, ICommandFactory commandFactory)
+	    {
+	        this.labelFactory = labelFactory;
+	        this.postService = postService;
+	        this.commandFactory = commandFactory;
+
+            this.Open();
+	    }
 
 		private int LastPage => this.categories.Length / 11;
 
