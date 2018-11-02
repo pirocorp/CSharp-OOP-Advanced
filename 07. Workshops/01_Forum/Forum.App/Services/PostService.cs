@@ -2,8 +2,10 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Linq;
     using Contracts;
     using Data;
+    using ViewModels;
 
     public class PostService : IPostService
     {
@@ -33,7 +35,10 @@
 
         public IEnumerable<ICategoryInfoViewModel> GetAllCategories()
         {
-            throw new NotImplementedException();
+            var categories = this.forumData.Categories
+                .Select(c => new CategoryInfoViewModel(c.Id, c.Name, c.Posts.Count));
+
+            return categories;
         }
 
         public IEnumerable<IPostInfoViewModel> GetCategoryPostsInfo(int categoryId)
