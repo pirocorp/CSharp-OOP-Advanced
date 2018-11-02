@@ -112,7 +112,8 @@
 
 		public void SetId(int id)
 		{
-			throw new System.NotImplementedException();
+			this.categoryId = id;
+            this.Open();
 		}
 
 	    public override void Open()
