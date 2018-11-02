@@ -72,7 +72,11 @@
 
 		public override IMenu ExecuteCommand()
 		{
-			throw new System.NotImplementedException();
+		    var commandName = $"{string.Join("", this.CurrentOption.Text.Split())}Menu";
+
+		    var command = this.commandFactory.CreateCommand(commandName);
+		    var view = command.Execute();
+		    return view;
 		}
     }
 }
