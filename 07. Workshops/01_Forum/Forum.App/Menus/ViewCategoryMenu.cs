@@ -13,12 +13,18 @@
 
 		private ILabelFactory labelFactory;
 		private IPostService postService;
+	    private ICommandFactory commandFactory;
 
 		private int categoryId;
 		private int currentPage;
 		private IPostInfoViewModel[] posts;
 
-		//TODO: Inject Dependencies
+	    public ViewCategoryMenu(ILabelFactory labelFactory, IPostService postService, ICommandFactory commandFactory)
+	    {
+	        this.labelFactory = labelFactory;
+	        this.postService = postService;
+	        this.commandFactory = commandFactory;
+	    }
 
 		private int LastPage => throw new System.NotImplementedException();
 
