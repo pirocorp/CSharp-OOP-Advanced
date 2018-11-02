@@ -5,18 +5,18 @@
 
 	public abstract class Menu : IMenu
 	{
-		protected int CurrentIndex;
+		protected int currentIndex;
 
 		public Menu()
 		{
-			this.CurrentIndex = 0;
+			this.currentIndex = 0;
 		}
 
 		public ILabel[] Labels { get; protected set; }
 
 		public IButton[] Buttons { get; protected set; }
 
-		public IButton CurrentOption => this.Buttons[this.CurrentIndex];
+		public IButton CurrentOption => this.Buttons[this.currentIndex];
 
 		public abstract IMenu ExecuteCommand();
 
@@ -35,13 +35,13 @@
 
 		public void NextOption()
 		{
-			this.CurrentIndex++;
+			this.currentIndex++;
 
 			var totalOptions = this.Buttons.Length;
 
-			if (this.CurrentIndex >= totalOptions)
+			if (this.currentIndex >= totalOptions)
 			{
-				this.CurrentIndex -= totalOptions;
+				this.currentIndex -= totalOptions;
 			}
 
 			if (this.CurrentOption.IsHidden)
@@ -52,11 +52,11 @@
 
 		public void PreviousOption()
 		{
-			this.CurrentIndex--;
+			this.currentIndex--;
 
-			if (this.CurrentIndex < 0)
+			if (this.currentIndex < 0)
 			{
-				this.CurrentIndex += this.Buttons.Length;
+				this.currentIndex += this.Buttons.Length;
 			}
 
 			if (this.CurrentOption.IsHidden)

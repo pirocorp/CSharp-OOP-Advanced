@@ -100,7 +100,20 @@
 
 		public override IMenu ExecuteCommand()
 		{
-			throw new System.NotImplementedException();
+		    ICommand command = null;
+
+		    var actualIndex = this.currentPage * 10 + this.currentIndex;
+
+		    if (this.currentIndex > 0 && this.currentIndex < 10)
+		    {
+		        command = this.commandFactory.CreateCommand("ViewCategoryMenu");
+		    }
+		    else
+		    {
+		        command = this.commandFactory.CreateCommand(string.Join("", this.CurrentOption.Text.Split()));
+		    }
+
+		    return command.Execute(actualIndex.ToString());
 		}
 
 		public void ChangePage(bool forward = true)
