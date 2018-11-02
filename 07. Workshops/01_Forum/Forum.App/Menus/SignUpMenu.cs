@@ -10,9 +10,19 @@
 
 		private bool error;
 
-		private ILabelFactory labelFactory;
+		private readonly ILabelFactory labelFactory;
+        private ICommandFactory commandFactory;
+        private IForumReader forumReader;
 
-		//TODO: Inject Dependencies
+        public SignUpMenu(ILabelFactory labelFactory, 
+            ICommandFactory commandFactory, IForumReader forumReader)
+        {
+            this.labelFactory = labelFactory;
+            this.commandFactory = commandFactory;
+            this.forumReader = forumReader;
+
+            this.Open();
+        }
 		
 		private string UsernameInput => this.Buttons[0].Text.TrimStart();
 

@@ -11,9 +11,9 @@
 		private const int PAGE_SIZE = 10;
 		private const int CATEGORY_NAME_LENGTH = 36;
 
-		private ILabelFactory labelFactory;
-		private IPostService postService;
-	    private ICommandFactory commandFactory;
+		private readonly ILabelFactory labelFactory;
+		private readonly IPostService postService;
+	    private readonly ICommandFactory commandFactory;
 
 		private int categoryId;
 		private int currentPage;
@@ -24,6 +24,8 @@
 	        this.labelFactory = labelFactory;
 	        this.postService = postService;
 	        this.commandFactory = commandFactory;
+
+            this.Open();
 	    }
 
 		private int LastPage => this.posts.Length / 11;
