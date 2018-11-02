@@ -1,10 +1,16 @@
 ﻿namespace Forum.App.Models
 {
-	using Contracts;
+    using System.Collections;
+    using System.Collections.Generic;
+    using Contracts;
 	using DataModels;
 
 	public class Session : ISession
 	{
+	    private User user;
+	    private Stack<IMenu> history;
+
+
 		public string Username => throw new System.NotImplementedException();
 
 		public int UserId => throw new System.NotImplementedException();
