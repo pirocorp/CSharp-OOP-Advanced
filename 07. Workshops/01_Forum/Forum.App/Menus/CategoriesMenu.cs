@@ -114,5 +114,10 @@
 
 	        base.Open();
 	    }
+
+	    private void LoadCategories()
+	    {
+	        this.categories = this.postService.GetAllCategories().ToArray();
+	    }
 	}
 }
