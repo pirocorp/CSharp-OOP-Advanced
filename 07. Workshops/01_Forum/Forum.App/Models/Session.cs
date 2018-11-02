@@ -60,7 +60,8 @@
 
 		public void Reset()
 		{
-			throw new System.NotImplementedException();
+			this.history = new Stack<IMenu>();
+		    this.user = null;
 		}
 	}
 }
