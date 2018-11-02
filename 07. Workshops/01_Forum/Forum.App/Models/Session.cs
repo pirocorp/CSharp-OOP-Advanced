@@ -36,9 +36,9 @@
 		    return previousMenu;
 		}
 
-		public void LogIn(User user)
+		public void LogIn(User currentUser)
 		{
-			throw new System.NotImplementedException();
+		    this.user = currentUser;
 		}
 
 		public void LogOut()

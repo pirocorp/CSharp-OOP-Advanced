@@ -12,7 +12,7 @@
 
 		IMenu CurrentMenu { get; }
 
-		void LogIn(User user);
+		void LogIn(User currentUser);
 
 		void LogOut();
 
