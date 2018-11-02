@@ -30,7 +30,14 @@
 
         public string GetCategoryName(int categoryId)
         {
-            throw new NotImplementedException();
+            var categoryName = this.forumData.Categories.Find(c => c.Id == categoryId)?.Name;
+
+            if (categoryName == null)
+            {
+                throw new ArgumentException($"Category with id {categoryId} not found!");
+            }
+
+            return categoryName;
         }
 
         public IEnumerable<ICategoryInfoViewModel> GetAllCategories()
