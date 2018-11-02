@@ -26,11 +26,11 @@
 	        this.commandFactory = commandFactory;
 	    }
 
-		private int LastPage => throw new System.NotImplementedException();
+		private int LastPage => this.posts.Length / 11;
 
-		private bool IsFirstPage => throw new System.NotImplementedException();
+		private bool IsFirstPage => this.currentPage == 1;
 
-		private bool IsLastPage => throw new System.NotImplementedException();
+		private bool IsLastPage => this.currentPage == this.LastPage;
 
 		protected override void InitializeStaticLabels(Position consoleCenter)
 		{
