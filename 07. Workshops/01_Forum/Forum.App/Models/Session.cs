@@ -2,6 +2,7 @@
 {
     using System.Collections;
     using System.Collections.Generic;
+    using System.Linq;
     using Contracts;
 	using DataModels;
 
@@ -48,7 +49,13 @@
 
 		public bool PushView(IMenu view)
 		{
-			throw new System.NotImplementedException();
+		    if (this.history.Any() || this.history.Peek() != view)
+		    {
+                this.history.Push(view);
+		        return true;
+		    }
+
+		    return false;
 		}
 
 		public void Reset()
