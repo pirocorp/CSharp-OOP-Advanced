@@ -43,7 +43,7 @@
 
 		public void LogOut()
 		{
-			throw new System.NotImplementedException();
+		    this.user = null;
 		}
 
 		public bool PushView(IMenu view)
