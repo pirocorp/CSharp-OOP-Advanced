@@ -40,8 +40,7 @@
 		        args[i] = this.serviceProvider.GetService(ctorParams[i].ParameterType);
 		    }
 
-            //var command = (ICommand)ctor.Invoke(args);
-		    var command = Instantiator.CreateInstance<ICommand>(ctor, args);
+            var command = (ICommand)ctor.Invoke(args);
             return command;
 		}
     }

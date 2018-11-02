@@ -42,8 +42,7 @@
                 args[i] = this.serviceProvider.GetService(ctorParams[i].ParameterType);
             }
 
-            //var command = (ICommand)ctor.Invoke(args);
-            var menu = Instantiator.CreateInstance<IMenu>(ctor, args);
+            var menu = (IMenu)ctor.Invoke(args);
             return menu;
         }
     }
