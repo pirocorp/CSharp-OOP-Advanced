@@ -60,7 +60,19 @@
         public IPostViewModel GetPostViewModel(int postId)
         {
             var post = this.forumData.Posts.FirstOrDefault(p => p.Id == postId);
-            var postView = new PostInfoViewModel(post.Title, this.userService.GetUserName(post.AuthorId), post.Content, this.GetPostReplies(postId));
+            var postView = new PostViewModel(post.Title, 
+                this.userService.GetUserName(post.AuthorId), post.Content, this.GetPostReplies(postId));
+
+            return postView;
+        }
+
+        private IEnumerable<IReplyViewModel> GetPostReplies(int postId)
+        {
+            var replies = this.forumData.Replies
+                .Where(r => r.PostId == postId)
+                .Select(r => new ReplyViewModel(this.userService.GetUserName(r.AuthorId), r.Content));
+
+            return replies;
         }
     }
 }
