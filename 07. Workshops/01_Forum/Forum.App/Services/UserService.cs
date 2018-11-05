@@ -29,7 +29,23 @@
 
         public bool TryLogInUser(string username, string password)
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
+            {
+                return false;
+            }
+
+            var user = this.forumData.Users
+                .FirstOrDefault(u => u.Username == username && u.Password == password);
+
+            if (user == null)
+            {
+                return false;
+            }
+
+            this.session.Reset();
+            this.session.LogIn(user);
+
+            return true;
         }
 
         public bool TrySignUpUser(string username, string password)
