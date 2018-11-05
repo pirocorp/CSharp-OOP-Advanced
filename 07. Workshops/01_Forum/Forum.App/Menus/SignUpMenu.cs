@@ -12,8 +12,8 @@
 		private bool error;
 
 		private readonly ILabelFactory labelFactory;
-        private ICommandFactory commandFactory;
-        private IForumReader forumReader;
+        private readonly ICommandFactory commandFactory;
+        private readonly IForumReader forumReader;
 
         public SignUpMenu(ILabelFactory labelFactory, 
             ICommandFactory commandFactory, IForumReader forumReader)
