@@ -119,7 +119,13 @@
 
 		public override IMenu ExecuteCommand()
 		{
-			throw new System.NotImplementedException();
+		    var commandName = string.Join("", this.CurrentOption.Text.Split());
+		    var command = this.commandFactory.CreateCommand(commandName);
+		    var menu = command.Execute(this.postId.ToString());
+
+            this.viewEngine.ResetBuffer();
+
+		    return menu;
 		}
 
 		private void ExtendBuffer()
