@@ -5,13 +5,23 @@
 
 	public class AddPostMenu : Menu, ITextAreaMenu
 	{
-		private ILabelFactory labelFactory;
-		private ITextAreaFactory textAreaFactory;
-		private IForumReader reader;
+		private readonly ILabelFactory labelFactory;
+		private readonly ITextAreaFactory textAreaFactory;
+		private readonly IForumReader reader;
+	    private readonly ICommandFactory commandFactor;
 
 		private bool error;
 
-		//TODO: Inject Dependencies
+	    public AddPostMenu(ILabelFactory labelFactory, ITextAreaFactory textAreaFactory, IForumReader reader, ICommandFactory commandFactor, bool error)
+	    {
+	        this.labelFactory = labelFactory;
+	        this.textAreaFactory = textAreaFactory;
+	        this.reader = reader;
+	        this.commandFactor = commandFactor;
+
+            this.InitializeTextArea();
+            this.Open();
+	    }
 
 		private string TitleInput => this.Buttons[0].Text.TrimStart();
 
