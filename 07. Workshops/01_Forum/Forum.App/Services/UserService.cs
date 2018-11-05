@@ -19,12 +19,14 @@
 
         public User GetUserById(int userId)
         {
-            throw new NotImplementedException();
+            var user = this.forumData.Users.FirstOrDefault(u => u.Id == userId);
+
+            return user;
         }
 
         public string GetUserName(int userId)
         {
-            var user = this.forumData.Users.FirstOrDefault(u => u.Id == userId);
+            var user = this.GetUserById(userId);
 
             return user?.Username;
         }
