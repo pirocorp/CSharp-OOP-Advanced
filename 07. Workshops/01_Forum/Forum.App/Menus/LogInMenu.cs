@@ -89,6 +89,8 @@
 		    }
 
 		    try
+
+
 		    {
 		        var commandName = string.Join("", this.CurrentOption.Text.Split());
 		        var command = this.commandFactory.CreateCommand(commandName);

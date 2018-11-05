@@ -2,12 +2,12 @@
 {
     using Contracts;
 
-    public class LogOutCommand : ICommand
+    public class LogOutMenuCommand : ICommand
     {
         private readonly ISession session;
         private readonly IMenuFactory menuFactory;
 
-        public LogOutCommand(ISession session, IMenuFactory menuFactory)
+        public LogOutMenuCommand(ISession session, IMenuFactory menuFactory)
         {
             this.session = session;
             this.menuFactory = menuFactory;
