@@ -30,7 +30,7 @@
                 throw new ArgumentException("All fields must be filled!");
             }
 
-            Category category = this.EnsureCategory(postCategory);
+            var category = this.EnsureCategory(postCategory);
 
             var postId = this.forumData.Posts.Any() ? this.forumData.Posts.Last().Id + 1 : 1;
 
@@ -100,7 +100,16 @@
 
         private Category EnsureCategory(string postCategory)
         {
-            throw new NotImplementedException();
+            var category = this.forumData.Categories.FirstOrDefault(c => c.Name == postCategory);
+
+            if (category == null)
+            {
+                var categoryId = this.forumData.Categories.LastOrDefault()?.Id + 1 ?? 1;
+                category = new Category(categoryId, postCategory, new List<int>());
+                this.forumData.Categories.Add(category);
+            }
+
+            return category;
         }
     }
 }
