@@ -107,12 +107,14 @@
 
 		public void SetId(int id)
 		{
-			throw new System.NotImplementedException();
+		    this.postId = id;
+
+            this.Open();
 		}
 
 		private void LoadPost()
 		{
-			throw new System.NotImplementedException();
+		    this.post = this.postService.GetPostViewModel(this.postId);
 		}
 
 		public override IMenu ExecuteCommand()
