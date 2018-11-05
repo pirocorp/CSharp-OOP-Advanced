@@ -8,8 +8,8 @@
 
     public class UserService : IUserService
     {
-        private ForumData forumData;
-        private ISession session;
+        private readonly ForumData forumData;
+        private readonly ISession session;
 
         public UserService(ForumData forumData, ISession session)
         {

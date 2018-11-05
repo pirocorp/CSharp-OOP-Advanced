@@ -11,15 +11,23 @@
 		private const int LEFT_OFFSET = 18;
 		private const int TOP_OFFSET = 7;
 
-		private ILabelFactory labelFactory;
-		private ISession session;
-
-		private IForumViewEngine viewEngine;
+	    private readonly IPostService postService;
+		private readonly ILabelFactory labelFactory;
+		private readonly ISession session;
+	    private readonly ICommandFactory commandFactory;
+        private readonly IForumViewEngine viewEngine;
 		
 		private int postId;
 		private IPostViewModel post;
 
-		//TODO: Inject Dependencies
+	    public ViewPostMenu(IPostService postService, ILabelFactory labelFactory, ISession session, ICommandFactory commandFactory, IForumViewEngine viewEngine)
+	    {
+	        this.postService = postService;
+            this.labelFactory = labelFactory;
+	        this.session = session;
+	        this.commandFactory = commandFactory;
+	        this.viewEngine = viewEngine;
+	    }
 
 		public override void Open()
 		{		
