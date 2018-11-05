@@ -5,6 +5,7 @@
     using System.Linq;
     using Contracts;
     using Data;
+    using DataModels;
     using ViewModels;
 
     public class PostService : IPostService
@@ -20,7 +21,29 @@
 
         public int AddPost(int userId, string postTitle, string postCategory, string postContent)
         {
-            throw new NotImplementedException();
+            var emptyCategory = string.IsNullOrWhiteSpace(postCategory);
+            var emptyTitle = string.IsNullOrWhiteSpace(postTitle);
+            var emptyContent = string.IsNullOrWhiteSpace(postContent);
+
+            if (emptyContent || emptyCategory || emptyTitle)
+            {
+                throw new ArgumentException("All fields must be filled!");
+            }
+
+            Category category = this.EnsureCategory(postCategory);
+
+            var postId = this.forumData.Posts.Any() ? this.forumData.Posts.Last().Id + 1 : 1;
+
+            var author = this.userService.GetUserById(userId);
+
+            var post = new Post(postId, postTitle, postContent, category.Id, userId, new List<int>());
+
+            this.forumData.Posts.Add(post);
+            author.Posts.Add(post.Id);
+            category.Posts.Add(post.Id);
+            this.forumData.SaveChanges();
+
+            return post.Id;
         }
 
         public void AddReplyToPost(int postId, string replyContents, int userId)
@@ -73,6 +96,11 @@
                 .Select(r => new ReplyViewModel(this.userService.GetUserName(r.AuthorId), r.Content));
 
             return replies;
+        }
+
+        private Category EnsureCategory(string postCategory)
+        {
+            throw new NotImplementedException();
         }
     }
 }
