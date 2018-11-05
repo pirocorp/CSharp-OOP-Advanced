@@ -48,7 +48,21 @@
 
         public void AddReplyToPost(int postId, string replyContents, int userId)
         {
-            throw new NotImplementedException();
+            if (String.IsNullOrWhiteSpace(replyContents))
+            {
+                throw new ArgumentException("Cannot add an emty reply.");
+            }
+
+            Post post = this.forumData.Posts.Find(p => p.Id == postId);
+            User author = this.userService.GetUserById(userId);
+
+            int replyId = this.forumData.Replies.LastOrDefault()?.Id + 1 ?? 1;
+            Reply reply = new Reply(replyId, replyContents, userId, postId);
+
+            this.forumData.Replies.Add(reply);
+            post.Replies.Add(reply.Id);
+
+            this.forumData.SaveChanges();
         }
 
         public string GetCategoryName(int categoryId)

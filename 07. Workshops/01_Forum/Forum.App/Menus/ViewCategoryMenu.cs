@@ -25,7 +25,7 @@
 	        this.postService = postService;
 	        this.commandFactory = commandFactory;
 
-            this.Open();
+            //this.Open();
 	    }
 
 		private int LastPage => this.posts.Length / 11;
@@ -103,7 +103,7 @@
 		public override IMenu ExecuteCommand()
 		{
 		    ICommand command = null;
-		    var actualIndex = this.currentPage * 10 + this.currentIndex;
+		    var actualIndex = this.currentPage * 10 + this.currentIndex - 1;
 		    string postId = null;
 
 		    if (this.currentIndex > 0 && this.currentIndex < 10)

@@ -1,6 +1,7 @@
 ﻿namespace Forum.App.Menus
 {
-	using System.Collections.Generic;
+    using System;
+    using System.Collections.Generic;
 
 	using Models;
 	using Contracts;
@@ -12,14 +13,24 @@
 		private const int TOP_OFFSET = 7;
 		private const int BUTTON_OFFSET = 14;
 
-		private ILabelFactory labelFactory;
-		private ITextAreaFactory textAreaFactory;
-		private IForumReader reader;
+		private readonly ILabelFactory labelFactory;
+		private readonly ITextAreaFactory textAreaFactory;
+		private readonly IForumReader reader;
+        private readonly ICommandFactory commandFactory;
+        private readonly IPostService postService;
 
 		private bool error;
 		private IPostViewModel post;
+        private int postId;
 
-		//TODO: Inject Dependencies
+        public AddReplyMenu(ILabelFactory labelFactory, ITextAreaFactory textAreaFactory, IForumReader reader, ICommandFactory commandFactory, IPostService postService, bool error, IPostViewModel post)
+        {
+            this.labelFactory = labelFactory;
+            this.textAreaFactory = textAreaFactory;
+            this.reader = reader;
+            this.commandFactory = commandFactory;
+            this.postService = postService;
+        }
 
 		public ITextInputArea TextArea { get; private set; }
 
@@ -77,12 +88,43 @@
 
 		public void SetId(int id)
 		{
-			throw new System.NotImplementedException();
+		    this.postId = id;
+
+		    this.LoadPost();
 		}
 
-		public override IMenu ExecuteCommand()
+        private void LoadPost()
+        {
+            this.post = this.postService.GetPostViewModel(this.postId);
+            this.InitializeTextArea();
+            this.Open();
+        }
+
+        public override IMenu ExecuteCommand()
 		{
-			throw new System.NotImplementedException();
-		}
+		    if (this.CurrentOption.IsField)
+		    {
+		        var fieldInput = " " + this.reader.ReadLine(this.CurrentOption.Position.Left + 1, this.CurrentOption.Position.Top);
+
+		        this.Buttons[this.currentIndex] = this.labelFactory.CreateButton(fieldInput, this.CurrentOption.Position, this.CurrentOption.IsHidden, this.CurrentOption.IsField);
+
+		        return this;
+		    }
+
+		    try
+		    {
+		        var commandName = string.Join("", this.CurrentOption.Text.Split());
+		        var command = this.commandFactory.CreateCommand(commandName);
+		        var view = command.Execute(this.TextArea.Text, this.postId.ToString());
+
+		        return view;
+		    }
+		    catch
+		    {
+		        this.error = true;
+		        this.InitializeStaticLabels(Position.ConsoleCenter());
+		        return this;
+		    }
+        }
 	}
 }

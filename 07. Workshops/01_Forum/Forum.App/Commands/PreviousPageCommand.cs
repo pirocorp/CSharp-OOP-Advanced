@@ -1,8 +1,5 @@
 ﻿namespace Forum.App.Commands
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Text;
     using Contracts;
 
     public class PreviousPageCommand : ICommand
