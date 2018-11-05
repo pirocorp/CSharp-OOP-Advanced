@@ -59,7 +59,8 @@
 
         public IPostViewModel GetPostViewModel(int postId)
         {
-            throw new NotImplementedException();
+            var post = this.forumData.Posts.FirstOrDefault(p => p.Id == postId);
+            var postView = new PostInfoViewModel(post.Title, this.userService.GetUserName(post.AuthorId), post.Content, this.GetPostReplies(postId));
         }
     }
 }

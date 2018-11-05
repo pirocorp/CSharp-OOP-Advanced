@@ -6,8 +6,7 @@
 
     public class PostViewModel : ContentViewModel, IPostViewModel
     {
-        public PostViewModel(string title, string author, string content,
-            IEnumerable<IReplyViewModel> replies) 
+        public PostViewModel(string title, string author, string content, IEnumerable<IReplyViewModel> replies) 
             : base(content)
         {
             this.Title = title;
