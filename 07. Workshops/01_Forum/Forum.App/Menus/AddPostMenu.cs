@@ -1,6 +1,7 @@
 ﻿namespace Forum.App.Menus
 {
-	using Models;
+    using System;
+    using Models;
 	using Contracts;
 
 	public class AddPostMenu : Menu, ITextAreaMenu
@@ -88,7 +89,32 @@
 
 		public override IMenu ExecuteCommand()
 		{
-			throw new System.NotImplementedException();
+		    if (this.CurrentOption.IsField)
+		    {
+		        var fieldInput =
+		            $" {this.reader.ReadLine(this.CurrentOption.Position.Left + 1, this.CurrentOption.Position.Top)}";
+
+		        this.Buttons[this.currentIndex] = this.labelFactory.CreateButton(
+                    fieldInput, this.CurrentOption.Position,
+                    this.CurrentOption.IsHidden, this.CurrentOption.IsField);
+
+		        return this;
+		    }
+
+		    try
+		    {
+		        var commandName = string.Join("", this.CurrentOption.Text.Split());
+		        var command = this.commandFactor.CreateCommand(commandName);
+		        var view = command.Execute(this.TitleInput, this.CategoryInput, this.TextArea.Text);
+
+		        return view;
+		    }
+		    catch (Exception e)
+		    {
+		        this.error = true;
+                this.InitializeStaticLabels(Position.ConsoleCenter());
+		        return this;
+		    }
 		}
 	}
 }

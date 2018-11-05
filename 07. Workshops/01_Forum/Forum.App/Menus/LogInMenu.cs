@@ -82,15 +82,12 @@
 
 		        this.Buttons[this.currentIndex] = this.labelFactory.CreateButton(
 		            fieldInput, this.CurrentOption.Position,
-		            this.CurrentOption.IsHidden, this.CurrentOption.IsField
-		        );
+		            this.CurrentOption.IsHidden, this.CurrentOption.IsField);
 
 		        return this;
 		    }
 
 		    try
-
-
 		    {
 		        var commandName = string.Join("", this.CurrentOption.Text.Split());
 		        var command = this.commandFactory.CreateCommand(commandName);
