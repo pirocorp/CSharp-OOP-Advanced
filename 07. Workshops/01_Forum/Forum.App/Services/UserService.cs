@@ -24,7 +24,9 @@
 
         public string GetUserName(int userId)
         {
-            throw new NotImplementedException();
+            var user = this.forumData.Users.FirstOrDefault(u => u.Id == userId);
+
+            return user?.Username;
         }
 
         public bool TryLogInUser(string username, string password)

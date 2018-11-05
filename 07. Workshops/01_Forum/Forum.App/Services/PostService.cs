@@ -10,7 +10,7 @@
     public class PostService : IPostService
     {
         private readonly ForumData forumData;
-        private IUserService userService;
+        private readonly IUserService userService;
 
         public PostService(ForumData forumData, IUserService userService)
         {
