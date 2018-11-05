@@ -4,7 +4,7 @@
 
     public class BackCommand : ICommand
     {
-        private ISession session;
+        private readonly ISession session;
 
         public BackCommand(ISession session)
         {
