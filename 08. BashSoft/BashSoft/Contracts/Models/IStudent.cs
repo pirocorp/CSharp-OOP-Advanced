@@ -1,8 +1,9 @@
 ﻿namespace BashSoft.Contracts.Models
 {
+    using System;
     using System.Collections.Generic;
 
-    public interface IStudent
+    public interface IStudent : IComparable<IStudent>
     {
         IReadOnlyDictionary<string, ICourse> EnrolledCourses { get; }
 

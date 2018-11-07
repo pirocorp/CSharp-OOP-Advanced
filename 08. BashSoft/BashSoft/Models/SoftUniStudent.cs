@@ -70,5 +70,9 @@
 
             return mark;
         }
+
+        public int CompareTo(IStudent other) => this.Username.CompareTo(other.Username);
+
+        public override string ToString() => this.Username;
     }
 }
