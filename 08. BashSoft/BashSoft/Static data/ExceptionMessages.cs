@@ -1,4 +1,4 @@
-﻿namespace BashSoft
+﻿namespace BashSoft.Static_data
 {
     public static class ExceptionMessages
     {
@@ -23,7 +23,7 @@
         public static string InvalidQueryComparison =
             "The comparison query you want, does not exist in the context of the current program!";
 
-        //public static string InvalidTakeQueryParamter = "The take command expected does not match the format wanted!";
+        //public static string InvalidTakeQueryParameter = "The take command expected does not match the format wanted!";
 
         public static string NotEnrolledInCourse = "Student must be enrolled in a course before you set his mark.";
 

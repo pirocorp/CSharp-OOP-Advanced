@@ -1,26 +1,27 @@
-﻿namespace BashSoft
+﻿namespace BashSoft.IO
 {
     using System;
     using System.Collections.Generic;
     using System.IO;
+    using Contracts;
     using Exceptions;
-    using Execptions;
+    using Static_data;
 
-    public class IOManager
+    public class IoManager : IDirectoryManager
     {
         public void TraverseDirectory(int depth)
         {
             OutputWriter.WriteEmptyLine();
-            int initialIdentation = SessionData.currentPath.Split('\\').Length;
-            Queue<string> subFolders = new Queue<string>();
-            subFolders.Enqueue(SessionData.currentPath);
+            var initialIndentation = SessionData.CurrentPath.Split('\\').Length;
+            var subFolders = new Queue<string>();
+            subFolders.Enqueue(SessionData.CurrentPath);
 
             while (subFolders.Count != 0)
             {
-                string currentPath = subFolders.Dequeue();
-                int identation = currentPath.Split('\\').Length - initialIdentation;
+                var currentPath = subFolders.Dequeue();
+                var indentation = currentPath.Split('\\').Length - initialIndentation;
 
-                if (depth - identation < 0)
+                if (depth - indentation < 0)
                 {
                     break;
                 }
@@ -32,12 +33,12 @@
                         subFolders.Enqueue(directoryPath);
                     }
 
-                    OutputWriter.WriteMessageOnNewLine(string.Format("{0}{1}", new string('-', identation), currentPath));
+                    OutputWriter.WriteMessageOnNewLine($"{new string('-', indentation)}{currentPath}");
 
-                    foreach (var file in Directory.GetFiles(SessionData.currentPath))
+                    foreach (var file in Directory.GetFiles(SessionData.CurrentPath))
                     {
-                        int indexOfLastSlash = file.LastIndexOf("\\");
-                        string fileName = file.Substring(indexOfLastSlash);
+                        var indexOfLastSlash = file.LastIndexOf("\\");
+                        var fileName = file.Substring(indexOfLastSlash);
                         OutputWriter.WriteMessageOnNewLine(new string('-', indexOfLastSlash) + fileName);
                     }
                 }
@@ -50,7 +51,7 @@
 
         public void CreateDirectoryInCurrentFolder(string name)
         {
-            string path = SessionData.currentPath + "\\" + name;
+            var path = SessionData.CurrentPath + "\\" + name;
             try
             {
                 Directory.CreateDirectory(path);
@@ -67,10 +68,10 @@
             {
                 try
                 {
-                    string currentPath = SessionData.currentPath;
-                    int indexOfLastSlash = currentPath.LastIndexOf("\\");
-                    string newPath = currentPath.Substring(0, indexOfLastSlash);
-                    SessionData.currentPath = newPath;
+                    var currentPath = SessionData.CurrentPath;
+                    var indexOfLastSlash = currentPath.LastIndexOf("\\");
+                    var newPath = currentPath.Substring(0, indexOfLastSlash);
+                    SessionData.CurrentPath = newPath;
                 }
                 catch (ArgumentOutOfRangeException)
                 {
@@ -79,9 +80,9 @@
             }
             else
             {
-                string currenPath = SessionData.currentPath;
-                currenPath += "\\" + relativePath;
-                SessionData.currentPath = currenPath;
+                var currentPath = SessionData.CurrentPath;
+                currentPath += "\\" + relativePath;
+                SessionData.CurrentPath = currentPath;
             }
         }
 
@@ -92,7 +93,7 @@
                 throw new InvalidPathException();
             }
 
-            SessionData.currentPath = absolutePath;
+            SessionData.CurrentPath = absolutePath;
         }
     }
 }

@@ -1,8 +1,10 @@
-﻿namespace BashSoft
+﻿namespace BashSoft.Repository
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using IO;
+    using Static_data;
 
     public class RepositorySorter
     {

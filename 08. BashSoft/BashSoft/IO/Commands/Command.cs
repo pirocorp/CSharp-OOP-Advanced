@@ -1,18 +1,21 @@
 ﻿namespace BashSoft.IO.Commands
 {
     using System;
-    using Execptions;
+    using Contracts;
+    using Exceptions;
+    using Judge;
+    using Repository;
 
-    public abstract class Command
+    public abstract class Command : IExecutable
     {
         private string input;
         private string[] data;
 
-        private Tester judge;
-        private StudentsRepository repository;
-        private IOManager inputOutputManager;
+        private readonly Tester judge;
+        private readonly StudentsRepository repository;
+        private readonly IDirectoryManager inputOutputManager;
 
-        public Command(string input, string[] data, Tester judge, StudentsRepository repository, IOManager inputOutputManager)
+        protected Command(string input, string[] data, Tester judge, StudentsRepository repository, IDirectoryManager inputOutputManager)
         {
             this.Input = input;
             this.Data = data;
@@ -23,7 +26,7 @@
         
         public string[] Data
         {
-            get { return this.data; }
+            get => this.data;
             private set
             {
                 if (value == null || value.Length == 0)
@@ -36,7 +39,7 @@
 
         public string Input
         {
-            get { return this.input; }
+            get => this.input;
             private set
             {
                 if (string.IsNullOrEmpty(value))
@@ -47,20 +50,11 @@
             }
         }
 
-        protected Tester Judge
-        {
-            get { return this.judge; }
-        }
+        protected Tester Judge => this.judge;
 
-        protected StudentsRepository Repository
-        {
-            get { return this.repository; }
-        }
+        protected StudentsRepository Repository => this.repository;
 
-        protected IOManager InputOutputManager
-        {
-            get { return this.inputOutputManager; }
-        }
+        protected IDirectoryManager InputOutputManager => this.inputOutputManager;
 
         public abstract void Execute();
     }

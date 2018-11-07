@@ -1,20 +1,22 @@
-﻿namespace BashSoft
+﻿namespace BashSoft.Repository
 {
     using System;
     using System.Collections.Generic;
     using System.IO;
     using System.Linq;
     using System.Text.RegularExpressions;
-    using Execptions;
+    using Exceptions;
+    using IO;
     using Models;
+    using Static_data;
 
     public class StudentsRepository
     {
-        private bool isDataInilized;
+        private bool isDataInitialized;
         private Dictionary<string, Course> courses;
         private Dictionary<string, Student> students;
-        private RepositoryFilter filter;
-        private RepositorySorter sorter;
+        private readonly RepositoryFilter filter;
+        private readonly RepositorySorter sorter;
 
         public StudentsRepository(RepositoryFilter filter, RepositorySorter sorter)
         {
@@ -22,12 +24,12 @@
             this.students = new Dictionary<string, Student>();
             this.filter = filter;
             this.sorter = sorter;
-            this.isDataInilized = false;
+            this.isDataInitialized = false;
         }
 
         public void FilterAndTake(string courseName, string givenFilter, int? studentsToTake = null)
         {
-            if (IsQueryForCoursePossible(courseName))
+            if (this.IsQueryForCoursePossible(courseName))
             {
                 if (studentsToTake == null)
                 {
@@ -42,7 +44,7 @@
 
         public void OrderAndTake(string courseName, string comparison, int? studentsToTake = null)
         {
-            if (IsQueryForCoursePossible(courseName))
+            if (this.IsQueryForCoursePossible(courseName))
             {
                 if (studentsToTake == null)
                 {
@@ -57,7 +59,7 @@
 
         public void LoadData(string fileName)
         {
-            if (this.isDataInilized)
+            if (this.isDataInitialized)
             {
                 throw new ArgumentException(ExceptionMessages.DataAlreadyInitialisedException);
             }
@@ -65,29 +67,29 @@
             this.courses = new Dictionary<string, Course>();
             this.students = new Dictionary<string, Student>();
             OutputWriter.WriteMessageOnNewLine("Reading data...");
-            ReadData(fileName);
+            this.ReadData(fileName);
         }
 
         public void UnloadData()
         {
-            if (!this.isDataInilized)
+            if (!this.isDataInitialized)
             {
                 throw new ArgumentException(ExceptionMessages.DataNotInitializedExceptionMessage);
             }
 
             this.courses = null;
             this.students = null;
-            this.isDataInilized = false;
+            this.isDataInitialized = false;
         }
 
         private void ReadData(string fileName)
         {
-            string path = SessionData.currentPath + "\\" + fileName;
+            var path = SessionData.CurrentPath + "\\" + fileName;
             if (File.Exists(path))
             {
                 var rgx = new Regex(@"([A-Z][a-zA-Z#\++]*_[A-Z][a-z]{2}_\d{4})\s+([A-Za-z]+\d{2}_\d{2,4})\s([\s0-9]+)");
                 var allInputLines = File.ReadAllLines(path);
-                for (int i = 0; i < allInputLines.Length; i++)
+                for (var i = 0; i < allInputLines.Length; i++)
                 {
                     if (!string.IsNullOrEmpty(allInputLines[i]) && rgx.IsMatch(allInputLines[i]))
                     {
@@ -144,13 +146,13 @@
                 throw new InvalidPathException();
             }
 
-            isDataInilized = true;
+            this.isDataInitialized = true;
             OutputWriter.WriteMessageOnNewLine("Data read!");
         }
 
         private bool IsQueryForCoursePossible(string courseName)
         {
-            if (isDataInilized)
+            if (this.isDataInitialized)
             {
                 if (this.courses.ContainsKey(courseName))
                 {
@@ -191,7 +193,7 @@
 
         public void GetAllStudentsFromCourse(string courseName)
         {
-            if (IsQueryForCoursePossible(courseName))
+            if (this.IsQueryForCoursePossible(courseName))
             {
                 OutputWriter.WriteMessageOnNewLine($"{courseName}");
                 foreach (var studetMarksEntry in this.courses[courseName].StudentsByName)

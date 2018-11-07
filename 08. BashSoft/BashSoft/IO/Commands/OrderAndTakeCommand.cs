@@ -1,11 +1,14 @@
 ﻿namespace BashSoft.IO.Commands
 {
-    using Execptions;
+    using Contracts;
+    using Exceptions;
+    using Judge;
+    using Repository;
 
     public class OrderAndTakeCommand : Command
     {
         public OrderAndTakeCommand(string input, string[] data, Tester judge, StudentsRepository repository,
-            IOManager inputOutputManager) : base(input, data, judge, repository, inputOutputManager) { }
+            IDirectoryManager inputOutputManager) : base(input, data, judge, repository, inputOutputManager) { }
 
         private void TryParseParametersForOrderAndTake(string takeCommand, string takeQuantity, string courseName, string comparison)
         {
@@ -25,13 +28,13 @@
                     }
                     else
                     {
-                        throw new InvalidTakeQueryParamterException();
+                        throw new InvalidTakeQueryParameterException();
                     }
                 }
             }
             else
             {
-                throw new InvalidTakeQueryParamterException();
+                throw new InvalidTakeQueryParameterException();
             }
         }
 

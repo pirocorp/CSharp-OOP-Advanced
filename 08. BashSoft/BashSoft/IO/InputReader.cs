@@ -1,25 +1,27 @@
-﻿namespace BashSoft
+﻿namespace BashSoft.IO
 {
     using System;
+    using Contracts;
+    using Static_data;
 
-    public class InputReader
+    public class InputReader : IReader
     {
-        private const string endCommand = "quit";
-        private CommandInterpreter interpreter;
+        private const string END_COMMAND = "quit";
+        private readonly IInterpreter interpreter;
 
-        public InputReader(CommandInterpreter interpreter)
+        public InputReader(IInterpreter interpreter)
         {
             this.interpreter = interpreter;
         }
         public  void StartReadingCommands()
         {
-            OutputWriter.WriteMessage($"{SessionData.currentPath}" + "> ");
-            string input = Console.ReadLine().Trim();
+            OutputWriter.WriteMessage($"{SessionData.CurrentPath}" + "> ");
+            var input = Console.ReadLine().Trim();
 
-            while (input != endCommand)
+            while (input != END_COMMAND)
             {
                 this.interpreter.InterpretCommand(input);
-                OutputWriter.WriteMessage($"{SessionData.currentPath}" + "> ");
+                OutputWriter.WriteMessage($"{SessionData.CurrentPath}" + "> ");
                 input = Console.ReadLine().Trim();
             }
         }

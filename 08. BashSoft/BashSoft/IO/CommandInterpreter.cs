@@ -1,16 +1,19 @@
-﻿namespace BashSoft
+﻿namespace BashSoft.IO
 {
     using System;
-    using Execptions;
-    using IO.Commands;
+    using Commands;
+    using Contracts;
+    using Exceptions;
+    using Judge;
+    using Repository;
 
-    public class CommandInterpreter
+    public class CommandInterpreter : IInterpreter
     {
-        private Tester judge;
-        private StudentsRepository repository;
-        private IOManager inputOutputManager;
+        private readonly Tester judge;
+        private readonly StudentsRepository repository;
+        private readonly IDirectoryManager inputOutputManager;
 
-        public CommandInterpreter(Tester judge, StudentsRepository repository, IOManager inputOutputManager)
+        public CommandInterpreter(Tester judge, StudentsRepository repository, IDirectoryManager inputOutputManager)
         {
             this.judge = judge;
             this.repository = repository;
@@ -19,12 +22,12 @@
 
         public void InterpretCommand(string input)
         {
-            string[] data = input.Split();
-            string commandName = data[0];
+            var data = input.Split();
+            var commandName = data[0];
 
             try
             {
-                Command command = this.ParseCommand(input, commandName, data);
+                var command = this.ParseCommand(input, commandName, data);
                 command.Execute();
             }
             catch (Exception e)
@@ -33,7 +36,7 @@
             }
         }
 
-        private Command ParseCommand(string input, string command, string[] data)
+        private IExecutable ParseCommand(string input, string command, string[] data)
         {
             switch (command)
             {

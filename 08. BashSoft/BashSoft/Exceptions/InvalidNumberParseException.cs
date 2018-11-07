@@ -1,4 +1,4 @@
-﻿namespace BashSoft.Execptions
+﻿namespace BashSoft.Exceptions
 {
     using System;
 
