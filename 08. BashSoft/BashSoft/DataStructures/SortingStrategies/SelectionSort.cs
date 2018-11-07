@@ -1,6 +1,5 @@
 ﻿namespace BashSoft.DataStructures.SortingStrategies
 {
-    using System;
     using System.Collections.Generic;
     using Contracts.DataStructures.SortingStrategies;
 

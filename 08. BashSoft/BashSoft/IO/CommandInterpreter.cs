@@ -6,8 +6,6 @@
     using Contracts.Judge;
     using Contracts.Repository;
     using Exceptions;
-    using Judge;
-    using Repository;
 
     public class CommandInterpreter : IInterpreter
     {
@@ -43,31 +41,31 @@
             switch (command)
             {
                 case "open":
-                    return new OpenFileCommand(input, data, this.judge, this.repository, this.inputOutputManager);
+                    return new OpenFileCommand(input, data);
                 case "mkdir":
-                    return new MakeDirectoryCommand(input, data, this.judge, this.repository, this.inputOutputManager);
+                    return new MakeDirectoryCommand(input, data);
                 case "ls":
-                    return new TraverseFoldersCommand(input, data, this.judge, this.repository, this.inputOutputManager);
+                    return new TraverseFoldersCommand(input, data);
                 case "cmp":
-                    return new CompareFilesCommand(input, data, this.judge, this.repository, this.inputOutputManager);
+                    return new CompareFilesCommand(input, data);
                 case "cdRel":
-                    return new ChangePathRelativelyCommand(input, data, this.judge, this.repository, this.inputOutputManager);
+                    return new ChangePathRelativelyCommand(input, data);
                 case "cdAbs":
-                    return new ChangePathAbsoluteCommand(input, data, this.judge, this.repository, this.inputOutputManager);
+                    return new ChangePathAbsoluteCommand(input, data);
                 case "readDb":
-                    return new ReadDatabaseFromFileCommand(input, data, this.judge, this.repository, this.inputOutputManager);
+                    return new ReadDatabaseFromFileCommand(input, data);
                 case "help":
-                    return new GetHelpCommand(input, data, this.judge, this.repository, this.inputOutputManager);
+                    return new GetHelpCommand(input, data);
                 case "filter":
-                    return new FilterAndTakeCommand(input, data, this.judge, this.repository, this.inputOutputManager);
+                    return new FilterAndTakeCommand(input, data);
                 case "order":
-                    return new OrderAndTakeCommand(input, data, this.judge, this.repository, this.inputOutputManager);
-                case "dropdb":
-                    return new DropDbCommand(input, data, this.judge, this.repository, this.inputOutputManager);
+                    return new OrderAndTakeCommand(input, data);
+                case "dropDb":
+                    return new DropDbCommand(input, data);
                 case "show":
-                    return new ShowWantedDataCommand(input, data, this.judge, this.repository, this.inputOutputManager);
+                    return new ShowWantedDataCommand(input, data);
                 case "display":
-                    return new DisplayCommand(input, data, this.judge, this.repository, this.inputOutputManager);
+                    return new DisplayCommand(input, data);
                 //case "decOrder":
                 //    break;
                 //case "download":

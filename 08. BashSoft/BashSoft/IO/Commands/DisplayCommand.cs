@@ -2,16 +2,21 @@
 {
     using System;
     using System.Collections.Generic;
-    using Contracts.IO;
-    using Contracts.Judge;
+    using Attributes;
     using Contracts.Models;
     using Contracts.Repository;
     using Exceptions;
 
+    [Alias("display")]
     internal class DisplayCommand : Command
     {
-        public DisplayCommand(string input, string[] data, IContentComparer judge, IDatabase repository, 
-            IDirectoryManager inputOutputManager) : base(input, data, judge, repository, inputOutputManager) { }
+        [Inject]
+        private IDatabase repository;
+
+        public DisplayCommand(string input, string[] data)
+            : base(input, data)
+        {
+        }
 
         public override void Execute()
         {
@@ -26,13 +31,13 @@
             if (entityToDisplay.Equals("students", StringComparison.OrdinalIgnoreCase))
             {
                 var studentComparator = this.CreateComparator<IStudent>(sortType);
-                var list = this.Repository.GetAllStudentsSorted(studentComparator);
+                var list = this.repository.GetAllStudentsSorted(studentComparator);
                 OutputWriter.WriteMessageOnNewLine(list.JoinWith(Environment.NewLine));
             }
             else if(entityToDisplay.Equals("courses", StringComparison.OrdinalIgnoreCase))
             {
                 var courseComparator = this.CreateComparator<ICourse>(sortType);
-                var list = this.Repository.GetAllCoursesSorted(courseComparator);
+                var list = this.repository.GetAllCoursesSorted(courseComparator);
                 OutputWriter.WriteMessageOnNewLine(list.JoinWith(Environment.NewLine));
             }
             else
