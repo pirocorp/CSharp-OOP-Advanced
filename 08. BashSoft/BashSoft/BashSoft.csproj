@@ -46,6 +46,9 @@
     <Compile Include="Contracts\IO\IDirectoryCreator.cs" />
     <Compile Include="Contracts\IO\IDirectoryTraverser.cs" />
     <Compile Include="Contracts\IO\IExecutable.cs" />
+    <Compile Include="Contracts\Repository\IFilteredTaker.cs" />
+    <Compile Include="Contracts\Repository\IOrderedTaker.cs" />
+    <Compile Include="Contracts\Repository\IRequester.cs" />
     <Compile Include="Exceptions\DuplicateEntryInStructureException.cs" />
     <Compile Include="Exceptions\InvalidCommandException.cs" />
     <Compile Include="Exceptions\InvalidFileNameException.cs" />
@@ -73,8 +76,12 @@
     <Compile Include="Contracts\IO\IReader.cs" />
     <Compile Include="Contracts\Models\ICourse.cs" />
     <Compile Include="Contracts\Models\IStudent.cs" />
+    <Compile Include="Contracts\Judge\IContentComparer.cs" />
     <Compile Include="Models\SoftUniCourse.cs" />
     <Compile Include="Models\SoftUniStudent.cs" />
+    <Compile Include="Contracts\Repository\IDatabase.cs" />
+    <Compile Include="Contracts\Repository\IDataSorter.cs" />
+    <Compile Include="Contracts\Repository\IDataFilter.cs" />
     <Compile Include="Static data\ExceptionMessages.cs" />
     <Compile Include="IO\InputReader.cs" />
     <Compile Include="IO\IOManager.cs" />

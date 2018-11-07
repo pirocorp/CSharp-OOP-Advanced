@@ -6,20 +6,21 @@
     using System.Linq;
     using System.Text.RegularExpressions;
     using Contracts.Models;
+    using Contracts.Repository;
     using Exceptions;
     using IO;
     using Models;
     using Static_data;
 
-    public class StudentsRepository
+    public class StudentsRepository : IDatabase
     {
         private bool isDataInitialized;
         private Dictionary<string, ICourse> courses;
         private Dictionary<string, IStudent> students;
-        private readonly RepositoryFilter filter;
-        private readonly RepositorySorter sorter;
+        private readonly IDataFilter filter;
+        private readonly IDataSorter sorter;
 
-        public StudentsRepository(RepositoryFilter filter, RepositorySorter sorter)
+        public StudentsRepository(IDataFilter filter, IDataSorter sorter)
         {
             this.courses = new Dictionary<string, ICourse>();
             this.students = new Dictionary<string, IStudent>();
@@ -186,20 +187,20 @@
             return false;
         }
 
-        public void GetStudentScoresFromCourse(string courseName, string username)
+        public void GetStudentMarkInCourse(string courseName, string username)
         {
             OutputWriter.PrintStudent(
                 new KeyValuePair<string, double>(username, this.courses[courseName].StudentsByName[username].MarksByCourseName[courseName]));
         }
 
-        public void GetAllStudentsFromCourse(string courseName)
+        public void GetStudentsByCourse(string courseName)
         {
             if (this.IsQueryForCoursePossible(courseName))
             {
                 OutputWriter.WriteMessageOnNewLine($"{courseName}");
                 foreach (var studentMarksEntry in this.courses[courseName].StudentsByName)
                 {
-                    this.GetStudentScoresFromCourse(courseName, studentMarksEntry.Key);
+                    this.GetStudentMarkInCourse(courseName, studentMarksEntry.Key);
                 }
             }
         }

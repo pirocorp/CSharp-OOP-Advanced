@@ -2,10 +2,11 @@
 {
     using System;
     using System.Collections.Generic;
+    using Contracts.Repository;
     using IO;
     using Static_data;
 
-    public class RepositoryFilter
+    public class RepositoryFilter : IDataFilter
     {
         public void FilterAndTake(Dictionary<string, double> studentsWithMarks, string wantedFilters, int studentsToTake)
         {

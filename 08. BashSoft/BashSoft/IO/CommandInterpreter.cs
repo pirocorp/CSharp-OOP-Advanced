@@ -3,17 +3,19 @@
     using System;
     using Commands;
     using Contracts.IO;
+    using Contracts.Judge;
+    using Contracts.Repository;
     using Exceptions;
     using Judge;
     using Repository;
 
     public class CommandInterpreter : IInterpreter
     {
-        private readonly Tester judge;
-        private readonly StudentsRepository repository;
+        private readonly IContentComparer judge;
+        private readonly IDatabase repository;
         private readonly IDirectoryManager inputOutputManager;
 
-        public CommandInterpreter(Tester judge, StudentsRepository repository, IDirectoryManager inputOutputManager)
+        public CommandInterpreter(IContentComparer judge, IDatabase repository, IDirectoryManager inputOutputManager)
         {
             this.judge = judge;
             this.repository = repository;

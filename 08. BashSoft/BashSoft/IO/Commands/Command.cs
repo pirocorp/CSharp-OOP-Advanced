@@ -2,6 +2,8 @@
 {
     using System;
     using Contracts.IO;
+    using Contracts.Judge;
+    using Contracts.Repository;
     using Exceptions;
     using Judge;
     using Repository;
@@ -11,11 +13,12 @@
         private string input;
         private string[] data;
 
-        private readonly Tester judge;
-        private readonly StudentsRepository repository;
+        private readonly IContentComparer judge;
+        private readonly IDatabase repository;
         private readonly IDirectoryManager inputOutputManager;
 
-        protected Command(string input, string[] data, Tester judge, StudentsRepository repository, IDirectoryManager inputOutputManager)
+        protected Command(string input, string[] data, IContentComparer judge, IDatabase repository, 
+            IDirectoryManager inputOutputManager)
         {
             this.Input = input;
             this.Data = data;
@@ -50,9 +53,9 @@
             }
         }
 
-        protected Tester Judge => this.judge;
+        protected IContentComparer Judge => this.judge;
 
-        protected StudentsRepository Repository => this.repository;
+        protected IDatabase Repository => this.repository;
 
         protected IDirectoryManager InputOutputManager => this.inputOutputManager;
 

@@ -2,11 +2,12 @@
 {
     using System;
     using System.IO;
+    using Contracts.Judge;
     using Exceptions;
     using IO;
     using Static_data;
 
-    public class Tester
+    public class Tester : IContentComparer
     {
         private string GetMismatchPath(string expectedOutputPath)
         {

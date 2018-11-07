@@ -2,6 +2,8 @@
 {
     using System.Diagnostics;
     using Contracts.IO;
+    using Contracts.Judge;
+    using Contracts.Repository;
     using Exceptions;
     using Judge;
     using Repository;
@@ -9,8 +11,8 @@
 
     public class OpenFileCommand : Command
     {
-        public OpenFileCommand(string input, string[] data, Tester judge, StudentsRepository repository, IDirectoryManager inputOutputManager) 
-            : base(input, data, judge, repository, inputOutputManager)
+        public OpenFileCommand(string input, string[] data, IContentComparer judge, IDatabase repository, 
+            IDirectoryManager inputOutputManager) : base(input, data, judge, repository, inputOutputManager)
         {
             
         }
