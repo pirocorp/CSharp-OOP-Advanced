@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\DataStructures\ISimpleOrderedBag.cs" />
     <Compile Include="Contracts\IO\IDirectoryChanger.cs" />
     <Compile Include="Contracts\IO\IDirectoryCreator.cs" />
     <Compile Include="Contracts\IO\IDirectoryTraverser.cs" />
@@ -49,6 +50,7 @@
     <Compile Include="Contracts\Repository\IFilteredTaker.cs" />
     <Compile Include="Contracts\Repository\IOrderedTaker.cs" />
     <Compile Include="Contracts\Repository\IRequester.cs" />
+    <Compile Include="DataStructures\SimpleSortedList.cs" />
     <Compile Include="Exceptions\DuplicateEntryInStructureException.cs" />
     <Compile Include="Exceptions\InvalidCommandException.cs" />
     <Compile Include="Exceptions\InvalidFileNameException.cs" />
