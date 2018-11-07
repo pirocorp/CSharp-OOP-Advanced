@@ -5,6 +5,8 @@
     using System.Collections.Generic;
     using System.Text;
     using Contracts.DataStructures;
+    using Contracts.DataStructures.SortingStrategies;
+    using SortingStrategies;
 
     public class SimpleSortedList<T> : ISimpleOrderedBag<T> where T : IComparable<T>
     {
@@ -13,20 +15,22 @@
         private T[] innerCollection;
         private int size;
         private readonly IComparer<T> comparison;
+        private readonly ISort<T> sortStrategy;
 
-        public SimpleSortedList(IComparer<T> comparison, int capacity)
+        public SimpleSortedList(IComparer<T> comparison, int capacity, ISort<T> sortStrategy)
         {
             this.comparison = comparison;
             this.InitializeInnerCollection(capacity);
+            this.sortStrategy = sortStrategy;
         }
 
         public SimpleSortedList(int capacity) 
-            : this(Comparer<T>.Create((x, y) => x.CompareTo(y)), capacity)
+            : this(Comparer<T>.Create((x, y) => x.CompareTo(y)), capacity, new QuickSort<T>())
         {
         }
 
         public SimpleSortedList(IComparer<T> comparison)
-            : this(comparison, DEFAULT_SIZE)
+            : this(comparison, DEFAULT_SIZE, new QuickSort<T>())
         {
         }
 
@@ -56,7 +60,7 @@
 
             this.innerCollection[this.Size] = element;
             this.size++;
-            Array.Sort(this.innerCollection, 0, this.Size, this.comparison);
+            this.sortStrategy.Sort(this.innerCollection, 0, this.Size, this.comparison);
         }
 
         public void AddAll(ICollection<T> collection)
@@ -72,7 +76,7 @@
                 this.size++;
             }
 
-            Array.Sort(this.innerCollection, 0, this.Size, this.comparison);
+            this.sortStrategy.Sort(this.innerCollection, 0, this.Size, this.comparison);
         }
 
         public string JoinWith(string joiner)

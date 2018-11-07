@@ -47,10 +47,15 @@
     <Compile Include="Contracts\IO\IDirectoryCreator.cs" />
     <Compile Include="Contracts\IO\IDirectoryTraverser.cs" />
     <Compile Include="Contracts\IO\IExecutable.cs" />
+    <Compile Include="Contracts\DataStructures\SortingStrategies\ISort.cs" />
     <Compile Include="Contracts\Repository\IFilteredTaker.cs" />
     <Compile Include="Contracts\Repository\IOrderedTaker.cs" />
     <Compile Include="Contracts\Repository\IRequester.cs" />
     <Compile Include="DataStructures\SimpleSortedList.cs" />
+    <Compile Include="DataStructures\SortingStrategies\BubbleSort.cs" />
+    <Compile Include="DataStructures\SortingStrategies\InsertionSort.cs" />
+    <Compile Include="DataStructures\SortingStrategies\QuickSort.cs" />
+    <Compile Include="DataStructures\SortingStrategies\SelectionSort.cs" />
     <Compile Include="Exceptions\DuplicateEntryInStructureException.cs" />
     <Compile Include="Exceptions\InvalidCommandException.cs" />
     <Compile Include="Exceptions\InvalidFileNameException.cs" />
