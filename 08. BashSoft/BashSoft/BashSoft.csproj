@@ -79,6 +79,7 @@
     <Compile Include="Contracts\Models\ICourse.cs" />
     <Compile Include="Contracts\Models\IStudent.cs" />
     <Compile Include="Contracts\Judge\IContentComparer.cs" />
+    <Compile Include="IO\Commands\DisplayCommand.cs" />
     <Compile Include="Models\SoftUniCourse.cs" />
     <Compile Include="Models\SoftUniStudent.cs" />
     <Compile Include="Contracts\Repository\IDatabase.cs" />

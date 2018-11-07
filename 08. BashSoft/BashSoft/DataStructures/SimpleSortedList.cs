@@ -91,7 +91,7 @@
 
         public IEnumerator<T> GetEnumerator()
         {
-            for (var i = 0; i < this.innerCollection.Length; i++)
+            for (var i = 0; i < this.size; i++)
             {
                 yield return this.innerCollection[i];
             }
