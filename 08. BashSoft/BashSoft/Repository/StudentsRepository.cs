@@ -5,8 +5,10 @@
     using System.IO;
     using System.Linq;
     using System.Text.RegularExpressions;
+    using Contracts.DataStructures;
     using Contracts.Models;
     using Contracts.Repository;
+    using DataStructures;
     using Exceptions;
     using IO;
     using Models;
@@ -84,6 +86,40 @@
             this.isDataInitialized = false;
         }
 
+        public void GetStudentMarkInCourse(string courseName, string username)
+        {
+            OutputWriter.PrintStudent(
+                new KeyValuePair<string, double>(username, this.courses[courseName].StudentsByName[username].MarksByCourseName[courseName]));
+        }
+
+        public void GetStudentsByCourse(string courseName)
+        {
+            if (this.IsQueryForCoursePossible(courseName))
+            {
+                OutputWriter.WriteMessageOnNewLine($"{courseName}");
+                foreach (var studentMarksEntry in this.courses[courseName].StudentsByName)
+                {
+                    this.GetStudentMarkInCourse(courseName, studentMarksEntry.Key);
+                }
+            }
+        }
+
+        public ISimpleOrderedBag<ICourse> GetAllCoursesSorted(IComparer<ICourse> comparer)
+        {
+            var sortedCourses = new SimpleSortedList<ICourse>(comparer);
+            sortedCourses.AddAll(this.courses.Values);
+
+            return sortedCourses;
+        }
+
+        public ISimpleOrderedBag<IStudent> GetAllStudentsSorted(IComparer<IStudent> comparer)
+        {
+            var sortedStudents = new SimpleSortedList<IStudent>(comparer);
+            sortedStudents.AddAll(this.students.Values);
+
+            return sortedStudents;
+        }
+
         private void ReadData(string fileName)
         {
             var path = SessionData.CurrentPath + "\\" + fileName;
@@ -102,7 +138,7 @@
 
                         try
                         {
-                            var scores = scoreStr.Split(new[] {' '}, StringSplitOptions.RemoveEmptyEntries)
+                            var scores = scoreStr.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
                                 .Select(int.Parse)
                                 .ToArray();
 
@@ -120,7 +156,7 @@
 
                             if (!this.students.ContainsKey(username))
                             {
-                                this.students.Add(username, new SoftUniStudent(username));   
+                                this.students.Add(username, new SoftUniStudent(username));
                             }
 
                             if (!this.courses.ContainsKey(courseName))
@@ -134,7 +170,7 @@
                             student.EnrollInCourse(course);
                             student.SetMarkOnCourse(courseName, scores);
                             course.EnrollStudent(student);
-                            
+
                         }
                         catch (FormatException fex)
                         {
@@ -185,24 +221,6 @@
             }
 
             return false;
-        }
-
-        public void GetStudentMarkInCourse(string courseName, string username)
-        {
-            OutputWriter.PrintStudent(
-                new KeyValuePair<string, double>(username, this.courses[courseName].StudentsByName[username].MarksByCourseName[courseName]));
-        }
-
-        public void GetStudentsByCourse(string courseName)
-        {
-            if (this.IsQueryForCoursePossible(courseName))
-            {
-                OutputWriter.WriteMessageOnNewLine($"{courseName}");
-                foreach (var studentMarksEntry in this.courses[courseName].StudentsByName)
-                {
-                    this.GetStudentMarkInCourse(courseName, studentMarksEntry.Key);
-                }
-            }
         }
     }
 }
