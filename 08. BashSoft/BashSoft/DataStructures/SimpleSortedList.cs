@@ -24,6 +24,11 @@
             this.sortStrategy = sortStrategy;
         }
 
+        public SimpleSortedList(IComparer<T> comparison, int capacity)
+            : this(comparison, capacity, new QuickSort<T>())
+        {
+        }
+
         public SimpleSortedList(int capacity) 
             : this(Comparer<T>.Create((x, y) => x.CompareTo(y)), capacity, new QuickSort<T>())
         {
@@ -55,6 +60,11 @@
 
         public void Add(T element)
         {
+            if (element == null)
+            {
+                throw new ArgumentNullException();
+            }
+
             if (this.innerCollection.Length <= this.Size)
             {
                 this.Resize();
@@ -74,6 +84,11 @@
 
             foreach (var element in collection)
             {
+                if (element == null)
+                {
+                    throw new ArgumentNullException();
+                }
+
                 this.innerCollection[this.Size] = element;
                 this.size++;
             }
@@ -83,6 +98,11 @@
 
         public bool Remove(T element)
         {
+            if (element == null)
+            {
+                throw new ArgumentNullException();
+            }
+
             var hasBeenRemoved = false;
             var indexOfRemovedElement = -1;
 
@@ -113,6 +133,11 @@
 
         public string JoinWith(string joiner)
         {
+            if (joiner == null)
+            {
+                throw new ArgumentNullException();
+            }
+
             var sb = new StringBuilder();
 
             foreach (var element in this)
