@@ -1,4 +1,4 @@
-﻿namespace BashSoft.Contracts
+﻿namespace BashSoft.Contracts.IO
 {
     public interface IExecutable
     {

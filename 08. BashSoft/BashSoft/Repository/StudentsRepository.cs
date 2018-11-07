@@ -5,6 +5,7 @@
     using System.IO;
     using System.Linq;
     using System.Text.RegularExpressions;
+    using Contracts.Models;
     using Exceptions;
     using IO;
     using Models;
@@ -13,15 +14,15 @@
     public class StudentsRepository
     {
         private bool isDataInitialized;
-        private Dictionary<string, Course> courses;
-        private Dictionary<string, Student> students;
+        private Dictionary<string, ICourse> courses;
+        private Dictionary<string, IStudent> students;
         private readonly RepositoryFilter filter;
         private readonly RepositorySorter sorter;
 
         public StudentsRepository(RepositoryFilter filter, RepositorySorter sorter)
         {
-            this.courses = new Dictionary<string, Course>();
-            this.students = new Dictionary<string, Student>();
+            this.courses = new Dictionary<string, ICourse>();
+            this.students = new Dictionary<string, IStudent>();
             this.filter = filter;
             this.sorter = sorter;
             this.isDataInitialized = false;
@@ -64,8 +65,8 @@
                 throw new ArgumentException(ExceptionMessages.DataAlreadyInitialisedException);
             }
             
-            this.courses = new Dictionary<string, Course>();
-            this.students = new Dictionary<string, Student>();
+            this.courses = new Dictionary<string, ICourse>();
+            this.students = new Dictionary<string, IStudent>();
             OutputWriter.WriteMessageOnNewLine("Reading data...");
             this.ReadData(fileName);
         }
@@ -110,7 +111,7 @@
                                 continue;
                             }
 
-                            if (scores.Length > Course.NumberOfTasksOnExam)
+                            if (scores.Length > SoftUniCourse.NumberOfTasksOnExam)
                             {
                                 OutputWriter.DisplayException(ExceptionMessages.InvalidNumberOfScores);
                                 continue;
@@ -118,12 +119,12 @@
 
                             if (!this.students.ContainsKey(username))
                             {
-                                this.students.Add(username, new Student(username));   
+                                this.students.Add(username, new SoftUniStudent(username));   
                             }
 
                             if (!this.courses.ContainsKey(courseName))
                             {
-                                this.courses.Add(courseName, new Course(courseName));
+                                this.courses.Add(courseName, new SoftUniCourse(courseName));
                             }
 
                             var course = this.courses[courseName];
@@ -196,9 +197,9 @@
             if (this.IsQueryForCoursePossible(courseName))
             {
                 OutputWriter.WriteMessageOnNewLine($"{courseName}");
-                foreach (var studetMarksEntry in this.courses[courseName].StudentsByName)
+                foreach (var studentMarksEntry in this.courses[courseName].StudentsByName)
                 {
-                    this.GetStudentScoresFromCourse(courseName, studetMarksEntry.Key);
+                    this.GetStudentScoresFromCourse(courseName, studentMarksEntry.Key);
                 }
             }
         }

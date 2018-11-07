@@ -1,7 +1,7 @@
 ﻿namespace BashSoft.IO.Commands
 {
     using System;
-    using Contracts;
+    using Contracts.IO;
     using Exceptions;
     using Judge;
     using Repository;

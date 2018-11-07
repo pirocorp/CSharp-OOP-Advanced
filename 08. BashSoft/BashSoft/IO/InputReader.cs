@@ -1,7 +1,7 @@
 ﻿namespace BashSoft.IO
 {
     using System;
-    using Contracts;
+    using Contracts.IO;
     using Static_data;
 
     public class InputReader : IReader

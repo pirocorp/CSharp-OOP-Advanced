@@ -1,6 +1,6 @@
 ﻿namespace BashSoft
 {
-    using Contracts;
+    using Contracts.IO;
     using IO;
     using Judge;
     using Repository;
