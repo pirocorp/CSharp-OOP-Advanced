@@ -51,6 +51,8 @@
 
         public int Size => this.size;
 
+        public int Capacity => this.innerCollection.Length;
+
         public void Add(T element)
         {
             if (this.innerCollection.Length <= this.Size)
@@ -77,6 +79,36 @@
             }
 
             this.sortStrategy.Sort(this.innerCollection, 0, this.Size, this.comparison);
+        }
+
+        public bool Remove(T element)
+        {
+            var hasBeenRemoved = false;
+            var indexOfRemovedElement = -1;
+
+            for (var i = 0; i < this.Size; i++)
+            {
+                if (this.innerCollection[i].Equals(element))
+                {
+                    indexOfRemovedElement = i;
+                    this.innerCollection[i] = default(T);
+                    hasBeenRemoved = true;
+                    break;
+                }
+            }
+
+            if (hasBeenRemoved)
+            {
+                for (var i = indexOfRemovedElement; i < this.Size - 1; i++)
+                {
+                    this.innerCollection[i] = this.innerCollection[i + 1];
+                }
+
+                this.innerCollection[this.Size - 1] = default(T);
+                this.size--;
+            }
+
+            return hasBeenRemoved;
         }
 
         public string JoinWith(string joiner)

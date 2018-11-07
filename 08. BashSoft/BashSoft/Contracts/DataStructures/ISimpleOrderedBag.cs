@@ -9,7 +9,11 @@
 
         void AddAll(ICollection<T> collection);
 
+        bool Remove(T element);
+
         int Size { get; }
+
+        int Capacity { get; }
 
         string JoinWith(string joiner);
     }
