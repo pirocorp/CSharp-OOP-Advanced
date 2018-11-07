@@ -42,6 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attributes\AliasAttribute.cs" />
+    <Compile Include="Attributes\InjectAttribute.cs" />
     <Compile Include="Contracts\DataStructures\ISimpleOrderedBag.cs" />
     <Compile Include="Contracts\IO\IDirectoryChanger.cs" />
     <Compile Include="Contracts\IO\IDirectoryCreator.cs" />
