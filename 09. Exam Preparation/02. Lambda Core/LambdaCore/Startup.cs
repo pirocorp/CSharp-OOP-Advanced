@@ -12,7 +12,6 @@
     using Interfaces.IO;
     using IO;
     using Microsoft.Extensions.DependencyInjection;
-    using Models.Fragments;
 
     public class Startup
     {
@@ -32,6 +31,7 @@
         {
             IServiceCollection services = new ServiceCollection();
 
+            //Every time get new instance
             services.AddTransient<ICoreFactory, CoreFactory>();
             services.AddTransient<ICoreFactoryHandler, CoreFactoryHandler>();
             services.AddTransient<IFragmentsFactory, FragmentsFactory>();
@@ -40,6 +40,7 @@
             services.AddTransient<IWriter, ConsoleWriter>();
             services.AddTransient<IEngine, Engine>();
 
+            //Same instance every time
             services.AddSingleton<ILambdaCoreController, LambdaCoreController>();
 
             var serviceProvider = services.BuildServiceProvider();
