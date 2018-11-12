@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecyclingStation", "RecyclingStation\RecyclingStation.csproj", "{1E4FB8E8-2439-4E29-84D2-B65014B2BFAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecyclingStation.Tests", "RecyclingStation.Tests\RecyclingStation.Tests.csproj", "{A3169F61-C30C-4784-99A1-65E121F91B3F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +17,15 @@ Global
 		{1E4FB8E8-2439-4E29-84D2-B65014B2BFAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E4FB8E8-2439-4E29-84D2-B65014B2BFAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E4FB8E8-2439-4E29-84D2-B65014B2BFAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3169F61-C30C-4784-99A1-65E121F91B3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3169F61-C30C-4784-99A1-65E121F91B3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3169F61-C30C-4784-99A1-65E121F91B3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3169F61-C30C-4784-99A1-65E121F91B3F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BB0CD630-4B79-4F6D-B95D-7479FEDFCF89}
 	EndGlobalSection
 EndGlobal

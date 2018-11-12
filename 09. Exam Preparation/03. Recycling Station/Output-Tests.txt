@@ -1,0 +1,157 @@
+﻿[12.11.2018 14:08:40 Warning] Build failed or it was cancelled.
+[12.11.2018 14:09:26 Informational] ------ Run test started ------
+[12.11.2018 14:09:28 Informational] NUnit Adapter 3.11.0.0: Test execution started
+[12.11.2018 14:09:28 Informational] Running all tests in D:\source\repos\C-OOP-Advanced\09. Exam Preparation\03. Recycling Station\RecyclingStation.Tests\bin\Debug\RecyclingStation.Tests.dll
+[12.11.2018 14:09:28 Informational]    NUnit3TestExecutor converted 1 of 1 NUnit test cases
+[12.11.2018 14:09:28 Informational] NUnit Adapter 3.11.0.0: Test execution complete
+[12.11.2018 14:09:29 Informational] ========== Run test finished: 1 run (0:00:02,9525005) ==========
+[12.11.2018 14:10:16 Informational] ------ Run test started ------
+[12.11.2018 14:10:16 Informational] NUnit Adapter 3.11.0.0: Test execution started
+[12.11.2018 14:10:17 Informational] Running selected tests in D:\source\repos\C-OOP-Advanced\09. Exam Preparation\03. Recycling Station\RecyclingStation.Tests\bin\Debug\RecyclingStation.Tests.dll
+[12.11.2018 14:10:17 Informational]    NUnit3TestExecutor converted 1 of 1 NUnit test cases
+[12.11.2018 14:10:17 Informational] NUnit Adapter 3.11.0.0: Test execution complete
+[12.11.2018 14:10:17 Informational] ========== Run test finished: 1 run (0:00:01,2175361) ==========
+[12.11.2018 14:12:56 Informational] ------ Run test started ------
+[12.11.2018 14:12:57 Informational] NUnit Adapter 3.11.0.0: Test execution started
+[12.11.2018 14:12:57 Informational] Running all tests in D:\source\repos\C-OOP-Advanced\09. Exam Preparation\03. Recycling Station\RecyclingStation.Tests\bin\Debug\RecyclingStation.Tests.dll
+[12.11.2018 14:12:58 Informational]    NUnit3TestExecutor converted 2 of 2 NUnit test cases
+[12.11.2018 14:12:58 Informational] NUnit Adapter 3.11.0.0: Test execution complete
+[12.11.2018 14:12:58 Informational] ========== Run test finished: 2 run (0:00:01,5996822) ==========
+[12.11.2018 14:22:13 Informational] ------ Run test started ------
+[12.11.2018 14:22:14 Informational] NUnit Adapter 3.11.0.0: Test execution started
+[12.11.2018 14:22:14 Informational] Running all tests in D:\source\repos\C-OOP-Advanced\09. Exam Preparation\03. Recycling Station\RecyclingStation.Tests\bin\Debug\RecyclingStation.Tests.dll
+[12.11.2018 14:22:15 Informational]    NUnit3TestExecutor converted 3 of 3 NUnit test cases
+[12.11.2018 14:22:15 Informational] NUnit Adapter 3.11.0.0: Test execution complete
+[12.11.2018 14:22:15 Informational] ========== Run test finished: 1 run (0:00:02,0672687) ==========
+[12.11.2018 14:23:01 Informational] ------ Run test started ------
+[12.11.2018 14:23:01 Informational] NUnit Adapter 3.11.0.0: Test execution started
+[12.11.2018 14:23:01 Informational] Running selected tests in D:\source\repos\C-OOP-Advanced\09. Exam Preparation\03. Recycling Station\RecyclingStation.Tests\bin\Debug\RecyclingStation.Tests.dll
+[12.11.2018 14:23:02 Informational]    NUnit3TestExecutor converted 3 of 3 NUnit test cases
+[12.11.2018 14:23:02 Informational] NUnit Adapter 3.11.0.0: Test execution complete
+[12.11.2018 14:23:02 Informational] ========== Run test finished: 1 run (0:00:01,4723308) ==========
+[12.11.2018 14:26:16 Informational] ------ Run test started ------
+[12.11.2018 14:26:16 Informational] NUnit Adapter 3.11.0.0: Test execution started
+[12.11.2018 14:26:16 Informational] Running selected tests in D:\source\repos\C-OOP-Advanced\09. Exam Preparation\03. Recycling Station\RecyclingStation.Tests\bin\Debug\RecyclingStation.Tests.dll
+[12.11.2018 14:26:17 Informational]    NUnit3TestExecutor converted 3 of 3 NUnit test cases
+[12.11.2018 14:26:17 Informational] NUnit Adapter 3.11.0.0: Test execution complete
+[12.11.2018 14:26:17 Informational] ========== Run test finished: 1 run (0:00:01,6173569) ==========
+[12.11.2018 14:26:23 Informational] ------ Run test started ------
+[12.11.2018 14:26:26 Informational] NUnit Adapter 3.11.0.0: Test execution started
+[12.11.2018 14:26:26 Informational] Debugging selected tests in D:\source\repos\C-OOP-Advanced\09. Exam Preparation\03. Recycling Station\RecyclingStation.Tests\bin\Debug\RecyclingStation.Tests.dll
+[12.11.2018 14:26:26 Informational]    NUnit3TestExecutor converted 3 of 3 NUnit test cases
+[12.11.2018 14:27:29 Error] The active test run was aborted. Reason: 
+[12.11.2018 14:27:29 Informational] ========== Run test finished: 0 run (0:01:06,0718511) ==========
+[12.11.2018 14:28:27 Informational] ------ Run test started ------
+[12.11.2018 14:28:28 Informational] NUnit Adapter 3.11.0.0: Test execution started
+[12.11.2018 14:28:28 Informational] Running selected tests in D:\source\repos\C-OOP-Advanced\09. Exam Preparation\03. Recycling Station\RecyclingStation.Tests\bin\Debug\RecyclingStation.Tests.dll
+[12.11.2018 14:28:28 Informational]    NUnit3TestExecutor converted 3 of 3 NUnit test cases
+[12.11.2018 14:28:29 Informational] NUnit Adapter 3.11.0.0: Test execution complete
+[12.11.2018 14:28:29 Informational] ========== Run test finished: 1 run (0:00:01,5914914) ==========
+[12.11.2018 14:28:43 Informational] ------ Run test started ------
+[12.11.2018 14:28:44 Informational] NUnit Adapter 3.11.0.0: Test execution started
+[12.11.2018 14:28:44 Informational] Debugging selected tests in D:\source\repos\C-OOP-Advanced\09. Exam Preparation\03. Recycling Station\RecyclingStation.Tests\bin\Debug\RecyclingStation.Tests.dll
+[12.11.2018 14:28:45 Informational]    NUnit3TestExecutor converted 3 of 3 NUnit test cases
+[12.11.2018 14:29:18 Error] The active test run was aborted. Reason: 
+[12.11.2018 14:29:18 Informational] ========== Run test finished: 0 run (0:00:35,5464014) ==========
+[12.11.2018 14:31:09 Informational] ------ Run test started ------
+[12.11.2018 14:31:09 Informational] NUnit Adapter 3.11.0.0: Test execution started
+[12.11.2018 14:31:09 Informational] Running selected tests in D:\source\repos\C-OOP-Advanced\09. Exam Preparation\03. Recycling Station\RecyclingStation.Tests\bin\Debug\RecyclingStation.Tests.dll
+[12.11.2018 14:31:10 Informational]    NUnit3TestExecutor converted 3 of 3 NUnit test cases
+[12.11.2018 14:31:10 Informational] NUnit Adapter 3.11.0.0: Test execution complete
+[12.11.2018 14:31:10 Informational] ========== Run test finished: 1 run (0:00:01,3677059) ==========
+[12.11.2018 14:31:28 Informational] ------ Run test started ------
+[12.11.2018 14:31:29 Informational] NUnit Adapter 3.11.0.0: Test execution started
+[12.11.2018 14:31:29 Informational] Debugging selected tests in D:\source\repos\C-OOP-Advanced\09. Exam Preparation\03. Recycling Station\RecyclingStation.Tests\bin\Debug\RecyclingStation.Tests.dll
+[12.11.2018 14:31:30 Informational]    NUnit3TestExecutor converted 3 of 3 NUnit test cases
+[12.11.2018 14:31:40 Error] The active test run was aborted. Reason: 
+[12.11.2018 14:31:40 Informational] ========== Run test finished: 0 run (0:00:12,2955411) ==========
+[12.11.2018 14:32:19 Informational] ------ Run test started ------
+[12.11.2018 14:32:21 Informational] NUnit Adapter 3.11.0.0: Test execution started
+[12.11.2018 14:32:21 Informational] Debugging selected tests in D:\source\repos\C-OOP-Advanced\09. Exam Preparation\03. Recycling Station\RecyclingStation.Tests\bin\Debug\RecyclingStation.Tests.dll
+[12.11.2018 14:32:22 Informational]    NUnit3TestExecutor converted 3 of 3 NUnit test cases
+[12.11.2018 14:35:38 Error] The active test run was aborted. Reason: 
+[12.11.2018 14:35:38 Informational] ========== Run test finished: 0 run (0:03:19,3000491) ==========
+[12.11.2018 14:35:45 Informational] ------ Run test started ------
+[12.11.2018 14:35:46 Informational] NUnit Adapter 3.11.0.0: Test execution started
+[12.11.2018 14:35:46 Informational] Running selected tests in D:\source\repos\C-OOP-Advanced\09. Exam Preparation\03. Recycling Station\RecyclingStation.Tests\bin\Debug\RecyclingStation.Tests.dll
+[12.11.2018 14:35:47 Informational]    NUnit3TestExecutor converted 3 of 3 NUnit test cases
+[12.11.2018 14:35:47 Informational] NUnit Adapter 3.11.0.0: Test execution complete
+[12.11.2018 14:35:47 Informational] ========== Run test finished: 1 run (0:00:01,2656281) ==========
+[12.11.2018 14:37:00 Informational] ------ Run test started ------
+[12.11.2018 14:37:01 Informational] NUnit Adapter 3.11.0.0: Test execution started
+[12.11.2018 14:37:01 Informational] Running all tests in D:\source\repos\C-OOP-Advanced\09. Exam Preparation\03. Recycling Station\RecyclingStation.Tests\bin\Debug\RecyclingStation.Tests.dll
+[12.11.2018 14:37:01 Informational]    NUnit3TestExecutor converted 4 of 4 NUnit test cases
+[12.11.2018 14:37:01 Informational] NUnit Adapter 3.11.0.0: Test execution complete
+[12.11.2018 14:37:01 Informational] ========== Run test finished: 4 run (0:00:01,7028681) ==========
+[12.11.2018 14:41:49 Informational] ------ Run test started ------
+[12.11.2018 14:41:51 Informational] NUnit Adapter 3.11.0.0: Test execution started
+[12.11.2018 14:41:51 Informational] Debugging selected tests in D:\source\repos\C-OOP-Advanced\09. Exam Preparation\03. Recycling Station\RecyclingStation.Tests\bin\Debug\RecyclingStation.Tests.dll
+[12.11.2018 14:41:51 Informational]    NUnit3TestExecutor converted 4 of 4 NUnit test cases
+[12.11.2018 14:41:51 Warning] SetUp failed for test fixture RecyclingStation.Tests.GarbageProcessorTests
+[12.11.2018 14:41:51 Warning] Invalid signature for SetUp or TearDown method: SetUp
+[12.11.2018 14:41:52 Informational] NUnit Adapter 3.11.0.0: Test execution complete
+[12.11.2018 14:41:52 Informational] ========== Run test finished: 4 run (0:00:02,9552885) ==========
+[12.11.2018 14:41:56 Informational] ------ Run test started ------
+[12.11.2018 14:41:57 Informational] NUnit Adapter 3.11.0.0: Test execution started
+[12.11.2018 14:41:57 Informational] Running selected tests in D:\source\repos\C-OOP-Advanced\09. Exam Preparation\03. Recycling Station\RecyclingStation.Tests\bin\Debug\RecyclingStation.Tests.dll
+[12.11.2018 14:41:57 Informational]    NUnit3TestExecutor converted 4 of 4 NUnit test cases
+[12.11.2018 14:41:57 Warning] SetUp failed for test fixture RecyclingStation.Tests.GarbageProcessorTests
+[12.11.2018 14:41:57 Warning] Invalid signature for SetUp or TearDown method: SetUp
+[12.11.2018 14:41:57 Informational] NUnit Adapter 3.11.0.0: Test execution complete
+[12.11.2018 14:41:57 Informational] ========== Run test finished: 4 run (0:00:01,4413932) ==========
+[12.11.2018 14:42:31 Informational] ------ Run test started ------
+[12.11.2018 14:42:32 Informational] NUnit Adapter 3.11.0.0: Test execution started
+[12.11.2018 14:42:32 Informational] Running selected tests in D:\source\repos\C-OOP-Advanced\09. Exam Preparation\03. Recycling Station\RecyclingStation.Tests\bin\Debug\RecyclingStation.Tests.dll
+[12.11.2018 14:42:32 Informational]    NUnit3TestExecutor converted 4 of 4 NUnit test cases
+[12.11.2018 14:42:32 Warning] SetUp failed for test fixture RecyclingStation.Tests.GarbageProcessorTests
+[12.11.2018 14:42:32 Warning] Invalid signature for SetUp or TearDown method: SetUp
+[12.11.2018 14:42:32 Informational] NUnit Adapter 3.11.0.0: Test execution complete
+[12.11.2018 14:42:32 Informational] ========== Run test finished: 4 run (0:00:01,3279401) ==========
+[12.11.2018 14:43:03 Informational] ------ Run test started ------
+[12.11.2018 14:43:04 Informational] NUnit Adapter 3.11.0.0: Test execution started
+[12.11.2018 14:43:04 Informational] Running selected tests in D:\source\repos\C-OOP-Advanced\09. Exam Preparation\03. Recycling Station\RecyclingStation.Tests\bin\Debug\RecyclingStation.Tests.dll
+[12.11.2018 14:43:04 Informational]    NUnit3TestExecutor converted 4 of 4 NUnit test cases
+[12.11.2018 14:43:04 Warning] SetUp failed for test fixture RecyclingStation.Tests.GarbageProcessorTests
+[12.11.2018 14:43:04 Warning] Invalid signature for SetUp or TearDown method: Initialize
+[12.11.2018 14:43:04 Informational] NUnit Adapter 3.11.0.0: Test execution complete
+[12.11.2018 14:43:04 Informational] ========== Run test finished: 4 run (0:00:01,2893358) ==========
+[12.11.2018 14:44:39 Informational] ------ Run test started ------
+[12.11.2018 14:44:39 Informational] NUnit Adapter 3.11.0.0: Test execution started
+[12.11.2018 14:44:39 Informational] Running selected tests in D:\source\repos\C-OOP-Advanced\09. Exam Preparation\03. Recycling Station\RecyclingStation.Tests\bin\Debug\RecyclingStation.Tests.dll
+[12.11.2018 14:44:40 Informational]    NUnit3TestExecutor converted 4 of 4 NUnit test cases
+[12.11.2018 14:44:40 Warning] SetUp failed for test fixture RecyclingStation.Tests.GarbageProcessorTests
+[12.11.2018 14:44:40 Warning] Invalid signature for SetUp or TearDown method: Initialize
+[12.11.2018 14:44:40 Informational] NUnit Adapter 3.11.0.0: Test execution complete
+[12.11.2018 14:44:40 Informational] ========== Run test finished: 1 run (0:00:01,2182046) ==========
+[12.11.2018 14:45:11 Informational] ------ Run test started ------
+[12.11.2018 14:45:13 Informational] NUnit Adapter 3.11.0.0: Test execution started
+[12.11.2018 14:45:13 Informational] Debugging selected tests in D:\source\repos\C-OOP-Advanced\09. Exam Preparation\03. Recycling Station\RecyclingStation.Tests\bin\Debug\RecyclingStation.Tests.dll
+[12.11.2018 14:45:13 Informational]    NUnit3TestExecutor converted 4 of 4 NUnit test cases
+[12.11.2018 14:45:13 Warning] SetUp failed for test fixture RecyclingStation.Tests.GarbageProcessorTests
+[12.11.2018 14:45:13 Warning] Invalid signature for SetUp or TearDown method: Initialize
+[12.11.2018 14:45:13 Informational] NUnit Adapter 3.11.0.0: Test execution complete
+[12.11.2018 14:45:13 Informational] ========== Run test finished: 1 run (0:00:02,6233409) ==========
+[12.11.2018 14:45:25 Informational] ------ Run test started ------
+[12.11.2018 14:45:26 Informational] NUnit Adapter 3.11.0.0: Test execution started
+[12.11.2018 14:45:26 Informational] Running all tests in D:\source\repos\C-OOP-Advanced\09. Exam Preparation\03. Recycling Station\RecyclingStation.Tests\bin\Debug\RecyclingStation.Tests.dll
+[12.11.2018 14:45:26 Informational]    NUnit3TestExecutor converted 4 of 4 NUnit test cases
+[12.11.2018 14:45:26 Informational] NUnit Adapter 3.11.0.0: Test execution complete
+[12.11.2018 14:45:26 Informational] ========== Run test finished: 4 run (0:00:01,4897594) ==========
+[12.11.2018 14:46:35 Informational] ------ Run test started ------
+[12.11.2018 14:46:36 Informational] NUnit Adapter 3.11.0.0: Test execution started
+[12.11.2018 14:46:36 Informational] Running all tests in D:\source\repos\C-OOP-Advanced\09. Exam Preparation\03. Recycling Station\RecyclingStation.Tests\bin\Debug\RecyclingStation.Tests.dll
+[12.11.2018 14:46:37 Informational]    NUnit3TestExecutor converted 5 of 5 NUnit test cases
+[12.11.2018 14:46:37 Informational] NUnit Adapter 3.11.0.0: Test execution complete
+[12.11.2018 14:46:37 Informational] ========== Run test finished: 1 run (0:00:01,6927857) ==========
+[12.11.2018 14:47:02 Informational] ------ Run test started ------
+[12.11.2018 14:47:03 Informational] NUnit Adapter 3.11.0.0: Test execution started
+[12.11.2018 14:47:03 Informational] Running selected tests in D:\source\repos\C-OOP-Advanced\09. Exam Preparation\03. Recycling Station\RecyclingStation.Tests\bin\Debug\RecyclingStation.Tests.dll
+[12.11.2018 14:47:03 Informational]    NUnit3TestExecutor converted 5 of 5 NUnit test cases
+[12.11.2018 14:47:03 Informational] NUnit Adapter 3.11.0.0: Test execution complete
+[12.11.2018 14:47:03 Informational] ========== Run test finished: 1 run (0:00:01,4125924) ==========
+[12.11.2018 14:47:12 Informational] ------ Run test started ------
+[12.11.2018 14:47:12 Informational] NUnit Adapter 3.11.0.0: Test execution started
+[12.11.2018 14:47:12 Informational] Running selected tests in D:\source\repos\C-OOP-Advanced\09. Exam Preparation\03. Recycling Station\RecyclingStation.Tests\bin\Debug\RecyclingStation.Tests.dll
+[12.11.2018 14:47:13 Informational]    NUnit3TestExecutor converted 5 of 5 NUnit test cases
+[12.11.2018 14:47:13 Informational] NUnit Adapter 3.11.0.0: Test execution complete
+[12.11.2018 14:47:13 Informational] ========== Run test finished: 1 run (0:00:01,2173722) ==========

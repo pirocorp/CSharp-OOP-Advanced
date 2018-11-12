@@ -5,7 +5,7 @@
     using Interfaces.Models.GarbageDisposalStrategies;
     using Interfaces.WasteDisposal;
 
-    internal class StrategyHolder : IStrategyHolder
+    public class StrategyHolder : IStrategyHolder
     {
         private readonly IDictionary<Type, IGarbageDisposalStrategy> strategies;
 

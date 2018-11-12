@@ -1,6 +1,5 @@
 ﻿namespace RecyclingStation.Models
 {
-    using Interfaces;
     using Interfaces.Models;
 
     public class ProcessingData : IProcessingData

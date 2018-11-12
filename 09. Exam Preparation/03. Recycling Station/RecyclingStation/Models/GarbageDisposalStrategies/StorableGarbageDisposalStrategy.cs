@@ -1,6 +1,5 @@
 ﻿namespace RecyclingStation.Models.GarbageDisposalStrategies
 {
-    using Interfaces;
     using Interfaces.Models;
     using Interfaces.Models.Wastes;
 

@@ -1,6 +1,5 @@
 ﻿namespace RecyclingStation.Interfaces.Core
 {
-    using Interfaces;
     using Models;
 
     public interface IRecyclingStation

@@ -1,6 +1,5 @@
 ﻿namespace RecyclingStation.Core
 {
-    using Interfaces;
     using Interfaces.Core;
     using Interfaces.Models;
 
