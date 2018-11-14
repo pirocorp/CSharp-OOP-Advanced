@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Last Army", "Last Army\Last Army.csproj", "{FA1AC72F-2CD0-4247-9078-B9BD8C9216CC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Last Army.Tests", "Last Army.Tests\Last Army.Tests.csproj", "{35BA4E22-4526-41EB-8D76-965760C5C97D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,8 +17,15 @@ Global
 		{FA1AC72F-2CD0-4247-9078-B9BD8C9216CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA1AC72F-2CD0-4247-9078-B9BD8C9216CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA1AC72F-2CD0-4247-9078-B9BD8C9216CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35BA4E22-4526-41EB-8D76-965760C5C97D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35BA4E22-4526-41EB-8D76-965760C5C97D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35BA4E22-4526-41EB-8D76-965760C5C97D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35BA4E22-4526-41EB-8D76-965760C5C97D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {933C14EE-D656-4F88-9516-D4C9A9D10C87}
 	EndGlobalSection
 EndGlobal
