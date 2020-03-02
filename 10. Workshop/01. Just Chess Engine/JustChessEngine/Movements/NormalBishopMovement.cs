@@ -10,7 +10,6 @@
     public class NormalBishopMovement : BaseNormalMovement, IMovement
     {
         private const string ILLEGAL_BISHOP_DESTINATION = "Bishop destination {0}{1} is invalid";
-        private const string FIGURE_IN_THE_BISHOP_WAY = "Figure at {0}{1} is in the way";
 
         public NormalBishopMovement()
             : base()
@@ -30,7 +29,7 @@
                 throw new InvalidOperationException(string.Format(ILLEGAL_BISHOP_DESTINATION, move.To.Col, move.To.Row));
             }
 
-            this.CheckForFigureInTheWay(board, from, to, FIGURE_IN_THE_BISHOP_WAY);
+            this.CheckForFigureInTheWay(board, from, to);
         }
     }
 }

@@ -41,6 +41,27 @@
             };
 
             this._strategies.Add("Rook", rookStrategies);
+
+            var queenStrategies = new List<IMovement>()
+            {
+                new NormalQueenMovement(),
+            };
+
+            this._strategies.Add("Queen", queenStrategies);
+
+            var knightStrategies = new List<IMovement>()
+            {
+                new NormalKnightMovement(),
+            };
+
+            this._strategies.Add("Knight", knightStrategies);
+
+            var kingStrategies = new List<IMovement>()
+            {
+                new NormalKingMovement(),
+            };
+
+            this._strategies.Add("King", kingStrategies);
         }
     }
 }

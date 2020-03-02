@@ -6,11 +6,11 @@
     using Contracts;
     using Figures.Contracts;
 
-    public class NormalRookMovement : BaseNormalMovement, IMovement
+    public class NormalQueenMovement : BaseNormalMovement, IMovement
     {
-        private const string ILLEGAL_ROOK_DESTINATION = "Rook destination {0}{1} is invalid";
+        private const string ILLEGAL_QUEEN_DESTINATION = "Queen destination {0}{1} is invalid";
 
-        public NormalRookMovement()
+        public NormalQueenMovement()
             : base()
         {
         }
@@ -23,9 +23,9 @@
             var from = move.From;
             var to = move.To;
 
-            if (rowDistance != 0 && colDistance != 0)
+            if (rowDistance != colDistance && rowDistance != 0 && colDistance != 0)
             {
-                throw new InvalidOperationException(string.Format(ILLEGAL_ROOK_DESTINATION, move.To.Col, move.To.Row));
+                throw new InvalidOperationException(string.Format(ILLEGAL_QUEEN_DESTINATION, move.To.Col, move.To.Row));
             }
 
             this.CheckForFigureInTheWay(board, from, to);

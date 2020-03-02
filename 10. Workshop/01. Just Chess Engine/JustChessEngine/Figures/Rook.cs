@@ -1,6 +1,7 @@
 ﻿namespace JustChessEngine.Figures
 {
     using System.Collections.Generic;
+
     using Common;
     using Contracts;
     using Movements.Contracts;
