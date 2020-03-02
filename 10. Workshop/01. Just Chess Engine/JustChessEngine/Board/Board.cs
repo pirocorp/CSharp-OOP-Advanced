@@ -97,5 +97,10 @@
         {
             return chessCol - GlobalConstants.MinColValueOnBoard;
         }
+
+        public bool PositionIsAttacked(Position position, ChessColor attackerColor)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

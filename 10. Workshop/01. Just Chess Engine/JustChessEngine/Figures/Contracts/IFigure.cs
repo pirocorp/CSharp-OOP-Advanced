@@ -18,6 +18,8 @@
 
         bool IsMoved { get; }
 
+        bool IsInCheck { get; }
+
         ICollection<IMovement> Move(IMovementStrategy strategy);
 
         void IncreaseRank();
@@ -25,5 +27,9 @@
         void SetInPassing();
 
         void ClearInPassing();
+
+        void SetCheck();
+
+        void ClearCheck();
     }
 }

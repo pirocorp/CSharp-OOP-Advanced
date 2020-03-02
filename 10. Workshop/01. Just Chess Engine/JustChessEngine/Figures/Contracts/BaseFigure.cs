@@ -21,6 +21,8 @@
 
         public virtual bool IsMoved => true;
 
+        public virtual bool IsInCheck => false;
+
         public ChessColor Color { get; private set; }
 
         public virtual ICollection<IMovement> Move(IMovementStrategy strategy)
@@ -33,5 +35,9 @@
         public virtual void SetInPassing() { }
 
         public virtual void ClearInPassing() { }
+
+        public virtual void SetCheck() { }
+
+        public virtual void ClearCheck() { }
     }
 }

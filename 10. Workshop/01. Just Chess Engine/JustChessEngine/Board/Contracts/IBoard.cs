@@ -20,5 +20,7 @@
         void RemoveAllToBeRemovedFigures();
 
         void RestoreFigures();
+
+        bool PositionIsAttacked(Position position, ChessColor attackerColor);
     }
 }
