@@ -19,7 +19,7 @@
         private const int CHARACTERS_PER_ROW_PER_BOARD_SQUARE = 9;
         private const int CHARACTERS_PER_COL_PER_BOARD_SQUARE = 9;
         private const ConsoleColor DARK_SQUARE_CONSOLE_COLOR = ConsoleColor.DarkGray;
-        private const ConsoleColor LIGHT_SQUARE_CONSOLE_COLOR = ConsoleColor.Gray;
+        private const ConsoleColor LIGHT_SQUARE_CONSOLE_COLOR = ConsoleColor.DarkYellow;
 
         private static readonly IDictionary<Type, bool[,]> Patterns = ConsoleFigurePatterns.GetFiguresPatterns();
 

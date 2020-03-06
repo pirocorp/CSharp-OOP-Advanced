@@ -22,15 +22,15 @@
             var from = move.From;
             var to = move.To;
             
-            if (this.CheckCastle(figure, board, move, attackerColor))
-            {
-                return;
-            }
+            //if (this.CheckCastle(figure, board, move, attackerColor))
+            //{
+            //    return;
+            //}
 
-            if (board.PositionIsAttacked(to, attackerColor))
-            {
-                return;
-            }
+            //if (board.PositionIsAttacked(to, attackerColor))
+            //{
+            //    return;
+            //}
 
             var dx = Math.Abs(from.Col - to.Col);
             var dy = Math.Abs(from.Row - to.Row);
