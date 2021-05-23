@@ -1,8 +1,8 @@
-﻿using P03_GenericSwapMethodString.Core;
-using P03_GenericSwapMethodString.IO;
-
-namespace P03_GenericSwapMethodString
+﻿namespace P03_GenericSwapMethodString
 {
+    using P03_GenericSwapMethodString.Core;
+    using P03_GenericSwapMethodString.IO;
+
     public class Program
     {
         public static void Main(string[] args)
