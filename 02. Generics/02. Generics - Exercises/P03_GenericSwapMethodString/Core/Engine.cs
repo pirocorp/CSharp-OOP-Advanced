@@ -8,7 +8,7 @@
 
     public class Engine
     {
-        private IReader reader;
+        private readonly IReader reader;
         private IWriter writer;
 
         private List<Box<string>> listOfStrings;
