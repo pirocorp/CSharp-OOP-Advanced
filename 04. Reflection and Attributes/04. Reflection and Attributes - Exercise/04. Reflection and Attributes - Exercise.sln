@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2046
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P01_HarvestingFields", "P01_HarvestingFields\P01_HarvestingFields.csproj", "{9FD545B1-0231-43E5-B0EF-C92A74D79E44}"
 EndProject
@@ -13,9 +13,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P06_TrafficLights", "P06_Tr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P07_InfernoInfinity", "P07_InfernoInfinity\P07_InfernoInfinity.csproj", "{F9A95187-9215-4B48-A515-D34FDE394BA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P08_CustomAttribute", "P08_CustomAttribute\P08_CustomAttribute.csproj", "{425FDD4A-D460-45E6-86F3-759884F021B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P08_CustomAttribute", "P08_CustomAttribute\P08_CustomAttribute.csproj", "{425FDD4A-D460-45E6-86F3-759884F021B5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P09_CardGame", "P09_CardGame\P09_CardGame.csproj", "{0FCD746E-7555-4F2A-8E2E-89954021A59B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P10_CommandPattern", "P10_CommandPattern\P10_CommandPattern.csproj", "{C92548BD-9CFE-48F0-92F2-3D1D47A02129}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P11_ValidationAttributes", "P11_ValidationAttributes\P11_ValidationAttributes.csproj", "{AA93BF6E-0C61-4085-A91E-89B2FD440239}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +55,14 @@ Global
 		{0FCD746E-7555-4F2A-8E2E-89954021A59B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0FCD746E-7555-4F2A-8E2E-89954021A59B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0FCD746E-7555-4F2A-8E2E-89954021A59B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C92548BD-9CFE-48F0-92F2-3D1D47A02129}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C92548BD-9CFE-48F0-92F2-3D1D47A02129}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C92548BD-9CFE-48F0-92F2-3D1D47A02129}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C92548BD-9CFE-48F0-92F2-3D1D47A02129}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA93BF6E-0C61-4085-A91E-89B2FD440239}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA93BF6E-0C61-4085-A91E-89B2FD440239}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA93BF6E-0C61-4085-A91E-89B2FD440239}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA93BF6E-0C61-4085-A91E-89B2FD440239}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
