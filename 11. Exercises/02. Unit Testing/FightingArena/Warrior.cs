@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace FightingArena
+﻿namespace FightingArena
 {
+    using System;
+
     public class Warrior
     {
         private const int MIN_ATTACK_HP = 30;
@@ -19,13 +19,10 @@ namespace FightingArena
 
         public string Name
         {
-            get
-            {
-                return this.name;
-            }
+            get => this.name;
             private set
             {
-                if (String.IsNullOrWhiteSpace(value))
+                if (string.IsNullOrWhiteSpace(value))
                 {
                     throw new ArgumentException("Name should not be empty or whitespace!");
                 }
@@ -36,10 +33,7 @@ namespace FightingArena
 
         public int Damage
         {
-            get
-            {
-                return this.damage;
-            }
+            get => this.damage;
             private set
             {
                 if (value <= 0)
@@ -53,10 +47,7 @@ namespace FightingArena
 
         public int HP
         {
-            get
-            {
-                return this.hp;
-            }
+            get => this.hp;
             private set
             {
                 if (value < 0)
